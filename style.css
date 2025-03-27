@@ -416,3 +416,9 @@ footer {
   text-align: center;
   margin-top: 0; /* remove top gap if there was one */
 }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

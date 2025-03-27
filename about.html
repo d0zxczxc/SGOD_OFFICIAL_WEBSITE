@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About - SDO Santa Rosa City</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Optional inline fallback */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  </style>
 </head>
 <body>
   <!-- Transparent Navbar (same as homepage) -->
@@ -24,23 +32,26 @@
       </nav>
     </div>
   </header>
-  
-  
-<!-- Philippines Clock -->
-<div id="philippines-clock"></div>
 
-<script src="script.js"></script>
-  <!-- About Section -->
-  <section class="about-section">
-    <div class="container">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="overlay">
       <h1>About Us</h1>
-      <p>
-        The Planning and Research Section of the Schools Division Office (SDO) Santa Rosa City is committed to improving the quality of education through data-driven decision-making, strategic planning, and educational research. We aim to ensure the effective implementation of programs and policies that contribute to the betterment of the educational system in our city.
-      </p>
-      <p>
-        Our primary focus is on comprehensive data analysis, research initiatives, and collaborative planning to support continuous improvement within schools, teachers, and students. We strive to foster a culture of excellence and innovation in education while embracing the importance of teamwork and partnership in achieving our goals.
-      </p>
     </div>
+  </section>
+
+  <!-- Philippines Clock -->
+  <div id="philippines-clock"></div>
+
+  <!-- About Section -->
+  <section class="about-section container">
+    <h1>About Us</h1>
+    <p>
+      The Planning and Research Section of the Schools Division Office (SDO) Santa Rosa City is committed to improving the quality of education through data-driven decision-making, strategic planning, and educational research. We aim to ensure the effective implementation of programs and policies that contribute to the betterment of the educational system in our city.
+    </p>
+    <p>
+      Our primary focus is on comprehensive data analysis, research initiatives, and collaborative planning to support continuous improvement within schools, teachers, and students. We strive to foster a culture of excellence and innovation in education while embracing the importance of teamwork and partnership in achieving our goals.
+    </p>
   </section>
 
   <!-- Footer -->
@@ -52,5 +63,7 @@
       </p>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
