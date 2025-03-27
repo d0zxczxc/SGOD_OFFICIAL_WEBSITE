@@ -10,6 +10,24 @@ body, html {
   margin-bottom: 100px; /* Add space at the bottom if needed */
 }
 
+.overlay h1 {
+  color: rgb(255, 255, 255);
+  font-size: 80px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  transition: text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.overlay h1:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.1),
+               0 0 20px rgba(255, 255, 255, 0.2),
+               0 0 30px rgba(255, 255, 255, 0.3);
+  transform: scale(1.01); /* slight zoom to make the glow feel natural */
+}
+
+
 header {
   position: absolute;
   width: 100%;
@@ -382,3 +400,19 @@ body > div:last-child {
   border-radius: 2px;
 }
 
+body {
+  background-color: #f9f9f9; /* ✅ ensures full page has consistent background */
+}
+
+.about-section {
+  padding: 100px 40px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+footer {
+  background-color: #f9f9f9; /* just to be sure */
+  padding: 30px 40px;
+  text-align: center;
+  margin-top: 0; /* remove top gap if there was one */
+}
