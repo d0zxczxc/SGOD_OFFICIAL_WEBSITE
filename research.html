@@ -5,13 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Action and Basic Research - SDO Santa Rosa City</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Optional fallback if not yet in your CSS */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  </style>
 </head>
 <body>
   <!-- Transparent Navbar (same as homepage) -->
   <header>
     <div class="navbar">
       <div class="logo">
-        <!-- Make SDO Santa Rosa City clickable -->
         <a href="index.html">
           <img src="assets/logo.png" alt="PRS Logo" />
           <span>SDO Santa Rosa City</span>
@@ -24,42 +31,44 @@
       </nav>
     </div>
   </header>
-  
-<!-- Philippines Clock -->
-<div id="philippines-clock"></div>
 
-<script src="script.js"></script>
-  <!-- Action and Basic Research Section -->
-  <section class="action-research-section">
-    <div class="container">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="overlay">
       <h1>Action and Basic Research</h1>
-      <p>
-        The Action and Basic Research section showcases ongoing and completed research projects aimed at improving the educational system. These projects are designed to explore new methods, validate existing strategies, and provide data-driven insights into education reform.
-      </p>
-      <p>
-        Our focus is on both Action Research (which aims to solve real-world issues) and Basic Research (which contributes to the foundational understanding of educational theories and practices). Through these efforts, we continue to improve the learning environment and educational outcomes for both teachers and students.
-      </p>
     </div>
   </section>
 
-  <!-- Featured Research Projects Section -->
-  <section class="research-projects">
-    <div class="container">
-      <h2>Featured Research Projects</h2>
-      <div class="projects-grid">
-        <!-- Example Project 1 -->
-        <div class="project-card">
-          <h3>Research Project 1</h3>
-          <p>A brief overview of the first research project. It could include the research objectives, methods, and key findings.</p>
-          <a href="project1.pdf" class="read-more">Read More</a>
-        </div>
+  <!-- Philippines Clock -->
+  <div id="philippines-clock"></div>
 
-        <!-- Example Project 2 -->
-        <div class="project-card">
-          <h3>Research Project 2</h3>
-          <p>A brief overview of the second research project. It could include the research objectives, methods, and key findings.</p>
-          <a href="project2.pdf" class="read-more">Read More</a>
-        </div>
+  <!-- Action and Basic Research Section -->
+  <section class="action-research-section container">
+    <h1>Action and Basic Research</h1>
+    <p>
+      The Action and Basic Research section showcases ongoing and completed research projects aimed at improving the educational system. These projects are designed to explore new methods, validate existing strategies, and provide data-driven insights into education reform.
+    </p>
+    <p>
+      Our focus is on both Action Research (which aims to solve real-world issues) and Basic Research (which contributes to the foundational understanding of educational theories and practices). Through these efforts, we continue to improve the learning environment and educational outcomes for both teachers and students.
+    </p>
+  </section>
+
+  <!-- Featured Research Projects Section -->
+  <section class="research-projects container">
+    <h2>Featured Research Projects</h2>
+    <div class="projects-grid">
+      <!-- Example Project 1 -->
+      <div class="project-card">
+        <h3>Research Project 1</h3>
+        <p>A brief overview of the first research project. It could include the research objectives, methods, and key findings.</p>
+        <a href="project1.pdf" class="read-more">Read More</a>
+      </div>
+
+      <!-- Example Project 2 -->
+      <div class="project-card">
+        <h3>Research Project 2</h3>
+        <p>A brief overview of the second research project. It could include the research objectives, methods, and key findings.</p>
+        <a href="project2.pdf" class="read-more">Read More</a>
       </div>
     </div>
   </section>
@@ -73,5 +82,7 @@
       </p>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
