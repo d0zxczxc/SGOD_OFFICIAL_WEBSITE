@@ -1,3 +1,4 @@
+/* Reset margin and padding for body and html */
 * {
   margin: 0;
   padding: 0;
@@ -7,11 +8,12 @@
 body, html {
   font-family: Bookman Old Style, sans-serif;
   height: 100%;
-  margin-bottom: 100px; /* Add space at the bottom if needed */
+  background-color: #f9f9f9; /* Consistent background color */
 }
 
+/* Header Styling */
 header {
-  position: absolute;
+  position: fixed; /* Change to fixed for consistent positioning */
   width: 100%;
   top: 0;
   left: 0;
@@ -20,6 +22,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
 }
 
 .navbar {
@@ -27,9 +30,7 @@ header {
   justify-content: space-between;
   width: 100%;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  padding: 10px 20px; /* Add padding around the navbar */
-  
+  padding: 10px 20px;
 }
 
 .logo {
@@ -63,9 +64,10 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* Hero Section */
 .hero {
   background: url('bg.jpg') no-repeat center center/cover;
-  min-height: 120vh; /* Increased height for a longer page */
+  min-height: 100vh; /* Changed to 100vh */
   position: relative;
   display: flex;
   align-items: center;
@@ -114,10 +116,8 @@ nav a:hover {
   line-height: 1.5;
 }
 
-
-
-
-.documents {
+/* Documents Section */
+.important-documents {
   padding: 50px;
   background-color: #f9f9f9;
   text-align: center;
@@ -181,8 +181,6 @@ footer p {
   margin: 0;
 }
 
-
-
 /* About Page Styling */
 .about-section {
   padding: 100px 40px;
@@ -203,36 +201,6 @@ footer p {
   max-width: 800px;
   margin: 0 auto;
 }
-
-/* Footer Styling for About Page (same as the homepage footer) */
-footer {
-  background-color: #f1f1f1;
-  padding: 30px 40px;
-  text-align: center;
-  margin-top: 50px;
-}
-
-.footer-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.footer-logo {
-  width: 300px;
-  margin-right: 20px;
-}
-
-footer p {
-  max-width: 800px;
-  font-size: 16px;
-  color: #333;
-  line-height: 1.5;
-  text-align: justify;
-  margin: 0;
-}
-
 
 /* Research Section */
 .research-abstracts {
@@ -279,53 +247,6 @@ footer p {
 .read-more:hover {
   text-decoration: underline;
 }
-
-/* Important Documents Section */
-.documents {
-  padding: 50px;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-
-.documents h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
-  color: #333;
-}
-
-.document-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 20px;
-}
-
-.document-card {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.document-card h3 {
-  font-size: 24px;
-  color: #333;
-}
-
-.document-card p {
-  font-size: 16px;
-  color: #666;
-}
-
-.download-link {
-  font-size: 18px;
-  color: #007bff;
-  text-decoration: none;
-}
-
-.download-link:hover {
-  text-decoration: underline;
-}
-
 
 /* Action and Basic Research Section */
 .action-research-section {
@@ -391,5 +312,78 @@ footer p {
 }
 
 .read-more:hover {
+  text-decoration: underline;
+}
+
+/* Navbar logo link (SDO Santa Rosa City) */
+.navbar .logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar .logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.navbar .logo span {
+  font-size: 20px;
+  font-weight: bold;
+  color: white; /* Ensure it stays white */
+}
+
+.navbar .logo a:hover span {
+  color: white; /* Keeps the color white when hovered */
+}
+
+
+/* Important Documents Section */
+.important-documents {
+  padding: 50px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.important-documents h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.document-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.document-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.document-card h3 {
+  font-size: 24px;
+  color: #333;
+}
+
+.document-card p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.download-link {
+  font-size: 18px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.download-link:hover {
   text-decoration: underline;
 }
