@@ -333,3 +333,52 @@ footer p {
 body > div:last-child {
   background-color: #f9f9f9 !important;
 }
+
+/* Properly align logo + remove underline */
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* Removes underline */
+}
+
+/* Optional vertical tweak for text next to logo */
+.logo span {
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  line-height: 1;
+}
+
+/* Align logo text and remove underline */
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo span {
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.section-divider {
+  height: 2px;
+  background-color: black;       /* solid black divider */
+  background: #f9f9f9;           /* background around it */
+  padding: 20px 0;               /* vertical spacing */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.section-divider::before {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 2px;
+  background-color: black;
+  border-radius: 2px;
+}
+
