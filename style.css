@@ -5,7 +5,7 @@
 }
 
 body, html {
-  font-family: Arial, sans-serif;
+  font-family: Bookman Old Style, sans-serif;
   height: 100%;
   margin-bottom: 100px; /* Add space at the bottom if needed */
 }
@@ -45,6 +45,7 @@ header {
 .logo span {
   font-size: 20px;
   color: white;
+  font-weight: bold;
 }
 
 nav {
@@ -322,5 +323,73 @@ footer p {
 }
 
 .download-link:hover {
+  text-decoration: underline;
+}
+
+
+/* Action and Basic Research Section */
+.action-research-section {
+  padding: 50px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.action-research-section h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.action-research-section p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+/* Research Projects Grid */
+.research-projects {
+  padding: 50px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.research-projects h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.project-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+  font-size: 24px;
+  color: #333;
+}
+
+.project-card p {
+  font-size: 16px;
+  color: #666;
+}
+
+.read-more {
+  font-size: 18px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.read-more:hover {
   text-decoration: underline;
 }
