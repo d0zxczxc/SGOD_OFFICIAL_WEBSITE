@@ -28,8 +28,7 @@ header {
   width: 100%;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  padding: 10px 20px; /* Add padding around the navbar */
-  
+  padding: 10px 20px;
 }
 
 .logo {
@@ -65,7 +64,7 @@ nav a:hover {
 
 .hero {
   background: url('bg.jpg') no-repeat center center/cover;
-  min-height: 120vh; /* Increased height for a longer page */
+  min-height: 120vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -113,126 +112,6 @@ nav a:hover {
   color: #333;
   line-height: 1.5;
 }
-
-
-
-
-.documents {
-  padding: 50px;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-
-.document {
-  margin: 30px 0;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.document h3 {
-  font-size: 24px;
-  color: #333;
-}
-
-.document p {
-  font-size: 16px;
-  color: #666;
-}
-
-.download-link {
-  margin-top: 10px;
-  font-size: 18px;
-  color: #007bff;
-  text-decoration: none;
-}
-
-.download-link:hover {
-  text-decoration: underline;
-}
-
-/* Footer Styling */
-footer {
-  background-color: #f1f1f1;
-  padding: 30px 40px;
-  text-align: center;
-  margin-top: 50px;
-}
-
-.footer-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.footer-logo {
-  width: 300px;
-  margin-right: 20px;
-}
-
-footer p {
-  max-width: 800px;
-  font-size: 16px;
-  color: #333;
-  line-height: 1.5;
-  text-align: justify;
-  margin: 0;
-}
-
-
-
-/* About Page Styling */
-.about-section {
-  padding: 100px 40px;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-
-.about-section h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.about-section p {
-  font-size: 18px;
-  color: #555;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Footer Styling for About Page (same as the homepage footer) */
-footer {
-  background-color: #f1f1f1;
-  padding: 30px 40px;
-  text-align: center;
-  margin-top: 50px;
-}
-
-.footer-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.footer-logo {
-  width: 300px;
-  margin-right: 20px;
-}
-
-footer p {
-  max-width: 800px;
-  font-size: 16px;
-  color: #333;
-  line-height: 1.5;
-  text-align: justify;
-  margin: 0;
-}
-
 
 /* Research Section */
 .research-abstracts {
@@ -326,7 +205,6 @@ footer p {
   text-decoration: underline;
 }
 
-
 /* Action and Basic Research Section */
 .action-research-section {
   padding: 50px;
@@ -368,7 +246,7 @@ footer p {
 }
 
 .project-card {
-  background-color: #fff;
+  background-color: #f4f4f4;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -392,4 +270,66 @@ footer p {
 
 .read-more:hover {
   text-decoration: underline;
+}
+
+/* About Page Styling */
+.about-section {
+  padding: 100px 40px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.about-section h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-section p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #f9f9f9; /* Updated from #f1f1f1 */
+  padding: 30px 40px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  width: 300px;
+  margin-right: 20px;
+}
+
+footer p {
+  max-width: 800px;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+  text-align: justify;
+  margin: 0;
+}
+
+/* Remove white space or override background */
+.documents + footer {
+  background-color: #d8d6d6 !important;
+  margin-top: 0;
+  padding-top: 50px;
+}
+
+/* Optional: Reset any outer container that may cause the line */
+body > div:last-child {
+  background-color: #f9f9f9 !important;
 }
