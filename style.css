@@ -57,8 +57,9 @@ header {
 }
 
 .logo img {
-  height: 40px;
-  margin-right: 10px;
+  height: 70px;
+  margin-left: 10px;
+  margin-right: 100px;
 }
 
 .logo span {
