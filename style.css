@@ -1,3 +1,4 @@
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +11,7 @@ body, html {
   margin-bottom: 100px; /* Add space at the bottom if needed */
 }
 
+/* Hero Overlay Title */
 .overlay h1 {
   color: rgb(255, 255, 255);
   font-size: 80px;
@@ -24,10 +26,10 @@ body, html {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.1),
                0 0 20px rgba(255, 255, 255, 0.2),
                0 0 30px rgba(255, 255, 255, 0.3);
-  transform: scale(1.01); /* slight zoom to make the glow feel natural */
+  transform: scale(1.01);
 }
 
-
+/* Navbar */
 header {
   position: absolute;
   width: 100%;
@@ -45,7 +47,7 @@ header {
   justify-content: space-between;
   width: 100%;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 10px 20px;
 }
 
@@ -63,6 +65,7 @@ header {
   font-size: 20px;
   color: white;
   font-weight: bold;
+  line-height: 1;
 }
 
 nav {
@@ -80,9 +83,10 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* Hero Section */
 .hero {
   background: url('Assets/bg.jpg') no-repeat center center/cover;
-  min-height: 100vh; /* Changed to 100vh */
+  min-height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -93,15 +97,6 @@ nav a:hover {
   background-color: rgba(0, 0, 0, 0.4);
   padding: 40px;
   border-radius: 10px;
-}
-
-.overlay h1 {
-  color: rgb(255, 255, 255);
-  font-size: 80px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 1.2;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 /* Clock Styling */
@@ -118,7 +113,7 @@ nav a:hover {
   text-align: center;
 }
 
-/* Add extra content to lengthen the page */
+/* Extra Content Placeholder */
 .extra-content {
   background-color: #f4f4f4;
   padding: 50px;
@@ -146,8 +141,10 @@ nav a:hover {
 
 .abstracts-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
+  justify-items: center;
+  padding: 20px;
 }
 
 .abstract-card {
@@ -177,7 +174,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Important Documents Section */
+/* Documents Section */
 .documents {
   padding: 50px;
   background-color: #f9f9f9;
@@ -280,17 +277,7 @@ nav a:hover {
   color: #666;
 }
 
-.read-more {
-  font-size: 18px;
-  color: #007bff;
-  text-decoration: none;
-}
-
-.read-more:hover {
-  text-decoration: underline;
-}
-
-/* About Page Styling */
+/* About Page Section */
 .about-section {
   padding: 100px 40px;
   background-color: #f9f9f9;
@@ -311,81 +298,64 @@ nav a:hover {
   margin: 0 auto;
 }
 
-/* Footer Styling */
+/* ✅ Updated Footer Styling to match first screenshot */
 footer {
-  background-color: #f9f9f9; /* Updated from #f1f1f1 */
+  /* dark gray like the first image(THIS IS FOR ABOUT.HTML AND RESEARCH.HTML*/
+  background-color: #9e9b9b; 
+  color: #fff;
   padding: 30px 40px;
-  text-align: center;
-  margin-top: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
 }
 
 .footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
 .footer-logo {
-  width: 300px;
-  margin-right: 20px;
+  width: 120px;
+  height: auto;
+  flex-shrink: 0;
 }
 
 footer p {
-  max-width: 800px;
+  flex: 1;
   font-size: 16px;
-  color: #333;
-  line-height: 1.5;
+  line-height: 1.6;
   text-align: justify;
+  color: #f0f0f0;
   margin: 0;
 }
 
-/* Remove white space or override background */
+/* Optional: force dark footer in some pages */ 
+
+/*Index HTML FOOTER IS HERE*/
 .documents + footer {
-  background-color: #d8d6d6 !important;
+  background-color: #9e9b9b !important;
   margin-top: 0;
   padding-top: 50px;
 }
 
-/* Optional: Reset any outer container that may cause the line */
-body > div:last-child {
-  background-color: #f9f9f9 !important;
-}
-
-/* Properly align logo + remove underline */
-.logo a {
-  display: flex;
-  align-items: center;
-  text-decoration: none; /* Removes underline */
-}
-
-/* Optional vertical tweak for text next to logo */
-.logo span {
-  font-size: 20px;
-  color: white;
-  font-weight: bold;
-  line-height: 1;
-}
-
-/* Align logo text and remove underline */
+/* Logo + Navbar tweaks */
 .logo a {
   display: flex;
   align-items: center;
   text-decoration: none;
 }
 
-.logo span {
-  font-size: 20px;
-  color: white;
-  font-weight: bold;
-  line-height: 1;
-}
-
+/* Divider */
 .section-divider {
   height: 2px;
-  background-color: black;       /* solid black divider */
-  background: #f9f9f9;           /* background around it */
-  padding: 20px 0;               /* vertical spacing */
+  background-color: black;
+  background: #f9f9f9;
+  padding: 20px 0;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -400,33 +370,12 @@ body > div:last-child {
   border-radius: 2px;
 }
 
+/* Background color fix */
 body {
-  background-color: #f9f9f9; /* ✅ ensures full page has consistent background */
-}
-
-.about-section {
-  padding: 100px 40px;
   background-color: #f9f9f9;
-  text-align: center;
 }
 
-footer {
-  background-color: #f9f9f9; /* just to be sure */
-  padding: 30px 40px;
-  text-align: center;
-  margin-top: 0; /* remove top gap if there was one */
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-
-
-
-/* From Uiverse.io by Smit-Prajapati */ 
+/* Uiverse Card Animation */
 .parent {
   width: 300px;
   padding: 20px;
@@ -435,7 +384,6 @@ footer {
 
 .card {
   padding-top: 50px;
-  /* border-radius: 10px; */
   border: 3px solid rgb(255, 255, 255);
   transform-style: preserve-3d;
   background: linear-gradient(135deg,#0000 18.75%,#f3f3f3 0 31.25%,#0000 0),
@@ -455,8 +403,6 @@ footer {
 
 .content-box {
   background: #4169E1;
-  /* border-radius: 10px 100px 10px 10px; */
-  transition: all 0.5s ease-in-out;
   padding: 60px 25px 25px 25px;
   transform-style: preserve-3d;
 }
@@ -466,7 +412,6 @@ footer {
   color: white;
   font-size: 25px;
   font-weight: 900;
-  transition: all 0.5s ease-in-out;
   transform: translate3d(0px, 0px, 50px);
 }
 
@@ -479,7 +424,6 @@ footer {
   font-size: 12px;
   font-weight: 700;
   color: #f2f2f2;
-  transition: all 0.5s ease-in-out;
   transform: translate3d(0px, 0px, 30px);
 }
 
@@ -495,10 +439,8 @@ footer {
   font-size: 9px;
   text-transform: uppercase;
   color: rgb(1, 2, 3);
-  /* border-radius: 5px; */
   background: white;
   padding: 0.5rem 0.7rem;
-  transition: all 0.5s ease-in-out;
   transform: translate3d(0px, 0px, 20px);
 }
 
@@ -514,7 +456,6 @@ footer {
   width: 60px;
   background: white;
   border: 1px solid rgb(7, 185, 255);
-  /* border-radius: 10px; */
   padding: 10px;
   transform: translate3d(0px, 0px, 80px);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 17px 10px -10px;
@@ -535,12 +476,4 @@ footer {
   font-size: 20px;
   font-weight: 900;
   color: rgb(4, 193, 250);
-}
- 
-.abstracts-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  justify-items: center;
-  padding: 20px;
 }
