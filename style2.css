@@ -125,14 +125,14 @@ body {
 
 /* Slideshow Container (white background for the slideshow) */
 .slideshow-container {
-    max-width: 500px; /* Controls the width of the slideshow */
+    max-width: 650px; /* Controls the width of the slideshow */
     position: relative;
-    margin: 20px; /* Moves the slideshow slightly to the left */
+    margin: auto; 
     padding: 20px;
     background-color: white; /* White background for the slideshow */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: add some shadow for separation */
     border-radius: 10px; /* Optional: rounded corners */
-    float: left; /* Ensures the slideshow stays on the left */
+    float: center; /* Ensures the slideshow stays on the left */
     margin-bottom: 20px; /* Adds some space below the slideshow */
     
 }
