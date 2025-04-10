@@ -1,460 +1,495 @@
-/* GLOBAL RESET & BASE STYLES*/
-   * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Bookman Old Style', serif;
-  }
-  
-  body, html {
-    height: 100%;
-    margin-bottom: 100px;
-    background-color: #f9f9f9;
-  }
-  
-  /* HERO SECTION STYLING*/
-  .hero {
-    background: url('Assets/b.jpg') no-repeat center center/cover;
-    min-height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .overlay {
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 40px;
-    border-radius: 10px;
-  }
-  
-  .overlay h1 {
-    color: #f4f4f4;
-    font-size: 80px;
-    text-align: center;
-    line-height: 1.2;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    transition: text-shadow 0.3s ease, transform 0.3s ease;
-  }
-  
-  .overlay h1:hover {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1),
-                 0 0 20px rgba(255, 255, 255, 0.2),
-                 0 0 30px rgba(255, 255, 255, 0.3);
-    transform: scale(1.01);
-  }
-  
-  /*  NAVIGATION BAR & LOGO */
-  header {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo img {
-    height: 70px;
-    margin-left: 10px;
-    margin-right: 100px;
-  }
-  
-  .logo span {
-    font-size: 20px;
-    color: white;
-    line-height: 1;
-  }
-  
-  nav {
-    display: flex;
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 30px;
-    font-size: 16px;
-  }
-  
-  nav a:hover {
-    text-decoration: underline;
-  }
-  
-  /* TOP-RIGHT CLOCK / DATE*/
-  #philippines-datetime {
-    position: absolute;
-    top: 0px;
-    right: 5px;
-    color: white;
-    font-size: 12px;
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    z-index: 999;
-    white-space: nowrap;
-  }
-  
-  /* EXTRA CONTENT SECTION  */
-  .extra-content {
-    background-color: #f4f4f4;
-    padding: 50px;
-    text-align: center;
-    font-size: 20px;
-  }
-  
-  .extra-content p {
-    color: #333;
-    line-height: 1.5;
-  }
-  
-  /* RESEARCH ABSTRACTS SECTION*/
-  .research-abstracts {
-    padding: 50px;
-    background-color: #f9f9f9;
-    text-align: center;
-  }
-  
-  .research-abstracts h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-    color: #333;
-  }
-  
-  .abstracts-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    justify-items: center;
-    padding: 20px;
-  }
-  
-  .abstract-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .abstract-card h3 {
-    font-size: 24px;
-    color: #333;
-  }
-  
-  .abstract-card p {
-    font-size: 16px;
-    color: #666;
-  }
-  
-  .read-more {
-    font-size: 18px;
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .read-more:hover {
-    text-decoration: underline;
-  }
-  
-  /*DOCUMENT DOWNLOAD SECTION*/
-  .documents {
-    padding: 50px;
-    background-color: #f9f9f9;
-    text-align: center;
-  }
-  
-  .documents h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-    color: #333;
-  }
-  
-  .document-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 20px;
-  }
-  
-  .document-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .document-card h3 {
-    font-size: 24px;
-    color: #333;
-  }
-  
-  .document-card p {
-    font-size: 16px;
-    color: #666;
-  }
-  
-  .download-link {
-    font-size: 18px;
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .download-link:hover {
-    text-decoration: underline;
-  }
-  
-  /*ACTION RESEARCH SECTION */
-  .action-research-section {
-    padding: 50px;
-    background-color: #f9f9f9;
-    text-align: center;
-  }
-  
-  .action-research-section h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .action-research-section p {
-    font-size: 18px;
-    color: #555;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto 40px;
-  }
-  
-  /* RESEARCH PROJECTS GRID */
-  .research-projects {
-    padding: 50px;
-    background-color: #f9f9f9;
-    text-align: center;
-  }
-  
-  .research-projects h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .projects-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-  }
-  
-  .project-card {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .project-card h3 {
-    font-size: 24px;
-    color: #333;
-  }
-  
-  .project-card p {
-    font-size: 16px;
-    color: #666;
-  }
-  
-  /*ABOUT SECTION */
-  .about-section {
-    padding: 100px 40px;
-    background-color: #f9f9f9;
-    text-align: center;
-  }
-  
-  .about-section h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .about-section p {
-    font-size: 18px;
-    color: #555;
-    line-height: 1.8;
-    text-align: center;
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 0 10px;
-  }
-  
-  /* FOOTER SECTION*/
-  footer {
-    background-color: #9e9b9b;
-    color: #fff;
-    padding: 30px 40px;
-    width: 100%;
-    box-sizing: border-box;
-    text-align: left;
-  }
-  
-  .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .footer-logo {
-    width: 120px;
-    height: auto;
-    flex-shrink: 0;
-  }
-  
-  footer p {
-    flex: 1;
-    font-size: 16px;
-    line-height: 1.6;
-    text-align: justify;
-    color: #f0f0f0;
-    margin: 0;
-  }
-  
-  .documents + footer {
-    background-color: #9e9b9b !important;
-    margin-top: 0;
-    padding-top: 50px;
-  }
-  
-  /*DIVIDER BAR BETWEEN SECTIONS */
-  .section-divider {
-    height: 2px;
-    background-color: black;
-    background: #f9f9f9;
-    padding: 20px 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .section-divider::before {
-    content: "";
-    display: block;
-    width: 80%;
-    height: 2px;
-    background-color: black;
-    border-radius: 2px;
-  }
-  
-  /*SPECIAL CARD ANIMATION (Uiverse-style)*/
-  .parent {
-    width: 300px;
-    padding: 20px;
-    perspective: 1000px;
-  }
-  
-  .card {
-    padding-top: 50px;
-    border: 3px solid #fff;
-    transform-style: preserve-3d;
-    background: linear-gradient(135deg,#0000 18.75%,#f3f3f3 0 31.25%,#0000 0),
-                repeating-linear-gradient(45deg,#f3f3f3 -6.25% 6.25%,#ffffff 0 18.75%);
-    background-size: 60px 60px;
-    background-position: 0 0, 0 0;
-    background-color: #f0f0f0;
-    width: 100%;
-    box-shadow: rgba(142, 142, 142, 0.3) 0px 30px 30px -10px;
-    transition: all 0.5s ease-in-out;
-  }
-  
-  .card:hover {
-    transform: rotateY(10deg) rotateX(5deg);
-    box-shadow: rgba(100, 100, 100, 0.4) 0px 40px 40px -10px;
-  }
-  
-  .content-box {
-    background: #4169E1;
-    padding: 60px 25px 25px 25px;
-    transform-style: preserve-3d;
-  }
-  
-  .content-box .card-title {
-    display: inline-block;
-    color: white;
-    font-size: 25px;
-    transform: translate3d(0px, 0px, 50px);
-  }
-  
-  .content-box .card-content {
-    margin-top: 10px;
-    font-size: 12px;
-    color: #f2f2f2;
-    transform: translate3d(0px, 0px, 30px);
-  }
-  
-  .content-box .see-more {
-    cursor: pointer;
-    margin-top: 1rem;
-    display: inline-block;
-    font-size: 9px;
-    text-transform: uppercase;
-    color: #010203;
-    background: white;
-    padding: 0.5rem 0.7rem;
-    transform: translate3d(0px, 0px, 20px);
-  }
-  
-  /* Optional Floating Date Box (not used)*/
-  .date-box {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    height: 60px;
-    width: 60px;
-    background: white;
-    border: 1px solid rgb(7, 185, 255);
-    padding: 10px;
-    transform: translate3d(0px, 0px, 80px);
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 17px 10px -10px;
-  }
-  
-  .date-box span {
-    display: block;
-    text-align: center;
-  }
-  
-  .date-box .month {
-    color: rgb(4, 193, 250);
-    font-size: 9px;
-  }
-  
-  .date-box .date {
-    font-size: 20px;
-    color: rgb(4, 193, 250);
-  }
-  
-  /* COPYRIGHT FOOTER BAR*/
-  .rights {
-    background-color: #005c78;
-    color: #fff;
-    font-size: 14px;
-    text-align: center;
-    padding: 15px 10px;
-    letter-spacing: 0.3px;
-  }
-  
-  
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: Bookman Old Style, sans-serif;
+  height: 100%;
+  margin-bottom: 100px; /* Add space at the bottom if needed */
+}
+
+/* Hero Overlay Title */
+.overlay h1 {
+  color: #f4f4f4;
+  font-size: 80px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  transition: text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.overlay h1:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.1),
+               0 0 20px rgba(255, 255, 255, 0.2),
+               0 0 30px rgba(255, 255, 255, 0.3);
+  transform: scale(1.01);
+}
+
+/* Navbar */
+header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 70px;
+  margin-left: 10px;
+  margin-right: 100px;
+}
+
+.logo span {
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  line-height: 1;
+}
+
+nav {
+  display: flex;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 30px;
+  font-size: 16px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background: url('Assets/bg.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+/* Clock Styling */
+#philippines-clock {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  background-color: rgba(35, 13, 176, 0.7);
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Extra Content Placeholder */
+.extra-content {
+  background-color: #f4f4f4;
+  padding: 50px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.extra-content p {
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Research Section */
+.research-abstracts {
+  padding: 50px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.research-abstracts h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.abstracts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  padding: 20px;
+}
+
+.abstract-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.abstract-card h3 {
+  font-size: 24px;
+  color: #333;
+}
+
+.abstract-card p {
+  font-size: 16px;
+  color: #666;
+}
+
+.read-more {
+  font-size: 18px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Documents Section */
+.documents {
+  padding: 50px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.documents h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.document-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.document-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.document-card h3 {
+  font-size: 24px;
+  color: #333;
+}
+
+.document-card p {
+  font-size: 16px;
+  color: #666;
+}
+
+.download-link {
+  font-size: 18px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.download-link:hover {
+  text-decoration: underline;
+}
+
+/* Action and Basic Research Section */
+.action-research-section {
+  padding: 50px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.action-research-section h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.action-research-section p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+/* Research Projects Grid */
+.research-projects {
+  padding: 50px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.research-projects h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.project-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+  font-size: 24px;
+  color: #333;
+}
+
+.project-card p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* About Page Section */
+.about-section {
+  padding: 100px 40px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.about-section h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-section p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.8;
+  font-weight: bold;
+  text-align: center;
+  max-width: 1000px;
+  margin: 20px auto;   /* spacing between paragraphs only */
+  padding: 0 10px;     /* light left/right breathing room */
+}
+
+
+
+/* ✅ Updated Footer Styling to match first screenshot */
+footer {
+  /* dark gray like the first image(THIS IS FOR ABOUT.HTML AND RESEARCH.HTML*/
+  background-color: #9e9b9b; 
+  color: #fff;
+  padding: 30px 40px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-logo {
+  width: 120px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+footer p {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+  color: #f0f0f0;
+  margin: 0;
+}
+
+/* Optional: force dark footer in some pages */ 
+
+/*Index HTML FOOTER IS HERE*/
+.documents + footer {
+  background-color: #9e9b9b !important;
+  margin-top: 0;
+  padding-top: 50px;
+}
+
+/* Logo + Navbar tweaks */
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Divider */
+.section-divider {
+  height: 2px;
+  background-color: black;
+  background: #f9f9f9;
+  padding: 20px 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.section-divider::before {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 2px;
+  background-color: black;
+  border-radius: 2px;
+}
+
+/* Background color fix */
+body {
+  background-color: #f9f9f9;
+}
+
+/* Uiverse Card Animation */
+.parent {
+  width: 300px;
+  padding: 20px;
+  perspective: 1000px;
+}
+
+.card {
+  padding-top: 50px;
+  border: 3px solid rgb(255, 255, 255);
+  transform-style: preserve-3d;
+  background: linear-gradient(135deg,#0000 18.75%,#f3f3f3 0 31.25%,#0000 0),
+      repeating-linear-gradient(45deg,#f3f3f3 -6.25% 6.25%,#ffffff 0 18.75%);
+  background-size: 60px 60px;
+  background-position: 0 0, 0 0;
+  background-color: #f0f0f0;
+  width: 100%;
+  box-shadow: rgba(142, 142, 142, 0.3) 0px 30px 30px -10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.card:hover {
+  transform: rotateY(10deg) rotateX(5deg);
+  box-shadow: rgba(100, 100, 100, 0.4) 0px 40px 40px -10px;
+}
+
+.content-box {
+  background: #4169E1;
+  padding: 60px 25px 25px 25px;
+  transform-style: preserve-3d;
+}
+
+.content-box .card-title {
+  display: inline-block;
+  color: white;
+  font-size: 25px;
+  font-weight: 900;
+  transform: translate3d(0px, 0px, 50px);
+}
+
+.content-box .card-title:hover {
+  transform: translate3d(0px, 0px, 60px);
+}
+
+.content-box .card-content {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #f2f2f2;
+  transform: translate3d(0px, 0px, 30px);
+}
+
+.content-box .card-content:hover {
+  transform: translate3d(0px, 0px, 60px);
+}
+
+.content-box .see-more {
+  cursor: pointer;
+  margin-top: 1rem;
+  display: inline-block;
+  font-weight: 900;
+  font-size: 9px;
+  text-transform: uppercase;
+  color: rgb(1, 2, 3);
+  background: white;
+  padding: 0.5rem 0.7rem;
+  transform: translate3d(0px, 0px, 20px);
+}
+
+.content-box .see-more:hover {
+  transform: translate3d(0px, 0px, 60px);
+}
+
+.date-box {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 60px;
+  width: 60px;
+  background: white;
+  border: 1px solid rgb(7, 185, 255);
+  padding: 10px;
+  transform: translate3d(0px, 0px, 80px);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 17px 10px -10px;
+}
+
+.date-box span {
+  display: block;
+  text-align: center;
+}
+
+.date-box .month {
+  color: rgb(4, 193, 250);
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.date-box .date {
+  font-size: 20px;
+  font-weight: 900;
+  color: rgb(4, 193, 250);
+}
+
+.rights {
+  background-color: #005c78; /* or match your footer like #9e9b9b */
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  padding: 15px 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.3px;
+}
