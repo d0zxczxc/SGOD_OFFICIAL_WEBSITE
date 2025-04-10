@@ -1,0 +1,122 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .header {
+    background-color: #0066b3;
+    color: white;
+    padding: 20px;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .header img {
+    max-height: 80px;
+  }
+  
+  .header-text {
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .header h2 {
+    margin: 5px 0 0;
+    font-size: 18px;
+    font-weight: normal;
+  }
+  
+  .contact-container {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    padding: 30px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  
+  .contact-section {
+    margin-bottom: 25px;
+  }
+  
+  .contact-section h3 {
+    color: #0066b3;
+    border-bottom: 2px solid #0066b3;
+    padding-bottom: 8px;
+    margin-top: 0;
+  }
+  
+  .contact-item {
+    display: flex;
+    margin-bottom: 15px;
+  }
+  
+  .icon {
+    width: 30px;
+    color: #0066b3;
+    margin-right: 15px;
+    text-align: center;
+  }
+  
+  .staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .staff-card {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding: 15px;
+    border-left: 4px solid #0066b3;
+  }
+  
+  .staff-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #0066b3;
+  }
+  
+  .staff-position {
+    font-style: italic;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .staff-contact {
+    font-size: 14px;
+  }
+  
+  .footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #666;
+    font-size: 14px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .header {
+      flex-direction: column;
+    }
+    
+    .header img {
+      margin-bottom: 15px;
+    }
+    
+    .staff-grid {
+      grid-template-columns: 1fr;
+    }
+  }
