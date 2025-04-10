@@ -139,11 +139,13 @@ body {
 .mySlides1 img, .mySlides2 img {
     width: 100%; /* Ensure the images fill the container */
     vertical-align: middle;
-    border-radius: 10px; /* Rounded corners for slideshow images */
-}
-
-/* Text in the slideshow (caption below the image) */
-.text {
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 14px;
+    padding: 8px 12px;
     position: absolute;
     bottom: 10px;
     left: 0;
@@ -213,6 +215,31 @@ div[style="text-align:center"] {
     .numbertext {
         font-size: 10px; /* Reduce font size for mobile */
     }
+}
+
+/* Container for date and time */
+#philippines-datetime {
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  font-family: 'Bookman Old Style', serif;
+  font-size: 12px;
+  color: white;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  white-space: nowrap;
+  z-index: 999;
+}
+
+/* Date styling */
+#philippines-date {
+  font-weight: normal;
+}
+
+/* Time styling */
+#philippines-clock {
+  font-weight: normal;
 }
 
 /* Optional: Customizing the text's styling */
