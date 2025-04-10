@@ -302,6 +302,20 @@ nav a:hover {
   padding: 0 10px;     /* light left/right breathing room */
 }
 
+html, body {
+  height: 100%; /* Ensure full height for both HTML and body */
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures that content is pushed to the top, and footer stays at the bottom */
+}
+
+main {
+  flex-grow: 1; /* This makes the main content area take up all available space */
+}
 
 
 /* ✅ Updated Footer Styling to match first screenshot */
@@ -339,6 +353,7 @@ footer p {
   color: #f0f0f0;
   margin: 0;
 }
+
 
 /* Optional: force dark footer in some pages */ 
 
