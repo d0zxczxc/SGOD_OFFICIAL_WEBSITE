@@ -103,8 +103,8 @@ nav a:hover {
 /* Clock Styling */
 #philippines-clock {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 0px;
+  right: 0px;
   background-color: rgba(35, 13, 176, 0.7);
   color: white;
   padding: 10px;
