@@ -10,8 +10,15 @@ function updateClock() {
 
   const currentTime = new Date().toLocaleTimeString('en-US', options);
   document.getElementById("philippines-clock").innerText = currentTime;
+}// for downloading
+function downloadSIPs() {
+  const link = document.createElement('a');
+  link.href = 'SIPs.jpg'; // Path to your file
+  link.download = 'SIPs.jpg'; // Desired filename on download
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 }
-
 // Call the updateClock function every second
 setInterval(updateClock, 1000);
 
