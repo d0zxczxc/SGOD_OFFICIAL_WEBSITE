@@ -121,11 +121,9 @@ body {
     }
   }
 
-
-
 /* Slideshow Container (white background for the slideshow) */
 .slideshow-container {
-    max-width: 550px; /* Controls the width of the slideshow */
+    max-width: 650px; /* Controls the width of the slideshow */
     position: relative;
     margin: auto;
     padding: 20px;
@@ -139,13 +137,11 @@ body {
 .mySlides1 img, .mySlides2 img {
     width: 100%; /* Ensure the images fill the container */
     vertical-align: middle;
-  }
-  
-  /* Caption text */
-  .text {
-    color: #f2f2f2;
-    font-size: 14px;
-    padding: 8px 12px;
+    border-radius: 10px; /* Rounded corners for slideshow images */
+}
+
+/* Text in the slideshow (caption below the image) */
+.text {
     position: absolute;
     bottom: 10px;
     left: 0;
@@ -216,6 +212,18 @@ div[style="text-align:center"] {
         font-size: 10px; /* Reduce font size for mobile */
     }
 }
+
+/* Optional: Customizing the text's styling */
+.text {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+/* Optional: For a better dot hover effect */
+.dot1:hover, .dot2:hover {
+    background-color: #555;
+}
+
 
 /* Container for date and time */
 #philippines-datetime {

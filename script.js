@@ -41,10 +41,11 @@ setInterval(updateClock, 1000);
 updateClock();
 
 
+let slideIndex1 = 0;
+let slideIndex2 = 0;
 
-
-let slideIndex = 0;
-showSlides();
+showSlides1(); // For the first slideshow (Seminar)
+showSlides2(); // For the second slideshow (BERF)
 
 function showSlides1() {
   let slides1 = document.getElementsByClassName("mySlides1");
@@ -59,7 +60,7 @@ function showSlides1() {
   }
   slides1[slideIndex1 - 1].style.display = "block";  
   dots1[slideIndex1 - 1].className += " active";
-  setTimeout(showSlides1, 3000); // Change slide every 2 seconds
+  setTimeout(showSlides1, 2500); // Change slide every 2 seconds
 }
 
 function showSlides2() {
@@ -73,13 +74,8 @@ function showSlides2() {
   for (let i = 0; i < dots2.length; i++) {
     dots2[i].className = dots2[i].className.replace(" active", "");
   }
-  
-  // Display the current slide and add the active class to the corresponding dot
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  
-  // Change the slide every 2 seconds
-  setTimeout(showSlides, 4000); 
+  slides2[slideIndex2 - 1].style.display = "block";  
+  dots2[slideIndex2 - 1].className += " active";
+  setTimeout(showSlides2, 2500); // Change slide every 2 seconds
 }
-
 
