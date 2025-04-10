@@ -1,16 +1,30 @@
-// Function to update the clock
+// Function to update the clock and date
 function updateClock() {
-  const options = { 
+  const timeOptions = { 
     timeZone: 'Asia/Manila', 
     hour: '2-digit', 
     minute: '2-digit', 
     second: '2-digit', 
     hour12: true 
   };
+  
+  const dateOptions = {
+    timeZone: 'Asia/Manila',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    weekday: 'long'
+  };
 
-  const currentTime = new Date().toLocaleTimeString('en-US', options);
+  const now = new Date();
+  const currentTime = now.toLocaleTimeString('en-US', timeOptions);
+  const currentDate = now.toLocaleDateString('en-US', dateOptions);
+
   document.getElementById("philippines-clock").innerText = currentTime;
-}// for downloading
+  document.getElementById("philippines-date").innerText = currentDate;
+}
+
+// For downloading SIPs
 function downloadSIPs() {
   const link = document.createElement('a');
   link.href = 'SIPs.jpg'; // Path to your file
@@ -19,15 +33,14 @@ function downloadSIPs() {
   link.click();
   document.body.removeChild(link);
 }
+
 // Call the updateClock function every second
 setInterval(updateClock, 1000);
 
 // Initialize the clock
 updateClock();
 
-
-
-
+// Slideshow functionality
 let slideIndex = 0;
 showSlides();
 
@@ -50,9 +63,9 @@ function showSlides() {
   }
   
   // Display the current slide and add the active class to the corresponding dot
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
+  slides[slideIndex - 1].style.display = "block";  
+  dots[slideIndex - 1].className += " active";
   
-  // Change the slide every 2 seconds
+  // Change the slide every 4 seconds
   setTimeout(showSlides, 4000); 
 }
