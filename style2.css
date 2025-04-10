@@ -123,82 +123,61 @@ body {
 
 
 
-/* Slideshow container */
+/* Slideshow Container (white background for the slideshow) */
 .slideshow-container {
-    max-width: 800px; /* Make the slideshow smaller */
+    max-width: 800px;
     position: relative;
-    margin: auto;
-    z-index: 1; /* Ensure slideshow is in front */
+    margin: 40px auto; /* Center the slideshow */
+    background-color: white; /* White background for the slideshow */
+    padding: 20px; /* Padding inside the slideshow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: add some shadow for separation */
+    border-radius: 10px; /* Optional: rounded corners */
   }
   
-  /* The hero section background */
-  .hero {
-    background: url('assets/bg.jpg') no-repeat center center/cover; /* Update the path to your background image */
-    min-height: 100vh; /* Make sure it covers the entire viewport */
-    position: relative;
-    z-index: 0; /* Ensure background is behind the content */
-  }
-  
-  /* Slideshow images */
-  .mySlides {
-    display: none;
-  }
-  
-  img {
-    width: 100%; /* Ensure image scales within the smaller container */
+  .mySlides img {
+    width: 100%; /* Ensure the images fill the container */
     vertical-align: middle;
+    border-radius: 10px; /* Rounded corners for slideshow images */
   }
   
-  /* Caption text */
+  /* Text in the slideshow */
   .text {
-    color: #f2f2f2;
-    font-size: 14px;
-    padding: 8px 12px;
     position: absolute;
-    bottom: 8px;
+    bottom: 10px;
     width: 100%;
     text-align: center;
-    z-index: 2; /* Make sure the caption text stays on top */
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5); /* Transparent background for text */
   }
   
-  /* Number text (1/3 etc) */
   .numbertext {
-    color: #f2f2f2;
+    color: white;
     font-size: 12px;
     padding: 8px 12px;
     position: absolute;
     top: 0;
-    z-index: 2; /* Ensure number text stays on top */
   }
   
-  /* The dots/bullets/indicators */
-  .dot {
-    height: 12px;
-    width: 12px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-  
-  .active {
-    background-color: #717171;
-  }
-  
-  /* Fading animation */
+  /* Fade transition for images */
   .fade {
     animation-name: fade;
     animation-duration: 1.5s;
   }
   
   @keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
+    from { opacity: .4 }
+    to { opacity: 1 }
   }
   
-  /* On smaller screens, decrease text size */
-  @media only screen and (max-width: 300px) {
-    .text {font-size: 11px}
-  }
+  /* Adjust for smaller screens */
+  @media only screen and (max-width: 768px) {
+    .hero {
+      height: 40vh; /* Make hero section smaller on mobile */
+    }
   
+    .overlay h1 {
+      font-size: 30px;
+    }
+  }
