@@ -261,3 +261,7 @@ div[style="text-align:center"] {
     background-color: #555;
 }
 
+#enrollmentChart {
+  max-width: 400px;
+  margin: 0 auto;
+}
