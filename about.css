@@ -1,0 +1,70 @@
+/* Container for the employee profiles */
+.employee-profiles {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  /* Title for the section */
+  .employee-profiles h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  /* Flex container for the profile cards */
+  .profile-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Individual profile card */
+  .profile-card {
+    width: 220px; /* Set a fixed width */
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensures no content spills over the card edges */
+    transition: transform 0.3s ease;
+  }
+  
+  /* Profile image styling */
+  .profile-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /* Ensures the image fits within the box while maintaining its aspect ratio */
+    border-bottom: 2px solid #ddd; /* Adds a border below the image */
+  }
+  
+  /* Profile description styling */
+  .profile-description {
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .profile-description h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .profile-description p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  /* Hover effect for the cards */
+  .profile-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design: Adjust the profile cards layout on smaller screens */
+  @media only screen and (max-width: 768px) {
+    .profile-cards {
+      flex-direction: column; /* Stack the cards vertically on smaller screens */
+      align-items: center;
+    }
+  }
+  
