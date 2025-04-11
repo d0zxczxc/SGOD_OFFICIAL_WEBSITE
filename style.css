@@ -161,51 +161,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Documents Section */
-.documents {
-  padding: 50px;
-  background-color: #f9f9f9;
-  text-align: center;
-}
 
-.documents h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
-  color: #333;
-}
-
-.document-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 20px;
-}
-
-.document-card {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.document-card h3 {
-  font-size: 24px;
-  color: #333;
-}
-
-.document-card p {
-  font-size: 16px;
-  color: #666;
-}
-
-.download-link {
-  font-size: 18px;
-  color: #007bff;
-  text-decoration: none;
-}
-
-.download-link:hover {
-  text-decoration: underline;
-}
 
 /* Action and Basic Research Section */
 .action-research-section {

@@ -1,0 +1,135 @@
+/* Documents Section */
+.documents {
+    padding: 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .documents h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  .document-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .document-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .document-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .document-card h3 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .document-card p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .download-link {
+    font-size: 18px;
+    color: #007bff;
+    text-decoration: none;
+    text-align: left;
+  }
+  
+  .download-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Styling for Year sections */
+  .year-documents {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .year {
+    width: 48%;
+    text-align: left;
+  }
+  
+  .year h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .year p {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  /* Style for the document cards container */
+.document-cards {
+    display: flex;
+    flex-wrap: wrap; /* Allow the cards to wrap on smaller screens */
+    gap: 20px; /* Space between the cards */
+    justify-content: space-around; /* Center the cards */
+    margin-top: 20px; /* Add space above the cards */
+  }
+  
+  /* Style for individual document card */
+  .document-card {
+    flex: 1 1 200px; /* Allow flexibility in width, but minimum 200px width */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+  }
+  
+  /* Align title and description in document card */
+  .document-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .document-card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for download links */
+  .download-link {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  /* Hover effect */
+  .download-link:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  /* Focus effect for accessibility */
+  .download-link:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.6);
+  }
+  
