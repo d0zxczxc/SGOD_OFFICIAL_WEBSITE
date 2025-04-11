@@ -71,6 +71,7 @@ header {
 
 nav {
   display: flex;
+  align-items: center; /* This ensures vertical alignment */
 }
 
 nav a {
@@ -288,8 +289,6 @@ nav a:hover {
   padding: 0 10px;     /* light left/right breathing room */
 }
 
-
-
 /* ✅ Updated Footer Styling to match first screenshot */
 footer {
   /* dark gray like the first image(THIS IS FOR ABOUT.HTML AND RESEARCH.HTML*/
@@ -478,4 +477,210 @@ body {
   padding: 15px 10px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   letter-spacing: 0.3px;
+}
+
+/* ✅ BURGER DROPDOWN CONTAINER - ALIGNED WITH NAVBAR */
+.burger-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 30px;
+  z-index: 9999;
+  height: 100%;
+}
+
+/* ✅ MINIMAL STYLISH BURGER ICON */
+.burger-icon {
+  width: 24px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 4px 0;
+  transition: all 0.3s ease;
+}
+
+.burger-icon div {
+  width: 18px;
+  height: 2px;
+  background-color: white;
+  border-radius: 1px;
+  transition: all 0.3s ease;
+  transform-origin: left center;
+}
+
+/* Subtle hover effect */
+.burger-icon:hover div {
+  width: 22px;
+}
+
+/* Middle line slightly shorter for style */
+.burger-icon div:nth-child(2) {
+  width: 14px;
+}
+
+.burger-icon:hover div:nth-child(2) {
+  width: 18px;
+}
+
+/* ✅ YEAR DROPDOWN */
+.dropdown-menu-vertical {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  z-index: 999;
+  width: 180px;
+  list-style: none;
+  box-sizing: border-box;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Improved hover behavior with delay to prevent accidental closing */
+.burger-dropdown:hover .dropdown-menu-vertical,
+.dropdown-menu-vertical:hover,
+.dropdown-menu-vertical:focus-within,
+.dropdown-menu-vertical.active {
+  display: block;
+}
+
+/* ✅ YEAR ITEMS */
+.dropdown-menu-vertical li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.dropdown-menu-vertical li a {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  box-sizing: border-box;
+  transition: color 0.2s ease;
+}
+
+/* Enhanced hover effects with scale animation */
+.dropdown-menu-vertical li:hover {
+  background-color: #eaeaea;
+  transform: scale(1.02);
+}
+
+.dropdown-menu-vertical li:hover > a {
+  background-color: transparent;
+  color: #007bff; /* Blue color to indicate selection */
+}
+
+/* ✅ MONTH SUBMENU - POSITIONED NEXT TO YEAR MENU */
+.submenu-below {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: -182px; /* Position to the left of the year menu */
+  width: 180px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  list-style: none;
+  padding: 0;
+  box-sizing: border-box;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Show submenu on hover with better persistence */
+.dropdown-menu-vertical li:hover > .submenu-below,
+.submenu-below:hover,
+.submenu-below:focus-within {
+  display: block;
+}
+
+/* Add visual connection between menus */
+.dropdown-menu-vertical li:hover::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent #eaeaea;
+  z-index: 1001;
+}
+
+.submenu-below li {
+  width: 100%;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.submenu-below li a {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  box-sizing: border-box;
+  background-color: transparent;
+  transition: color 0.2s ease;
+}
+
+/* Enhanced hover effects for submenu items */
+.submenu-below li:hover {
+  background-color: #eaeaea;
+  transform: scale(1.02);
+}
+
+.submenu-below li:hover > a {
+  background-color: transparent;
+  color: #007bff; /* Blue color to indicate selection */
+}
+
+/* Visual highlight for active selections */
+.dropdown-menu-vertical li.active,
+.submenu-below li.active {
+  background-color: #f0f7ff;
+  border-left: 3px solid #007bff;
+}
+
+.dropdown-menu-vertical li.active > a,
+.submenu-below li.active > a {
+  color: #007bff;
+  font-weight: 600;
 }
