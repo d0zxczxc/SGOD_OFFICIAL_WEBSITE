@@ -640,3 +640,16 @@ body {
   color: #007bff;
   font-weight: 600;
 }
+
+/* Replaces burger icon with text label */
+.dropdown-label {
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0px 0px;
+  transition: color 0.3s ease;
+}
+
+.dropdown-label:hover {
+  color: #007bff;
+}
