@@ -67,4 +67,65 @@
       align-items: center;
     }
   }
+  .contact-item {
+    display: flex;
+    align-items: center;  /* Ensures both the icon and text are aligned */
+    margin-bottom: 5px;  /* Reduce the space between items */
+  }
   
+  .contact-item .icon {
+    margin-right: 10px;  /* Space between the icon and the text */
+  }
+  
+  .contact-item div {
+    margin: 0;  /* Remove any additional margin around the text */
+    padding: 0;  /* Remove padding */
+    font-size: 14px;  /* Adjust font size if needed */
+  }
+  /* Container for Contact Information */
+.contact-container {
+  display: flex;
+  justify-content: space-between; /* Align the contact info on the left and map on the right */
+  align-items: flex-start; /* Align items at the top */
+  gap: 10px; /* Optional: space between the contact info and map */
+  margin-top: 20px;
+}
+
+/* Contact Section */
+.contact-section {
+  flex: 1; /* Takes available space */
+}
+
+/* Contact item layout */
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;  /* Tighten the space between items */
+}
+
+.contact-item .icon {
+  margin-right: 10px;  /* Space between icon and text */
+}
+
+/* Map Container */
+.google-map-container {
+  max-width: 40%; /* Make the map smaller */
+  display: flex;
+  justify-content: flex-end;  /* Aligns the map to the right */
+}
+
+/* iframe for map styling */
+iframe {
+  width: 95%;  /* Make the map take full container width */
+  height: 450px;  /* Adjust height */
+  border-radius: 10px;  /* Optional: rounded corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);  /* Optional: adds shadow */
+  border: none;  /* Removes default border */
+}
+
+/* Optional: Remove any space between name and email */
+.contact-item div {
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+  font-size: 14px; /* Adjust font size if needed */
+}
