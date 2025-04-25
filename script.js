@@ -79,3 +79,4 @@ function showSlides2() {
   setTimeout(showSlides2, 2500); // Change slide every 2 seconds
 }
 
+
