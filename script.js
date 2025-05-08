@@ -124,4 +124,31 @@ window.addEventListener('unload', () => {
   berfSlideshow.stop();
 });
 
+new Swiper(".mySwiper1", {
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false
+  },
+  navigation: {
+    nextEl: ".mySwiper1 .swiper-button-next",
+    prevEl: ".mySwiper1 .swiper-button-prev"
+  },
+  pagination: {
+    el: ".mySwiper1 .swiper-pagination",
+    clickable: true
+  }
+});
 
+new Swiper(".mySwiper2", {
+  loop: true,
+  navigation: {
+    nextEl: ".mySwiper2 .swiper-button-next",
+    prevEl: ".mySwiper2 .swiper-button-prev"
+  },
+  pagination: {
+    el: ".mySwiper2 .swiper-pagination",
+    clickable: true
+  }
+});
+  
