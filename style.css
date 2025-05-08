@@ -5,21 +5,44 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #007bff;
+  --text-color: #333;
+  --background-color: #f4f4f4;
+  --navbar-bg: rgba(0, 0, 0, 0.5);
+  --transition-speed: 0.3s;
+  --spacing-unit: 1rem;
+}
+
 body, html {
   font-family: Bookman Old Style, sans-serif;
   height: 100%;
   margin-bottom: 100px; /* Add space at the bottom if needed */
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Responsive Typography */
+html {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
 }
 
 /* Hero Overlay Title */
 .overlay h1 {
   color: #f4f4f4;
-  font-size: 80px;
+  font-size: clamp(2.5rem, 5vw, 5rem);
   font-weight: bold;
   text-align: center;
   line-height: 1.2;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  transition: text-shadow 0.3s ease, transform 0.3s ease;
+  transition: text-shadow var(--transition-speed) ease,
+              transform var(--transition-speed) ease;
 }
 
 .overlay h1:hover {
@@ -47,8 +70,10 @@ header {
   justify-content: space-between;
   width: 100%;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px 20px;
+  background-color: var(--navbar-bg);
+  padding: calc(var(--spacing-unit) * 0.625) calc(var(--spacing-unit) * 1.25);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 
 .logo {
@@ -57,13 +82,13 @@ header {
 }
 
 .logo img {
-  height: 70px;
-  margin-left: 10px;
-  margin-right: 100px;
+  height: clamp(50px, 5vw, 70px);
+  margin-left: calc(var(--spacing-unit) * 0.625);
+  margin-right: calc(var(--spacing-unit) * 6.25);
 }
 
 .logo span {
-  font-size: 20px;
+  font-size: 1.25rem;
   color: white;
   font-weight: bold;
   line-height: 1;
@@ -71,18 +96,47 @@ header {
 
 nav {
   display: flex;
-  align-items: center; /* This ensures vertical alignment */
+  align-items: center;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin-left: 30px;
-  font-size: 16px;
+  margin-left: calc(var(--spacing-unit) * 1.875);
+  font-size: 1rem;
+  transition: opacity var(--transition-speed) ease;
 }
 
 nav a:hover {
+  opacity: 0.8;
   text-decoration: underline;
+}
+
+/* Responsive Navigation */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: calc(var(--spacing-unit) * 0.5);
+  }
+
+  nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav a {
+    margin: calc(var(--spacing-unit) * 0.5) 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo {
+    margin-bottom: calc(var(--spacing-unit) * 0.5);
+  }
+
+  .logo img {
+    margin-right: 0;
+  }
 }
 
 /* Hero Section */
@@ -161,8 +215,6 @@ nav a:hover {
 .read-more:hover {
   text-decoration: underline;
 }
-
-
 
 /* Action and Basic Research Section */
 .action-research-section {
@@ -434,7 +486,6 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   letter-spacing: 0.3px;
 }
-
 
 /* ✅ BURGER DROPDOWN CONTAINER - ALIGNED WITH NAVBAR */
 .burger-dropdown {
