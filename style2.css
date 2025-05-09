@@ -258,16 +258,50 @@ body {
   margin: 0 auto;
 }
 
-/*GIF */
+/* GIF Container */
 .gif-container {
   display: flex;
-  justify-content: center; /* Centers the GIF horizontally */
-  align-items: center;     /* Centers the GIF vertically */
-  height: 150vh;           /* Makes sure the container takes up full viewport height */
+  justify-content: space-between; /* Position GIF on the left and description on the right */
+  align-items: center;           /* Vertically centers the content */
+  width: 100%;
+  padding: 20px;
 }
 
-.gif-container img {
-  max-width: 100%;         /* Ensures the image doesn't overflow */
-  height: 50%;            /* Maintains aspect ratio */
-  width: 50%;              /* Adjust width to your preference */
+/* Left section for the GIF */
+.gif-left {
+  flex: 1;                       /* Makes sure the left section takes as much space as needed */
+  padding-right: 30px;           /* Space between the GIF and description */
 }
+
+/* Right section for title and description */
+.gif-right {
+  flex: 1;                       /* Right section takes up remaining space */
+  padding-left: 20px;            /* Space between the description and GIF */
+}
+
+.gif-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #969022;                   /* Title color */
+  margin-bottom: 10px;           /* Space between the title and description */
+}
+
+.gif-description {
+  font-size: 16px;
+  color: #000000;                   /* Description color */
+  line-height: 2.0;                 /* Line spacing for better readability */
+  text-align: justify;  
+  margin-right: 50px;         
+}
+
+/* GIF styling */
+.gif-left img {
+  max-width: 100%;                /* Ensure the GIF scales with the container */
+  height: auto;                   /* Keeps the GIF's aspect ratio intact */
+  border-radius: 30px;            /* Optional: Add rounded corners */
+  margin-left: 30px;         
+}
+
+
+
+

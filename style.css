@@ -351,7 +351,7 @@ footer p {
 
 /* Divider */
 .section-divider {
-  height: 2px;
+  height: 5px;
   background-color: black;
   background: #f9f9f9;
   padding: 20px 0;
@@ -363,9 +363,9 @@ footer p {
 .section-divider::before {
   content: "";
   display: block;
-  width: 80%;
-  height: 2px;
-  background-color: black;
+  width: 90%;
+  height: 5px;
+  background-color: rgb(34, 0, 255);
   border-radius: 2px;
 }
 
