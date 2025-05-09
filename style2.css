@@ -139,11 +139,21 @@ body {
 }
 
 /* Swiper Slideshow Styles */
-.swiper {
-  width: 100%;
-  max-width: 500px;
+/* Ensure both slideshows are side-by-side */
+.slideshow-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  flex-wrap: wrap;  /* Ensures responsiveness */
+}
+
+/* Class for each slideshow */
+.slideshow {
+  width: 48%; /* Adjust to make them take up 48% of the width */
+  max-width: 600px; /* Maximum width of each slideshow */
   height: 300px;
-  margin: 40px auto;
+  margin: 0; /* Remove margins for side-by-side layout */
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -174,14 +184,18 @@ body {
   box-sizing: border-box;
 }
 
-/* Side-by-side Swiper Rows */
-.slideshow-row {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  padding: 40px 20px;
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff;
 }
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 
 /* Optional Dots */
 .dot1, .dot2 {
