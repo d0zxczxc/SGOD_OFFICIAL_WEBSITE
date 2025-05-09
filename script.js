@@ -149,6 +149,7 @@ new Swiper(".mySwiper2", {
   pagination: {
     el: ".mySwiper2 .swiper-pagination",
     clickable: true
-  }
+  },
+  lazy: true, // Enable lazy loading
 });
   
