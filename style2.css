@@ -1,4 +1,146 @@
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Header */
+.header {
+  font-family: Verdana, sans-serif;
+  font-weight: bold;
+  background-color: #0930bd;
+  color: white;
+  padding: 20px;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header img {
+  max-height: 80px;
+}
+
+.header-text1 {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.header h2 {
+  margin: 5px 0 0;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/* Contact Container */
+.contact-container {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  padding: 30px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section {
+  margin-bottom: 25px;
+}
+
+.contact-section h3 {
+  color: #0066b3;
+  border-bottom: 2px solid #0066b3;
+  padding-bottom: 8px;
+  margin-top: 0;
+}
+
+.contact-item {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.icon {
+  width: 30px;
+  color: #0066b3;
+  margin-right: 15px;
+  text-align: center;
+}
+
+/* Staff Cards */
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.staff-card {
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 15px;
+  border-left: 4px solid #0066b3;
+}
+
+.staff-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #0066b3;
+}
+
+.staff-position {
+  font-style: italic;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.staff-contact {
+  font-size: 14px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .header img {
+    margin-bottom: 15px;
+  }
+
+  .staff-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .slideshow-container {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .text,
+  .slide-caption {
+    font-size: 16px;
+  }
+
+  .numbertext {
+    font-size: 10px;
+  }
+}
+
 /* Swiper Slideshow Styles */
+/* Ensure both slideshows are side-by-side */
 .slideshow-row {
   display: flex;
   justify-content: center;
@@ -7,6 +149,7 @@
   flex-wrap: wrap;  /* Ensures responsiveness */
 }
 
+/* Class for each slideshow */
 .slideshow {
   width: 48%; /* Adjust to make them take up 48% of the width */
   max-width: 600px; /* Maximum width of each slideshow */
@@ -60,7 +203,7 @@
 .text {
   font-family: Arial, sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 40px;
   padding: 10px;
   color: white;
   background: rgba(0, 0, 0, 0.7);
@@ -90,24 +233,4 @@
 #philippines-date,
 #philippines-clock {
   font-weight: normal;
-}
-
-/* Chart Container */
-#enrollmentChart {
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-/*GIF */
-.gif-container {
-  display: flex;
-  justify-content: center; /* Centers the GIF horizontally */
-  align-items: center;     /* Centers the GIF vertically */
-  height: 150vh;           /* Makes sure the container takes up full viewport height */
-}
-
-.gif-container img {
-  max-width: 100%;         /* Ensures the image doesn't overflow */
-  height: 50%;            /* Maintains aspect ratio */
-  width: 50%;              /* Adjust width to your preference */
 }
