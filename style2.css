@@ -257,3 +257,17 @@ body {
   max-width: 400px;
   margin: 0 auto;
 }
+
+/*GIF */
+.gif-container {
+  display: flex;
+  justify-content: center; /* Centers the GIF horizontally */
+  align-items: center;     /* Centers the GIF vertically */
+  height: 150vh;           /* Makes sure the container takes up full viewport height */
+}
+
+.gif-container img {
+  max-width: 100%;         /* Ensures the image doesn't overflow */
+  height: 50%;            /* Maintains aspect ratio */
+  width: 50%;              /* Adjust width to your preference */
+}
