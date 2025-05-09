@@ -15,7 +15,7 @@
 }
 
 body, html {
-  font-family: Bookman Old Style, sans-serif;
+  font-family: Helvetica;
   height: 100%;
   margin-bottom: 100px; /* Add space at the bottom if needed */
   color: var(--text-color);
