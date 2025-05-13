@@ -166,3 +166,36 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
+/* Month Buttons Section */
+.month-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.month-button {
+  background: linear-gradient(135deg, #007BFF, #0056b3); /* Gradient blue background */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 30px; /* Rounded corners */
+  margin: 5px; /* Space between buttons */
+  transition: all 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Button Hover Effect */
+.month-button:hover {
+  background: linear-gradient(135deg, #0056b3, #003366); /* Darker gradient on hover */
+  transform: translateY(-3px); /* Button lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Active Button Effect */
+.month-button:active {
+  background: linear-gradient(135deg, #003366, #0056b3); /* Even darker gradient on click */
+  transform: translateY(1px); /* Slightly lower when clicked */
+}
