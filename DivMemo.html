@@ -40,9 +40,9 @@
     }
   
     .memo-title a:hover {
-      text-decoration: underline;
+      text-decoration: underline;           /* Remove default underline */
     }
-  
+
     .memo-layout {
       display: flex;
       flex-wrap: wrap;
@@ -61,14 +61,14 @@
       border: 1px solid #f9f9f9;
       padding: 20px;
       border-radius: 30px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.05);
     }
 
   
     .memo-left img {
       max-width: 100%;
       height: auto;
-      border-radius: 8px;
+      border-radius: 10px;
     }
   
     .memo-right {
@@ -182,13 +182,13 @@
       
      
       <!-- Right Side: Memo List -->
-      <h2>2025</h2>
       <br>  
       <div class="memo-right">
-    
         <div class="memo-right">
           <div class="memo-item">
-            
+            <div class="year-container">
+              <h1>Year 2025</h1>
+               </div>            
               <h2>January</h2>
               <br>
             <div class="memo-date">January 23, 2025</div>
