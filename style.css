@@ -298,40 +298,59 @@ nav a:hover {
 }
 
 /* ✅ Updated Footer Styling to match first screenshot */
+/* Footer Styling */
 footer {
-  /* dark gray like the first image(THIS IS FOR ABOUT.HTML AND RESEARCH.HTML*/
-  background-color: #9e9b9b; 
-  color: #fff;
-  padding: 30px 40px;
+  background-color: #f5f5f5;  /* Changed to a more minimal light gray background */
+  color: #333;                /* Darker text color for better contrast */
+  padding: 20px 40px;         /* Reduced padding to make the footer more compact */
   width: 100%;
   box-sizing: border-box;
   text-align: left;
 }
 
+/* Footer content container */
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start; /* Align items to the left */
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 20px;                   /* Space between items */
 }
 
+/* Footer logo styling */
 .footer-logo {
-  width: 120px;
+  width: 150px;  /* Increased size for better visibility */
   height: auto;
-  flex-shrink: 0;
+  flex-shrink: 0; /* Prevent logo from shrinking */
+  margin-right: 20px; /* Add some space to the right of the logo */
 }
 
+/* Footer paragraph styling */
 footer p {
   flex: 1;
   font-size: 16px;
   line-height: 1.6;
   text-align: justify;
-  color: #f0f0f0;
+  color: #333;    /* Darker text color for readability */
   margin: 0;
+  padding-left: 20px; /* Reduced padding to avoid too much space */
 }
+
+/* Adjust spacing for the footer on smaller screens */
+@media screen and (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;  /* Stack the items vertically on smaller screens */
+    align-items: center;     /* Center the content */
+    text-align: center;      /* Center the text */
+  }
+
+  .footer-logo {
+    margin-bottom: 20px;  /* Space below the logo when stacked */
+  }
+}
+
 
 /* Optional: force dark footer in some pages */ 
 

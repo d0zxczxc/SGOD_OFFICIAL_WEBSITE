@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: Bookman Oldstyle;
+  font-family: Helvetica;
   background-color: #f4f4f4; /* Light gray background for the body */
   color: #333;
 }
@@ -69,7 +69,7 @@ background: linear-gradient(90deg, rgba(0, 0, 71, 1) 0%, rgba(9, 9, 121, 1) 37%,
 }
 
 .month-content ul li {
-  font-size: 16px;
+  font-size: 20px;
   color: #333;
   margin-bottom: 10px;
 }
