@@ -153,3 +153,17 @@ new Swiper(".mySwiper2", {
   lazy: true, // Enable lazy loading
 });
   
+// Function to display the content for the selected month
+function showMonth(month) {
+  // Hide all month content
+  const months = document.querySelectorAll('.month-content');
+  months.forEach(monthContent => {
+    monthContent.style.display = 'none';
+  });
+
+  // Show the selected month content
+  const selectedMonth = document.getElementById(month);
+  if (selectedMonth) {
+    selectedMonth.style.display = 'block';
+  }
+}
