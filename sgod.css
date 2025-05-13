@@ -1,0 +1,168 @@
+/* Reset Margin and Padding for All Elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Bookman Oldstyle;
+  background-color: #f4f4f4; /* Light gray background for the body */
+  color: #333;
+}
+
+/* Calendar Container */
+.calendar {
+  max-width: 1200px;
+  margin: 40px auto;
+  background-color: #fff; /* White background for the calendar container */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Calendar Header */
+.calendar-header {
+  background-color: #007BFF; /* Blue header background */
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.calendar-title {
+  font-size: 50px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Month Buttons Section */
+.month-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.month-button {
+  background-color: #007BFF; /* Blue button background */
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.month-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Month Content Section */
+.month-content {
+  display: none; /* Hidden by default */
+}
+
+.month-content ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.month-content ul li {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.month-content ul li strong {
+  color: #000;
+}
+
+/* Month Containers for Each Month */
+.months {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.month {
+  background-color: #004085; /* Darker blue for the month blocks */
+  width: 48%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.month h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff; /* White text color for month title */
+}
+
+.month ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.month ul li {
+  font-size: 16px;
+  color: #ffffff; /* White text for event items */
+  margin-bottom: 10px;
+}
+
+.month ul li strong {
+  color: #f8f9fa; /* Slightly lighter white color for event dates */
+}
+
+.month ul li:hover {
+  background-color: #0056b3; /* Lighter blue background on hover */
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.month ul li:active {
+  background-color: #003366; /* Darker blue on click */
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: auto;
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  color: #333;
+}
+
+.close-btn {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

@@ -153,6 +153,3 @@ new Swiper(".mySwiper2", {
   lazy: true, // Enable lazy loading
 });
   
-
-
-
