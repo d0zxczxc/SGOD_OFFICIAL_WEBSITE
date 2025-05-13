@@ -23,7 +23,8 @@ body {
 
 /* Calendar Header */
 .calendar-header {
-  background-color: #007BFF; /* Blue header background */
+  background: #000047;
+background: linear-gradient(90deg, rgba(0, 0, 71, 1) 0%, rgba(9, 9, 121, 1) 37%, rgba(0, 212, 255, 1) 100%);
   padding: 20px;
   text-align: center;
   border-radius: 8px;
@@ -200,3 +201,4 @@ body {
   background: linear-gradient(135deg, #003366, #0056b3); /* Even darker gradient on click */
   transform: translateY(1px); /* Slightly lower when clicked */
 }
+
