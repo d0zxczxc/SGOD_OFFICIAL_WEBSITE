@@ -2,6 +2,7 @@
 .employee-profiles {
   text-align: center;
   margin-top: 40px;
+  padding: 0 20px; /* Add some horizontal padding for responsiveness */
 }
 
 /* Title for the section */
@@ -13,11 +14,11 @@
 /* Flex container for the profile cards */
 .profile-cards {
   display: flex;
-  flex-wrap: wrap;           /* Ensures cards wrap into the next row when needed */
-  gap: 20px;                 /* Space between cards */
-  justify-content: center;   /* Centers the content horizontally */
-  margin: 0 auto;            /* Centers the cards horizontally */
-  padding: 0;                /* Removes any extra padding */
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;   /* Centers the profile cards horizontally */
+  margin: 0 auto;            /* Ensures the cards are centered */
+  padding: 0;                /* Removes extra padding */
 }
 
 /* Flex container for the top-level employee */
@@ -28,22 +29,22 @@
 
 /* Individual profile card */
 .profile-card {
-  flex-basis: 220px;         /* Ensures cards take up a consistent width */
+  width: 220px; /* Set a fixed width for profile cards */
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;          /* Ensures no content spills over the card edges */
+  overflow: hidden;           /* Ensures no content spills over the card edges */
   transition: transform 0.3s ease;
-  margin: 0;                 /* Removes margin between the profile cards */
+  margin: 0;                  /* Removes margin between the profile cards */
 }
 
 /* Profile image styling */
 .profile-image {
   width: 100%;
   height: 220px;
-  object-fit: cover;         /* Ensures the image fits within the box while maintaining its aspect ratio */
+  object-fit: cover;          /* Ensures the image fits within the box */
   border-bottom: 2px solid #ddd; /* Adds a border below the image */
-  border-radius: 8px;        /* Rounded corners on the image */
+  border-radius: 8px;         /* Rounded corners on the image */
 }
 
 /* Profile description styling */
@@ -74,10 +75,9 @@
 @media only screen and (max-width: 768px) {
   .profile-cards {
     flex-direction: column; /* Stack the cards vertically on smaller screens */
-    align-items: center;
+    align-items: center;     /* Centers the profile cards */
   }
 }
-
 
   .contact-item {
     display: flex;

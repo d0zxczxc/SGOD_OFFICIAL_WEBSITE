@@ -88,11 +88,13 @@
     </div>
   </section>
   <div class="section-divider"></div>
+
 <!-- Enrollment Pie Chart Section -->
 <section class="container" style="text-align: center; padding: 50px 0;">
   <h2>Enrollment Status Overview</h2>
-  <canvas id="enrollmentChart" width="400" height="400"></canvas>
+  <canvas id="enrollmentChart"></canvas>
 </section>
+
 <div class="section-divider"></div>
   <!-- Action and Basic Research Section -->
   <section class="action-research-section container">
@@ -141,41 +143,42 @@
     Copyright © 2025 DepEd Santa Rosa City - Planning and Research Section.
   </div>
   <script src="script.js"></script>
-  <script>
-    const ctx = document.getElementById('enrollmentChart').getContext('2d');
-    const enrollmentChart = new Chart(ctx, {
-      type: 'pie',
-      data: {
-        labels: ['Enrolled', 'Not Enrolled'],
-        datasets: [{
-          label: 'Enrollment Status',
-          data: [3708, 400], // Update with your real values
-          backgroundColor: ['#003594', '#869397'],
-          borderWidth: 1
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: {
-            position: 'bottom',
-            labels: {
-              font: {
-                size: 14
+    <script>
+      const ctx = document.getElementById('enrollmentChart').getContext('2d');
+      const enrollmentChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+          labels: ['Enrolled', 'Not Enrolled'],
+          datasets: [{
+            label: 'Enrollment Status',
+            data: [60000, 60000], // Update with your real values
+            backgroundColor: ['#003594', '#869397'],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,  // This ensures the chart is responsive
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: {
+                font: {
+                  size: 14
+                }
               }
-            }
-          },
-          title: {
-            display: true,
-            text: 'Distribution of Enrolled vs Not Enrolled Learners',
-            font: {
-              size: 18
+            },
+            title: {
+              display: true,
+              text: 'Distribution of Enrolled vs Not Enrolled Learners',
+              font: {
+                size: 18
+              }
             }
           }
         }
-      }
-    });
+      });
   </script>
+
   
 </body>
 </html>
