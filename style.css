@@ -706,5 +706,16 @@ body {
   color: #007bff;
 }
 
+#enrollmentChart {
+  width: 100%;          /* Ensures the chart takes up 100% of the available width */
+  max-width: 400px;     /* Maximum width to keep the chart from growing too large */
+  height: 300px;        /* Set a fixed height or let it adjust based on width */
+  margin: 0 auto;       /* Centers the chart horizontally */
+}
+
+
+
+
+
 
 
