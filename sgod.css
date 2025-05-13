@@ -23,7 +23,8 @@ body {
 
 /* Calendar Header */
 .calendar-header {
-  background-color: #007BFF; /* Blue header background */
+  background: #000047;
+background: linear-gradient(90deg, rgba(0, 0, 71, 1) 0%, rgba(9, 9, 121, 1) 37%, rgba(0, 212, 255, 1) 100%);
   padding: 20px;
   text-align: center;
   border-radius: 8px;
@@ -33,6 +34,7 @@ body {
   font-size: 50px;
   font-weight: bold;
   color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 0 0 25px rgba(0, 123, 255, 0.7); /* Soft shadow and glow */
 }
 
 /* Month Buttons Section */
@@ -199,3 +201,4 @@ body {
   background: linear-gradient(135deg, #003366, #0056b3); /* Even darker gradient on click */
   transform: translateY(1px); /* Slightly lower when clicked */
 }
+
