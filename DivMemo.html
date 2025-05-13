@@ -40,7 +40,7 @@
     }
   
     .memo-title a:hover {
-      text-decoration: underline;           /* Remove default underline */
+      text-decoration: underline;           
     }
 
     .memo-layout {
@@ -76,6 +76,37 @@
       min-width: 0;
       text-align: left;
     }
+
+    .year-container {
+      text-align: center;       /* Centers the text inside the div */
+      font-size: 32px;          /* Sets font size for the year */
+      font-weight: bold;        /* Makes the year bold */
+      background-color: #e6e8c9;/* Adds a light background color */
+      border-radius: 100px;       /* Gives rounded corners to the div */
+      margin: 10px;           /* Centers the div horizontally */
+      margin-top: 10px;
+      transition: letter-spacing 0.3s ease;;
+    }
+
+    .year-container h1 {
+      display: center;
+      transform: perspective(100px) rotateX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .year-container h1:hover {
+      transform: perspective(50px) rotateX(10deg);
+    }
+    .gravity-text span {
+  display: inline-block;
+  transition: transform 0.5s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+}
+.gravity-text:hover span {
+  transform: translateY(-10px);
+}
+.gravity-text:hover span:nth-child(2) { transition-delay: 0.1s; }
+.gravity-text:hover span:nth-child(3) { transition-delay: 0.2s; }
+/* Continue for each letter... */
   
     @media screen and (max-width: 768px) {
       .memo-layout {
@@ -90,6 +121,7 @@
       .memo-right {
         width: 100%;
       }
+      
     }
   </style>
   
@@ -187,7 +219,10 @@
         <div class="memo-right">
           <div class="memo-item">
             <div class="year-container">
-              <h1>Year 2025</h1>
+              <h1 class="gravity-text">
+                <span>Y</span><span>e</span><span>a</span><span>r</span> 
+                <span>2</span><span>0</span><span>2</span><span>5</span>
+              </h1>
                </div>            
               <h2>January</h2>
               <br>

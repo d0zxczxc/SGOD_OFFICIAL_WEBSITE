@@ -277,7 +277,7 @@ nav a:hover {
 .about-section {
   padding: 100px 40px;
   background-color: #f9f9f9;
-  text-align: center;
+  text-align: justify;
 }
 
 .about-section h1 {
@@ -712,6 +712,7 @@ body {
   height: 300px;        /* Set a fixed height or let it adjust based on width */
   margin: 0 auto;       /* Centers the chart horizontally */
 }
+
 
 
 

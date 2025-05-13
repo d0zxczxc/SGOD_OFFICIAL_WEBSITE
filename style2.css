@@ -280,13 +280,4 @@ body {
   margin-left: 40px;
 }
 
-.year-container {
-  text-align: center;       /* Centers the text inside the div */
-  font-size: 32px;          /* Sets font size for the year */
-  font-weight: bold;        /* Makes the year bold */
-  background-color: #e6e8c9;/* Adds a light background color */
-  border-radius: 100px;       /* Gives rounded corners to the div */
-  margin: 10px;           /* Centers the div horizontally */
-  margin-top: 10px;
-}
 
