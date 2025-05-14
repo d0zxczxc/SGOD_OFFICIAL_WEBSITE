@@ -306,6 +306,9 @@ footer {
   width: 100%;
   box-sizing: border-box;
   text-align: left;
+  margin-top: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 /* Footer content container */
@@ -354,9 +357,10 @@ footer p {
 
 /*Index HTML FOOTER IS HERE*/
 .documents + footer {
-  background-color: #9e9b9b !important;
+  background-color: #eaeaea !important;
   margin-top: 0;
-  padding-top: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 /* Logo + Navbar tweaks */
