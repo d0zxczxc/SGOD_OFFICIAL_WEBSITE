@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="icon" href="Assets/sgod.png" type="image/png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -77,7 +78,7 @@
     <div class="overlay">
       <h1>School Governance &<br>Operations Division</h1>
     </div>
-  </section>
+  </section>      
 
    <!-- Divider -->
    <div class="section-divider"></div>
@@ -92,10 +93,63 @@
       <p class="gif-description">The Schools Division Office (SDO) of Santa Rosa City has been officially accredited as a Continuing Professional Development (CPD) Provider by the CPD Council of Professional Teachers (Accreditation No. PTR-2024-611). This accreditation allows SDO to offer CPD programs aimed at enhancing the teaching skills and competencies of educators and personnel, supporting their continuous professional growth. The accreditation was led by Mr. Mouller Lumague and Jeanne Elaine Sangalang from the Human Resource Development Section (HRDS), with strong backing from the Division’s Top Management.</p>
     </div>
   </div>
-  
-   <!-- Divider -->
+
+  <!-- Divider -->
    <div class="section-divider"></div>
 
+    <!-- SEMINAR SLIDESHOW -->
+<div class="slideshow-row">
+  <!-- Seminar Slideshow row -->
+  <div class="swiper mySwiper1 slideshow">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="assets/Seminar/slide1.jpg" alt="Seminar 1">
+        <div class="slide-caption">Seminar-Workshop on Research Writing</div>
+      </div>
+      <div class="swiper-slide">
+        <img src="assets/Seminar/slide2.jpg" alt="Seminar 2">
+        <div class="slide-caption">Seminar-Workshop on Research Writing</div>
+      </div>
+      <div class="swiper-slide">
+        <img src="assets/Seminar/slide3.jpg" alt="Seminar 3">
+        <div class="slide-caption">Seminar-Workshop on Research Writing</div>
+      </div>
+      <div class="swiper-slide">
+        <img src="assets/Seminar/slide4.jpg" alt="Seminar 4">
+        <div class="slide-caption">Seminar-Workshop on Research Writing</div>
+      </div>
+      <div class="swiper-slide">
+        <img src="assets/Seminar/slide5.jpg" alt="Seminar 5">
+        <div class="slide-caption">Seminar-Workshop on Research Writing</div>
+      </div>
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+  <p class="taskforce-description">DepEd Santa Rosa City Division Election Task Force 2025! Fully geared up for the May 12, 2025 National and Local Elections.
+Committed to ensuring a safe, fair, and efficient electoral process.
+Meet the 2025 DepEd Santa Rosa City Division Election Task Force!
+Composed of dedicated personnel from various operational areas — including real-time monitoring and coordination, hotline and helpdesk operations, legal support, logistics, and post-election reporting — this team is ready to serve the public with excellence and integrity.
+Task Force Members:
+Elvira B. Catangay – Chairperson
+Jessie James E. Kingat – Vice Chairperson
+Kenrick L. Villanueva – Real-Time Monitoring & Coordination
+Jason G. Sagaysay – Real-Time Monitoring & Coordination
+Atty. Carlo June C. Tibayan – Legal & Incident Response Support
+Maricel S. Saguinsin – Hotline & Helpdesk Operations
+Janice Caryl S. Dela Rosa – Hotline & Helpdesk Operations
+Danica May C. Cagay – Data Collection & Post-Election Reporting
+Eileen B. Hernandez – Data Collection & Post-Election Reporting
+Simplicio P. Honduna – Logistics
+Support Staff:
+Providing crucial assistance to ensure smooth operations across all areas.
+Together, they form a strong and reliable team, working to ensure the success of the 2025 elections in Santa Rosa City.</p>
+</div>
+
+   <!-- Divider -->
+   <div class="section-divider"></div>
+   
    <section class="calendar">
     <div class="calendar-header">
       <h2 class="calendar-title">2025 SGOD Calendar Of Activities</h2>
@@ -303,9 +357,6 @@
   </section>
   
   
-
-  
-
    <!-- Divider -->
   <div class="section-divider"></div>
 
@@ -374,6 +425,44 @@
   </div>
   
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> 
+  <!-- Swiper-->
+  <script>
+    ['.mySwiper1', '.mySwiper2'].forEach(selector => {
+  new Swiper(selector, {
+    loop: true,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false
+    },
+    navigation: {
+      nextEl: `${selector} .swiper-button-next`,
+      prevEl: `${selector} .swiper-button-prev`
+    },
+    pagination: {
+      el: `${selector} .swiper-pagination`,
+      clickable: true
+    }
+  });
+});
+
+    new Swiper(".mySwiper2", {
+  loop: true,
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: false
+  },
+  navigation: {
+    nextEl: ".mySwiper2 .swiper-button-next",
+    prevEl: ".mySwiper2 .swiper-button-prev"
+  },
+  pagination: {
+    el: ".mySwiper2 .swiper-pagination",
+    clickable: true
+  }
+});
+
+  </script>
   
 </body>
 </html>

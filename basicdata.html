@@ -153,11 +153,11 @@
       const enrollmentChart = new Chart(ctx, {
         type: 'pie',
         data: {
-          labels: ['Enrolled', 'Not Enrolled'],
+          labels: ['Public', 'Private'],
           datasets: [{
             label: 'Enrollment Status',
-            data: [60000, 60000], // Update with your real values
-            backgroundColor: ['#003594', '#869397'],
+            data: [63381, 24028], // Update with your real values
+            backgroundColor: ['#869397', '#003594'],
             borderWidth: 1
           }]
         },
@@ -174,7 +174,7 @@
             },
             title: {
               display: true,
-              text: 'Distribution of Enrolled vs Not Enrolled Learners',
+              text: 'SY 2024 - 2025 Total LIS Enrollment',
               font: {
                 size: 18
               }
