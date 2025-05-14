@@ -171,19 +171,24 @@ body {
   display: block;
 }
 
-.slide-caption {
+/* Slideshow Captions */
+.swiper-slide .slide-caption {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
+  bottom: 10px;
+  left: 10px;
+  width: calc(100% - 20px); /* Ensures the caption does not overflow */
+  background-color: rgba(0, 0, 0, 0.6); /* Solid black background with transparency */
+  color: white; /* White text color */
   padding: 10px;
   font-weight: bold;
-  font-size: 16px;
-  box-sizing: border-box;
+  font-size: 19px;
+  text-align: center;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensures padding is accounted for in width calculation */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds shadow for additional contrast */
 }
+
+
 
 .swiper-button-prev,
 .swiper-button-next {
@@ -203,7 +208,7 @@ body {
 .text {
   font-family: Arial, sans-serif;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 60px;
   padding: 10px;
   color: white;
   background: rgba(0, 0, 0, 0.7);

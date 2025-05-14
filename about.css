@@ -45,6 +45,7 @@
   object-fit: cover;          /* Ensures the image fits within the box */
   border-bottom: 2px solid #ddd; /* Adds a border below the image */
   border-radius: 8px;         /* Rounded corners on the image */
+  object-fit: cover
 }
 
 /* Profile description styling */
