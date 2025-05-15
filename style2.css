@@ -276,6 +276,7 @@ body {
   margin-right: 70px;
   margin-bottom: 20px; 
   font-style: italic;
+  font-weight: 500;
 }
 
 /* GIF styling */
@@ -286,16 +287,76 @@ body {
   margin-left: 40px;
 }
 
+.taskforce-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;                   /* Title color */
+  margin-bottom: 10px;           /* Space between the title and description */
+  margin-right: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 0 0 25px rgba(0, 123, 255, 0.7); /* Soft shadow and glow */
+  border-radius: 30px;       /* Gives rounded corners to the div */
+  background: linear-gradient(90deg, rgb(5, 5, 108) 0%, rgb(99, 61, 61) 37%, rgb(200, 87, 87) 100%);
+}
+
+.taskforce{      /*Task Force Members:*/
+  text-align: left;
+  font-size: 17px;
+  line-height: 2.0;
+  font-weight: bold;
+  color:color-mix(in srgb, #0066b3 50%, #555 50%)
+}
+.taskforce-members{
+  text-align: left;
+  font-size: 16px;
+  line-height: 0.1;
+  font-style: italic;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
 .taskforce-description {
-  font-size: 18px;
+  font-size: 17px;
   color: #555;                   /* Description color */
   line-height: 2.0;              /* Line spacing for better readability */
   text-align: justify;
-  margin-right: 30px;
-  margin-left: 30px;
-  margin-bottom: 20px; 
-  background-color: antiquewhite;
+  margin-right: 70px;
+  margin-bottom: 10px;
+  font-style: italic;
+  font-weight: bold;
 }
+
+.taskforce-container {
+  display: flex;
+  justify-content: space-between; /* Position GIF on the left and description on the right */
+  align-items: center;           /* Vertically centers the content */
+  width: 100%;
+  padding: 20px;
+}
+
+.taskforce-left {
+  flex: 1;                       /* Makes sure the left section takes as much space as needed */
+  padding-right: 50px;           /* Space between the GIF and description */
+}
+
+/* Right section for title and description */
+.taskforce-right {
+  flex: 1;                       /* Right section takes up remaining space */
+  padding-left: 20px;            /* Space between the description and GIF */
+}
+
+.taskforce-left img {
+  max-width: 100%;                /* Ensure the GIF scales with the container */
+  height: auto;                   /* Keeps the GIF's aspect ratio intact */
+  border-radius: 10px;             /* Optional: Add rounded corners */
+  margin-left: 40px;
+  margin-bottom: 140px;
+}
+
+
+
+
+
 
 
 
