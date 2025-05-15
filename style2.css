@@ -287,6 +287,7 @@ body {
   margin-left: 40px;
 }
 
+/* taskforce members */
 .taskforce-title {
   text-align: center;
   font-size: 28px;
@@ -299,14 +300,24 @@ body {
   background: linear-gradient(90deg, rgb(5, 5, 108) 0%, rgb(99, 61, 61) 37%, rgb(200, 87, 87) 100%);
 }
 
-.taskforce{      /*Task Force Members:*/
+.taskforce {      /*Task Force Members:*/
   text-align: left;
   font-size: 17px;
   line-height: 2.0;
   font-weight: bold;
-  color:color-mix(in srgb, #0066b3 50%, #555 50%)
+  color: color-mix(in srgb, #0066b3 50%, #555 50%);
 }
-.taskforce-members{
+
+.taskforce-members {
+  text-align: left;
+  font-size: 16px;
+  line-height: 0.1;
+  font-style: italic;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.staff-members {
   text-align: left;
   font-size: 16px;
   line-height: 0.1;
@@ -320,8 +331,8 @@ body {
   color: #555;                   /* Description color */
   line-height: 2.0;              /* Line spacing for better readability */
   text-align: justify;
-  margin-right: 70px;
-  margin-bottom: 10px;
+  margin-right: 50px;
+  margin-bottom: 20px;
   font-style: italic;
   font-weight: bold;
 }
@@ -329,9 +340,9 @@ body {
 .taskforce-container {
   display: flex;
   justify-content: space-between; /* Position GIF on the left and description on the right */
-  align-items: center;           /* Vertically centers the content */
+  align-items: flex-start;         /* Align items to the top instead of center */
   width: 100%;
-  padding: 20px;
+  padding: 20px;  
 }
 
 .taskforce-left {
@@ -339,19 +350,20 @@ body {
   padding-right: 50px;           /* Space between the GIF and description */
 }
 
-/* Right section for title and description */
 .taskforce-right {
   flex: 1;                       /* Right section takes up remaining space */
   padding-left: 20px;            /* Space between the description and GIF */
+  margin-bottom: 0;              /* Remove large bottom margin */
 }
 
 .taskforce-left img {
-  max-width: 100%;                /* Ensure the GIF scales with the container */
-  height: auto;                   /* Keeps the GIF's aspect ratio intact */
-  border-radius: 10px;             /* Optional: Add rounded corners */
+  max-width: 100%;               /* Ensure the GIF scales with the container */
+  height: 650px;                /* Keeps the GIF's aspect ratio intact */
+  border-radius: 20px;           /* Optional: Add rounded corners */
   margin-left: 40px;
-  margin-bottom: 140px;
+  margin-bottom: 20px;           /* Reduce large bottom margin to 20px */
 }
+
 
 
 
