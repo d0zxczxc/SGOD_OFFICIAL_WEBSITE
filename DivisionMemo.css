@@ -57,7 +57,9 @@
   }
 
   .month-button {
-    padding: 1rem 2rem;
+    width: 130px;              /* fixed width */
+  height: 50px;             /* fixed height */
+  padding: 0;               /* remove padding to keep fixed size */
     font-weight: 700;
     background: #003594;           /* white background */
     color: #ffffff;                /* deep blue text (matching memo-date color) */
@@ -67,7 +69,7 @@
     border-right: 2px solid #003594;
     border-top: 2px solid #ffffff;
     border-left: 2px solid #ffffff;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
     transition-property: border-top, border-left, border-bottom, border-right, box-shadow;
   }
   
