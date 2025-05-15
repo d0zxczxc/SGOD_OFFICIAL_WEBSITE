@@ -1,0 +1,539 @@
+turn this like the calendar of activities in sgod html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="Assets/sgod11.PNG" type="Assets/logo.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>February 2025 Memos - SDO Santa Rosa City</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style2.css" />
+  <script src="script.js"></script>
+  <style>
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  
+    .memo-item {
+      margin-bottom: 30px;
+      padding-left: 5px; /* Optional: adds a tiny indent */
+    }
+  
+    .memo-date {
+      font-weight: bold;
+      color: #003594;
+      margin-bottom: 5px;
+      text-align: left;
+    }
+  
+    .memo-title {
+      font-size: 14px;
+      color: #222;
+      line-height: 1.6;
+      text-align: left;
+    }
+  
+    .memo-title a {
+      color: #003594;
+      text-decoration: none;
+    }
+  
+    .memo-title a:hover {
+      text-decoration: underline;           
+    }
+
+    .memo-layout {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 1px;
+      align-items: flex-start;
+    }
+  
+    .memo-left {
+      flex: 0 0 280px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      background-color: #fff;
+      border: 1px solid #f9f9f9;
+      padding: 20px;
+      border-radius: 30px;
+      box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.05);
+    }
+
+  
+    .memo-left img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  
+    .memo-right {
+      flex: 1;
+      min-width: 0;
+      text-align: left;
+    }
+
+    .year-container {
+      text-align: center;       /* Centers the text inside the div */
+      font-size: 32px;          /* Sets font size for the year */
+      font-weight: bold;        /* Makes the year bold */
+      background-color: #e6e8c9;/* Adds a light background color */
+      border-radius: 100px;       /* Gives rounded corners to the div */
+      margin: 10px;           /* Centers the div horizontally */
+      margin-top: 10px;
+      transition: letter-spacing 0.3s ease;;
+    }
+
+    .year-container h1 {
+      display: center;
+      transform: perspective(100px) rotateX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .year-container h1:hover {
+      transform: perspective(50px) rotateX(10deg);
+    }
+    .gravity-text span {
+  display: inline-block;
+  transition: transform 0.5s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+}
+.gravity-text:hover span {
+  transform: translateY(-10px);
+}
+.gravity-text:hover span:nth-child(2) { transition-delay: 0.1s; }
+.gravity-text:hover span:nth-child(3) { transition-delay: 0.2s; }
+/* Continue for each letter... */
+  
+    @media screen and (max-width: 768px) {
+      .memo-layout {
+        flex-direction: column;
+        align-items: center;
+      }
+  
+      .memo-left {
+        width: 100%;
+      }
+  
+      .memo-right {
+        width: 100%;
+      }
+      
+    }
+  </style>
+  
+</head>
+<body>
+  <!-- Transparent Navbar (same as homepage) -->
+  <header>
+    <div id="philippines-datetime">
+      <span id="philippines-date"></span>/
+      <span id="philippines-clock"></span>
+    </div>
+    <div class="navbar">
+      <div class="logo">
+        <a href="sgod.html">
+          <img src="assets/logo2.png" alt="PRS Logo" />
+        </a>
+      </div>
+      <nav>
+        <div class="burger-dropdown">
+          <a href="sgod.html"><span class="dropdown-label">Home▾</span></a>
+          <ul class="dropdown-menu-vertical">
+        
+            
+            <li>
+              <a href="index.html">PRS</a>
+            </li>
+            
+            <li>
+              <a href="#">SMMES</a>
+            </li>
+    
+            <li>
+              <a href="#">YFS</a>
+            </li>
+        
+          </ul>
+        </div>
+        
+        
+        <div class="burger-dropdown">
+          <span class="dropdown-label">SGOD Issuances ▾</span>
+            <ul class="dropdown-menu-vertical">
+              <!-- Division Memo -->
+              <li><a href="DivMemo.html">Division Memo</a></li>
+              
+              <!-- Office Memo -->
+              <li><a href="#">Office Memo</a></li>
+              
+              <!-- Division Order -->
+              <li><a href="#">Division Order</a></li>
+            </ul>
+          </div>
+
+        
+          </ul>
+        </div>
+        
+        
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="overlay">
+      <h1>Division Memo<br></h1>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- April 2025 Memos Section with Left-Side Content -->
+  <section class="action-research-section container">
+    <div class="memo-layout">
+
+      <!-- Left Side: Seal + QR -->
+      <div class="memo-left">
+        <!-- Seal -->
+        <div style="border: 2px solid #fff; padding: 10px; border-radius: 30px; background: #fff;">
+          <img src="Assets/seal.jpg" alt="Transparency Seal" />
+        </div>
+      
+        <!-- Feedback message + QR -->
+        <div style="border: 2px solid #ccc; padding: 10px; border-radius: 30px; background: #fff;">
+          <p style="margin-bottom: 10px;">Your Honest feedback matters. Your Feedback is in safe space here.</p>
+          <img src="Assets/qrcode.jpg" alt="Feedback QR Code" />
+        </div>
+      </div>
+      
+      
+     
+      <!-- Right Side: Memo List -->
+      <br>  
+      <div class="memo-right">
+        <div class="memo-right">
+          <div class="memo-item">
+            <div class="year-container">
+              <h1 class="gravity-text">
+                <span>Y</span><span>e</span><span>a</span><span>r</span> 
+                <span>2</span><span>0</span><span>2</span><span>5</span>
+              </h1>
+               </div>            
+              <h2>January</h2>
+              <br>
+              <div class="memo-item">
+                <div class="memo-date">January 31, 2025</div>
+                <div class="memo-title">
+                  <strong>Division Memo No. 89, s.2025</strong><br>
+                  <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/January%202025/SRC-CID-DM-25-089.pdf?csf=1&web=1&e=MDhKUc" target="_blank">ADDENDUM TO DIVISION MEMORANDUM NO. 066, S. 2025</a>
+                </div>
+              </div>
+              <div class="memo-item">
+                <div class="memo-date">January 31, 2025</div>
+                <div class="memo-title">
+                  <strong>Division Memo No. 88, s.2025</strong><br>
+                  <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/January%202025/SRC-SGO-DM-25-088.pdf?csf=1&web=1&e=WiZNMm" target="_blank">DIVISION STATE OF THE LEARNER GOVERNMENT ADDRESS (SOLGA) FOR SY 2024-2025</a>
+                </div>
+              </div>
+              <div class="memo-item">
+                <div class="memo-date">January 28, 2025</div>
+                <div class="memo-title">
+                  <strong>Division Memo No. 87, s.2025</strong><br>
+                  <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/January%202025/SRC-SGO-DM-25-087.pdf?csf=1&web=1&e=aNz2NC" target="_blank">ELECTIONS OF THE YOUTH FOR ENVIRONMENT IN SCHOOLS ORGANIZATION (YES-O) AND BARKADA KONTRA DROGA (BKD) OFFICERS FOR SY 2025-2026</a>
+                </div>
+              </div>
+              <div class="memo-item">
+                <div class="memo-date">January 28, 2025</div>
+                <div class="memo-title">
+                  <strong>Division Memo No. 86, s.2025</strong><br>
+                  <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/January%202025/SRC-HRD-DM-25-086.pdf?csf=1&web=1&e=b1uFXW" target="_blank">DEPED EXECUTIVES AND SCHOOL LEADERS ORIENTATION ON THE REVISED K TO 12 CURRICULUM IMPLEMENTATION TRAINING FOR GRADES 2, 3, 5, AND 8 TEACHERS (PHASE 2 IMPLEMENTATION)</a>
+                </div>
+              </div>
+              <div class="memo-item">
+                <div class="memo-date">January 27, 2025</div>
+                <div class="memo-title">
+                  <strong>Division Memo No. 79, s.2025</strong><br>
+                  <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/January%202025/SRC-SME-DM-25-079.pdf?csf=1&web=1&e=m1dzVH" target="_blank">ADDENDUM TO DIVISION MEMORANDUM NO. 64, S. 2025</a>
+                </div>
+              </div>
+              <div class="memo-item">
+                <div class="memo-date">January 27, 2025</div>
+                <div class="memo-title">
+                  <strong>Division Memo No. 78, s.2025</strong><br>
+                  <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/January%202025/SRC-HRD-DM-25-078.pdf?csf=1&web=1&e=z37v69" target="_blank">CONFIRMATION AND SUBMISSION OF UNDERTAKING FOR E-LEARNING COURSES SCHOLARSHIP FOR DEPED EDUCATORS</a>
+                </div>
+              </div>
+              <div class="memo-item">
+                <div class="memo-date">January 27, 2025</div>
+                <div class="memo-title">
+                  <strong>Division Memo No. 76, s.2025</strong><br>
+                  <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/January%202025/SRC-SMN-DM-25-076.pdf?csf=1&web=1&e=6fDUiU" target="_blank">FEDERATED PARENT-TEACHER ASSOCIATION (FPTA) CAPACITY BUILDING</a>
+                </div>
+              </div>
+              <div class="memo-item">
+                <div class="memo-date">January 24, 2025</div>
+                <div class="memo-title">
+                  <strong>Division Memo No. 74, s.2025</strong><br>
+                  <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/January%202025/SRC-HRD-DM-25-074.pdf?csf=1&web=1&e=Nun021" target="_blank">RESCHEDULING OF THE ON-SITE VALIDATION AND TECHNICAL ASSISTANCE ON THE PREPARATION AND SUBMISSION OF GAD ACCOMPLISHMENT REPORT FOR FY 2024 AND OTHER GAD DOCUMENTS FOR THE REMAINING SCHOOLS</a>
+                </div>
+              </div>
+              <div class="memo-item">
+                <div class="memo-date">January 24, 2025</div>
+                <div class="memo-title">
+                  <strong>Division Memo No. 73, s.2025</strong><br>
+                  <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/January%202025/SRC-SGO-DM-25-073.pdf?csf=1&web=1&e=YcXOhu" target="_blank">USE OF REVISED COMMUNICATION AND ISSUANCE TEMPLATES WITH DEPED AND BAGONG PILIPINAS LOGOS</a>
+                </div>
+              </div>
+            <div class="memo-date">January 24, 2025</div>
+            <div class="memo-title">
+              <strong>Division Memo No. 70, s.2025</strong><br>
+              <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/January%202025/SRC-HNS-DM-25-070.pdf?csf=1&web=1&e=GKml8e" target="_blank">CONDUCT OF ADOLESCENT HEALTH EDUCATION AND PRACTICAL TRAINING (ADEPT) FOR ARH COORDINATORS, GUIDANCE COUNSELOR/S AND SCHOOL HEALTH PERSONNEL</a>
+            </div>
+          </div>
+          <div class="memo-item">
+            <div class="memo-date">January 23, 2025</div>
+            <div class="memo-title">
+              <strong>Division Memo No. 69, s.2025</strong><br>
+              <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/January%202025/SRC-SMN-DM-25-069.pdf?csf=1&web=1&e=0r9ytQ" target="_blank">REITERATION OF DEPED ORDER NO. 22, S. 2024 ON THE REVISED GUIDELINES ON CLASS AND WORK SUSPENSION IN SCHOOLS DURING DISASTERS AND EMERGENCIES</a>
+            </div>
+          </div>
+          <div class="memo-item">
+            <div class="memo-date">January 23, 2025</div>
+            <div class="memo-title">
+              <strong>Division Memo No. 68, s.2025</strong><br>
+              <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/January%202025/SRC-SGO-DM-25-068.pdf?csf=1&web=1&e=Ru3aIZ" target="_blank">TECHNICAL ASSISTANCE ON THE LEARNER GOVERNMENT ELECTION AND APPOINTMENT CODE (LGEAC) FOR SY 2025-2026</a>
+            </div>
+          </div>
+          <div class="memo-item">
+            <div class="memo-date">January 23, 2025</div>
+            <div class="memo-title">
+              <strong>Division Memo No. 67, s.2025</strong><br>
+              <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/January%202025/SRC-SGO-DM-25-067.pdf?csf=1&web=1&e=wx1gkO" target="_blank">LEARNER GOVERNMENT ELECTIONS FOR SCHOOL YEAR 2025-2026</a>
+            </div>
+          </div>
+          <div class="memo-item">
+            <div class="memo-date">January 23, 2025</div>
+            <div class="memo-title">
+              <strong>Division Memo No. 64, s.2025</strong><br>
+              <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/January%202025/SRC-PRS-DM-25-064.pdf?csf=1&web=1&e=ooyDvj" target="_blank">EARLY REGISTRATION FOR SY 2025-2026</a>
+            </div>
+          </div>
+          <div class="memo-item">
+            <div class="memo-date">January 23, 2025</div>
+            <div class="memo-title">
+              <strong>Division Memo No. 62, s.2025</strong><br>
+              <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/January%202025/SRC-SGO-DM-25-062.pdf?csf=1&web=1&e=qzoxS1" target="_blank">SARIBUHAY 2025 ECO-KALINGA: BAYANIHAN TUNGO SA MAAYOS NA KAPALIGIRAN</a>
+            </div>
+          </div>
+          <div class="memo-item">
+            <div class="memo-date">January 22, 2025</div>
+            <div class="memo-title">
+              <strong>Division Memo No. 59, s.2025</strong><br>
+              <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/January%202025/SRC-SMN-DM-25-059%20rev01.pdf?csf=1&web=1&e=2GmGoB" target="_blank">FIRST QUARTER SCHOOL ASSESSMENT OF SAFETY AND HEALTH HAZARDS (SASHH) CUM MONITORING AND TECHNICAL ASSISTANCE ON COMPREHENSIVE SCHOOL SAFETY (CSS) IMPLEMENTATION</a>
+            </div>
+          </div>
+          <div class="memo-item">
+            <div class="memo-date">January 21, 2025</div>
+            <div class="memo-title">
+              <strong>Division Memo No. 57, s.2025</strong><br>
+              <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/January%202025/SRC-SGO-DM-25-057.pdf?csf=1&web=1&e=SuLckL" target="_blank">PHILIPPINE RED CROSS: MILLION VOLUNTEER FUND DRIVE 2025</a>
+            </div>
+          </div>
+          <div class="memo-item">
+            <div class="memo-date">January 17, 2025</div>
+            <div class="memo-title">
+              <strong>Division Memo No. 50, s.2025</strong><br>
+              <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/January%202025/SRC-SMN-DM-25-050.pdf?csf=1&web=1&e=PkNJ3w" target="_blank">TURN OVER AND DISTRIBUTION OF READING MATERIALS DONATED BY GLOBAL BOOK PUBLISHING ROOM TO READ</a>
+            </div>
+          </div>
+          <div class="memo-item">
+            <div class="memo-date">January 16, 2025</div>
+            <div class="memo-title">
+              <strong>Division Memo No. 45, s.2025</strong><br>
+              <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/January%202025/SRC-SGO-DM-25-045.pdf?csf=1&web=1&e=O9KHi3" target="_blank">ADMINISTRATION OF 2024 ACCREDITATION AND EQUIVALENCY (A & E) TEST</a>
+            </div>
+          </div>
+          <div class="memo-item">
+            <div class="memo-date">January 16, 2025</div>
+            <div class="memo-title">
+              <strong>Division Memo No. 42, s.2025</strong><br>
+              <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/January%202025/SRC-SGO-DM-25-042.pdf?csf=1&web=1&e=6sWqZs" target="_blank">VIRTUAL TECHNICAL ASSISTANCE FOR THE CONDUCT OF SARIBUHAY 2025</a>
+            </div>
+          </div>
+          <div class="memo-item">
+            <div class="memo-date">January 16, 2025</div>
+            <div class="memo-title">
+              <strong>Division Memo No. 41, s.2025</strong><br>
+              <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/January%202025/SRC-SGO-DM-25-041.pdf?csf=1&web=1&e=YNzjZE" target="_blank">CONDUCT OF SCHOOL CAREER GUIDANCE ACTIVITIES</a>
+            </div>
+          </div>
+          <div class="memo-item">
+            <div class="memo-date">January 15, 2025</div>
+            <div class="memo-title">
+              <strong>Division Memo No. 35, s.2025</strong><br>
+              <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Document 1" target="_blank">SCHOOL-BASED FEEDING PROGRAM (SBFP) MILK IMPLEMENTATION AND MONITORING FOR SCHOOL YEAR 2024-2025</a>
+            </div>
+          </div>
+          <div class="memo-item">
+            <div class="memo-date">January 15, 2025</div>
+            <div class="memo-title">
+              <strong>Division Memo No. 34, s.2025</strong><br>
+              <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/January%202025/SRC-SME-DM-25-034.pdf?csf=1&web=1&e=hJL3Vy" target="_blank">RANDOM MONITORING OF SCHOOLS ON THE WHOLE GAMUT OF OPERATIONS AND MANAGEMENT</a>
+            </div>
+          </div>
+          <div class="memo-item">
+            <div class="memo-date">January 14, 2025</div>
+            <div class="memo-title">
+              <strong>Division Memo No. 32, s.2025</strong><br>
+              <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/January%202025/SRC-PRS-DM-25-032.pdf?csf=1&web=1&e=7EPcF2" target="_blank">FIELD TECHNICAL ASSISTANCE IN THE OPERATIONALIZATION OF BASIC EDUCATION MONITORING AND EVALUATION FRAMEWORK (BEMEF) IN THE ANNUAL IMPLEMENTATION PLAN (AIP) OF PUBLIC SCHOOLS</a>
+            </div>
+          </div>
+          <div class="memo-item">
+            <div class="memo-date">January 13, 2025</div>
+            <div class="memo-title">
+              <strong>Division Memo No. 29, s.2025</strong><br>
+              <a href="SUBMISSION AND ON-SITE VALIDATION AND TECHNICAL ASSISTANCE ON THE PREPARATION AND SUBMISSION OF GAD ACCOMPLISHMENT REPORT FOR FY 2024 AND OTHER GAD DOCUMENTS" target="_blank">SUBMISSION AND ON-SITE VALIDATION AND TECHNICAL ASSISTANCE ON THE PREPARATION AND SUBMISSION OF GAD ACCOMPLISHMENT REPORT FOR FY 2024 AND OTHER GAD DOCUMENTS</a>
+            </div>
+          </div>
+          <div class="memo-item">
+            <div class="memo-date">January 13, 2025</div>
+            <div class="memo-title">
+              <strong>Division Memo No. 24, s.2025</strong><br>
+              <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/January%202025/SRC-HNS-DM-25-024.pdf?csf=1&web=1&e=QbyeK8" target="_blank">ORIENTATION/ TRAINING ON FOUNDATIONAL COURSE ON ADOLESCENT HEALTH CARE FOR SCHOOL HEADS, ARH COORDINATORS, GUIDANCE COUNSELORS AND SCHOOL HEALTH PERSONNEL</a>
+            </div>
+          </div>
+          <div class="memo-item">
+            <div class="memo-date">January 9, 2025</div>
+            <div class="memo-title">
+              <strong>Division Memo No. 22, s.2025</strong><br>
+              <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/January%202025/SRC-SMN-DM-25-022.pdf?csf=1&web=1&e=6b9onb" target="_blank">FIRST QUARTER LEARNING SESSION: UPDATES ON DEPED PARTNERSHIP DATABASE SYSTEM (DPDS)</a>
+            </div>
+          </div>
+      <div class="memo-item">
+        <div class="memo-date">January 8, 2025</div>
+        <div class="memo-title">
+          <strong>Division Memo No. 015, s.2025</strong><br>
+          <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/January%202025/SRC-HRD-DM-25-015.pdf?csf=1&web=1&e=6w7EHt" target="_blank">COMPOSITION OF THE EVALUATION TEAM FOR MASTER TEACHERS PROFESSIONAL DEVELOPMENT PROGRAM (MTPDP) 2.0 WORKPLACE APPLICATION PLAN (WAP)</a>
+        </div>
+      </div>
+          <div class="memo-item">
+            <div class="memo-date">January 7, 2025</div>
+            <div class="memo-title">
+              <strong>Division Memo No. 012, s.2025</strong><br>
+              <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/January%202025/SRC-HNS-DM-25-012.pdf?csf=1&web=1&e=hyB2L0" target="_blank">MIDLINE NUTRITIONAL STATUS ASSESSMENT OF SCHOOL-BASED FEEDING PROGRAM (SBFP) BENEFICIARIES FOR SCHOOL YEAR 2024-2025</a>
+            </div>
+          </div>
+            <div class="memo-item">
+              <div class="memo-date">January 7, 2025</div>
+              <div class="memo-title">
+                <strong>Division Memo No. 010, s.2025</strong><br>
+                <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/January%202025/SRC-HNS-DM-25-010rev01.pdf?csf=1&web=1&e=OxXok7" target="_blank">MEDICAL ASSESSMENT OF REGIONAL SCHOOL PRESS CONFERENCE DELEGATES</a>
+              </div>
+          
+          </div>
+            <div class="memo-item">
+              <div class="memo-date">January 3, 2025</div>
+              <div class="memo-title">
+                <strong>Division Memo No. 2, s.2025</strong><br>
+                <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/January%202025/SRC-SGO-DM-25-002.pdf?csf=1&web=1&e=q1DUif" target="_blank">DATA COLLECTION AND VALIDATION FOR BALIK-ARAL, REPEATERS, TRANSFERRED-IN/OUT, AND NLPSA/DROPPED-OUT FOR SY 2024-2025</a>
+              </div>
+            
+            <br>
+            <h2>February</h2>
+          </div>
+         
+           
+        <div class="memo-item">
+          <div class="memo-date">February 26, 2025</div>
+          <div class="memo-title">
+            <strong>Division Memo No. 153 s.2025</strong><br>
+            <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/February%202025/SRC-PRS-DM-25-153rev01.pdf?csf=1&web=1&e=9OQPWX" target="_blank">CORRIGENDUM TO DIVISION MEMORANDUM NO. 100, S. 2025, “ORIENTATION OF PLANNING AND MONITORING METHODOLOGIES”</a>
+          </div>
+        </div>
+
+        <div class="memo-right">
+          <div class="memo-item">
+            <div class="memo-date">February 26, 2025</div>
+            <div class="memo-title">
+              <strong>Division Memo No. 154 s.2025</strong><br>
+              <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/February%202025/SRC-PRS-DM-25-154.pdf?csf=1&web=1&e=7yxj3u" target="_blank">MIDTERM REVIEW OF THE DIVISION EDUCATION DEVELOPMENT PLAN (DEDP)</a>
+            </div>
+          </div>
+      <div class="memo-right">
+        <div class="memo-item">
+          <div class="memo-date">February 07, 2025</div>
+          <div class="memo-title">
+            <strong>Division Memo No. 112 s.2025</strong><br>
+            <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/February%202025/SRC-PRS-DM-25-112.pdf?csf=1&web=1&e=nySbvf" target="_blank">CORRIGENDUM TO DIVISION MEMORANDUM NO. 100, S. 2025, “ORIENTATION OF PLANNING AND MONITORING METHODOLOGIES”</a>
+          </div>
+        </div>
+
+        <div class="memo-item">
+          <div class="memo-date">February 06, 2025</div>
+          <div class="memo-title">
+            <strong>Division Memo No. 100 s.2025</strong><br>
+            <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/February%202025/SRC-PRS-DM-25-100edited.pdf?csf=1&web=1&e=CO2raM" target="_blank">ORIENTATION OF PLANNING AND MONITORING METHODOLOGIES</a> 
+        </div>
+        <br>
+        <h2>March</h2>
+      </div>
+      
+      <div class="memo-right">
+        <div class="memo-item">
+          <div class="memo-date">March 27, 2025</div>
+          <div class="memo-title">
+            <strong>Division Memo No. 211 s.2025</strong><br>
+            <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/March%202025/SRC-PRS-DM-25-211rev01.pdf?csf=1&web=1&e=OGhUE0" target="_blank">SEMINAR-WORKSHOP ON RESEARCH WRITING</a>
+          </div>
+        </div>
+
+        <div class="memo-right">
+          <div class="memo-item">
+            <div class="memo-date">March 20, 2025</div>
+            <div class="memo-title">
+              <strong>Division Memo No. 201 s.2025</strong><br>
+              <a href="https://r4adeped2-my.sharepoint.com/:b:/r/personal/admin_starosacity_r4a-2_deped_gov_ph/Documents/memo/2025/March%202025/SRC-PRS-DM-25-175.pdf?csf=1&web=1&e=xgbHtg" target="_blank">CORRIGENDUM TO DIVISION MEMORANDUM NO. 192 S.2029: SUBMISSION OF CONSOLIDATED SCHOOL-BASED FEEDING PROGRAM (SBFP) REPORTS FOR SCHOOL YEAR 2024-2025</a>
+            </div>
+            <br>
+            <h2>April</h2>
+          </div>
+          <div class="memo-right">
+            <div class="memo-item">
+              <div class="memo-date">April 08, 2025</div>
+              <div class="memo-title">
+                <strong>Division Memo No. 246 s.2025</strong><br>
+                <a href="https://r4adeped2-my.sharepoint.com/personal/admin_starosacity_r4a-2_deped_gov_ph/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fadmin%5Fstarosacity%5Fr4a%2D2%5Fdeped%5Fgov%5Fph%2FDocuments%2Fmemo%2F2025%2FApril%202025%2FSRC%2DPRS%2DDM%2D25%2D246%2Epdf&parent=%2Fpersonal%2Fadmin%5Fstarosacity%5Fr4a%2D2%5Fdeped%5Fgov%5Fph%2FDocuments%2Fmemo%2F2025%2FApril%202025&ga=1" target="_blank">CONDUCT OF TECHNICAL ASSISTANCE FOR PUBLIC AND PRIVATE SCHOOLS ON END-OF-SCHOOL YEAR LEARNER INFORMATION SYSTEM (LIS) FINALIZATION FOR SCHOOL YEAR 2024-2025</a>
+              </div>
+            </div>
+            
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-content">
+      <img src="assets/logo.png" alt="DepEd Logo" class="footer-logo">
+      <p>
+        The Planning and Research Section of the Schools Division Office (SDO) Santa Rosa City is committed to using 
+        data to inform decisions, drive strategic planning, and conduct educational research. Our goal is to effectively 
+        implement programs and policies that enhance the educational quality in the city. 
+        Through detailed data analysis, research initiatives, and teamwork in planning,
+         we contribute to the continuous improvement of schools, educators, and students, 
+         fostering a culture of excellence and innovation in education.
+      </p>
+    </div>
+  </footer>
+  <div class="rights">
+    Copyright © 2025 DepEd Santa Rosa City - Planning and Research Section.
+  </div>
+</body>
+</html>
