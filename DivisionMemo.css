@@ -69,14 +69,14 @@
     border-right: 2px solid #003594;
     border-top: 2px solid #ffffff;
     border-left: 2px solid #ffffff;
-    transition-duration: 0.3s;
+    transition-duration: 0.7s;
     transition-property: border-top, border-left, border-bottom, border-right, box-shadow;
   }
   
   .month-button:hover {
     border-top: 2px solid #003594;
     border-left: 2px solid #003594;
-    border-bottom: 2px solid #2899fb;      /* bright purple accent */
+    border-bottom: 2px solid #2899fb;      
     border-right: 2px solid #1f91fc;
     box-shadow:
   rgba(102, 153, 255, 0.4) 5px 5px,
