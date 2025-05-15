@@ -47,10 +47,10 @@
     
   }
   .memo-title a {
-    font-weight: bold;
-    color: #003594;
+    
+    color: #0000EE;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 15px;
   }
   .memo-title a:hover {
     text-decoration: underline;
