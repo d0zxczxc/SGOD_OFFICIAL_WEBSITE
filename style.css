@@ -569,7 +569,7 @@ body {
   width: 180px;
   list-style: none;
   box-sizing: border-box;
-  animation: fadeIn 0.3s ease;
+  animation: fadeIn 0.6s ease;
 }
 
 @keyframes fadeIn {
@@ -715,17 +715,23 @@ body {
 }
 
 /* Replaces burger icon with text label */
-.dropdown-label {
+.dropdown-label,
+.about-animation {
   color: white;
   font-size: 16px;
   cursor: pointer;
   padding: 0px 0px;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease; /* This makes both color and scale transition smoothly */
 }
 
-.dropdown-label:hover {
-  color: #007bff;
+.dropdown-label:hover,
+.about-animation:hover {
+  color: #007bff; /* Blue on hover */
+  transform: scale(1.1); /* Slightly scale the text when hovered */
 }
+
+
+
 
 #enrollmentChart {
   width: 100%;          /* Ensures the chart takes up 100% of the available width */

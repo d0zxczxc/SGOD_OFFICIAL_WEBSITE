@@ -262,10 +262,16 @@ body {
 }
 
 .gif-title {
+  text-align: center;
   font-size: 24px;
   font-weight: bold;
-  color: #333;                   /* Title color */
-  margin-bottom: 10px;           /* Space between the title and description */
+  color: #ffffff;                   /* Title color */
+  margin-left: -10px;
+  margin-bottom: 1px;           /* Space between the title and description */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 0 0 25px rgba(0, 123, 255, 0.7); /* Soft shadow and glow */
+  border-radius: 10px;       /* Gives rounded corners to the div */
+  background: linear-gradient(90deg, rgb(5, 5, 108) 0%, rgb(99, 61, 61) 37%, rgb(200, 87, 87) 100%);
+  margin-right: 60px;
 }
 
 .gif-description {
