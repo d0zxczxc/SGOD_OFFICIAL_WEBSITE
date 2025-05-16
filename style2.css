@@ -151,7 +151,7 @@ body {
 
 /* Class for each slideshow */
 .slideshow {
-  width: 48%; /* Adjust to make them take up 48% of the width */
+  width: 30%; /* Adjust to make them take up 48% of the width */
   max-width: 600px; /* Maximum width of each slideshow */
   height: 300px;
   margin: 0; /* Remove margins for side-by-side layout */
