@@ -1,4 +1,3 @@
-// Function to update the clock and date
 function updateClock() {
   try {
     const timeOptions = { 
@@ -32,6 +31,7 @@ function updateClock() {
     console.error('Error updating clock:', error);
   }
 }
+
 
 // For downloading SIPs
 function downloadSIPs() {
