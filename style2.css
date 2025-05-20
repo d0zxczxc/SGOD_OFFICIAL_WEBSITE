@@ -372,6 +372,11 @@ body {
   margin-bottom: 0px;           /* Reduce large bottom margin to 20px */
 }
 
+.horizontal-divider{
+  color: rgb(142, 142, 142);
+  
+}
+
 
 
 
