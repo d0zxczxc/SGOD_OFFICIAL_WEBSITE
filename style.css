@@ -171,7 +171,7 @@ nav a:hover {
 /* Research Section */
 .research-abstracts {
   padding: 50px;
-  background-color: #f9f9f9;
+  background-color: #f4f4f4;
   text-align: center;
 }
 
@@ -187,6 +187,7 @@ nav a:hover {
   gap: 30px;
   justify-items: center;
   padding: 20px;
+  background-color: #f9f9f9;
 }
 
 .abstract-card {
@@ -300,7 +301,7 @@ nav a:hover {
 /* ✅ Updated Footer Styling to match first screenshot */
 /* Footer Styling */
 footer {
-  background-color: #eaeaea;  /* Changed to a more minimal light gray background */
+  background-color: #f4f4f4;  /* Changed to a more minimal light gray background */
   color: #000000;                /* Darker text color for better contrast */
   padding: 0px;         /* Reduced padding to make the footer more compact */
   width: 100%;
@@ -459,7 +460,7 @@ body {
   font-size: 9px;
   text-transform: uppercase;
   color: rgb(1, 2, 3);
-  background: white;
+  background: #eaeaea;
   padding: 0.5rem 0.7rem;
   transform: translate3d(0px, 0px, 20px);
 }
