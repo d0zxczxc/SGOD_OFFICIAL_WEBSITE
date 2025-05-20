@@ -187,7 +187,7 @@ nav a:hover {
   gap: 30px;
   justify-items: center;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #f4f4f4;
 }
 
 .abstract-card {
@@ -301,7 +301,7 @@ nav a:hover {
 /* ✅ Updated Footer Styling to match first screenshot */
 /* Footer Styling */
 footer {
-  background-color: #f4f4f4;  /* Changed to a more minimal light gray background */
+  background-color: #eaeaea;  /* Changed to a more minimal light gray background */
   color: #000000;                /* Darker text color for better contrast */
   padding: 0px;         /* Reduced padding to make the footer more compact */
   width: 100%;
@@ -393,7 +393,7 @@ footer p {
 
 /* Background color fix */
 body {
-  background-color: #f9f9f9;
+  background-color: #f4f4f4;
 }
 
 /* Uiverse Card Animation */
