@@ -130,7 +130,7 @@
 /* iframe for map styling */
 iframe {
   width: 95%;  /* Make the map take full container width */
-  height: 450px;  /* Adjust height */
+  height: 500px;  /* Adjust height */
   border-radius: 10px;  /* Optional: rounded corners */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);  /* Optional: adds shadow */
   border: none;  /* Removes default border */
