@@ -25,8 +25,11 @@
   <!-- Transparent Navbar (same as homepage) -->
   <header>
     <div id="philippines-datetime">
-      <span id="philippines-date"></span>/
-      <span id="philippines-clock"></span>
+      <div id="philippines-timezone">Philippine Standard Time:</div>
+      <div>
+        <span id="philippines-date"></span> /
+        <span id="philippines-clock"></span>
+      </div>
     </div>
     <div class="navbar">
       <div class="logo">
@@ -37,48 +40,32 @@
       </div>
       
       <nav>
-        <div class="burger-dropdown">
-          <a href="sgod.html"><span class="dropdown-label">Home▾</span></a>
+        
+        <nav>
+          <a href="sgod.html">Home</a>
+          <a class="horizontal-divider">|</a>
+          <a href="index.html">PRS</a>
+          <a class="horizontal-divider">|</a>
+          <a href="#">SMMES</a>
+          <a class="horizontal-divider">|</a>
+          <a href="#">YFS</a>
+          <a class="horizontal-divider">|</a>
+        
+      <a href="sgod-about.html">About SGOD</a>
+      <a class="horizontal-divider">|</a>
+      <div class="burger-dropdown">
+        <span class="dropdown-label">SGOD Issuances ▾</span>
           <ul class="dropdown-menu-vertical">
-        
+            <!-- Division Memo -->
+            <li><a href="DivMemo.html">Division Memo</a></li>
             
-            <li>
-              <a href="index.html">PRS</a>
-            </li>
+            <!-- Office Memo -->
+            <li><a href="#">Office Memo</a></li>
             
-            <li>
-              <a href="#">SMMES</a>
-            </li>
-    
-            <li>
-              <a href="#">YFS</a>
-            </li>
-        
+            <!-- Division Order -->
+            <li><a href="#">Division Order</a></li>
           </ul>
         </div>
-
-    
-        <nav>
-        
-          
-          <a href="sgod-about.html">About</a>
-          <div class="burger-dropdown">
-            <span class="dropdown-label">SGOD Issuances ▾</span>
-              <ul class="dropdown-menu-vertical">
-                <!-- Division Memo -->
-                <li><a href="DivMemo.html">Division Memo</a></li>
-                
-                <!-- Office Memo -->
-                <li><a href="#">Office Memo</a></li>
-                
-                <!-- Division Order -->
-                <li><a href="#">Division Order</a></li>
-              </ul>
-            </div>
-  
-          
-            </ul>
-          </div>
           
           
         </nav>
