@@ -332,7 +332,7 @@ footer {
 footer p {
   flex: 1;
   font-size: 18px;
-  font-style: Helvetica;
+  font-family: Helvetica;
   line-height: 2.0;
   text-align: justify;
   color: #333;    /* Darker text color for readability */
