@@ -105,10 +105,56 @@
       <li>Provide a venue for sharing, using and reusing knowledge within DepED through improving access to data/information.</li>
     </ul>
 
+
+
+<!--FORWARD ESTIMATES-->
   </div>
 </section>
-      
+<section class="container" style="text-align: center; padding: 30px 0;">
+  <h2>Basic Education Data</h2>
+  <p class="mb-4">Forward Estimates</p>
+  
+  <div class="sheets-container">
+    <div class="sheets-header">
+      <h2 class="sheets-title">School Year 2024-2025 Data</h2>
+      <div class="sheets-actions">
+        <button class="sheets-btn" id="refreshSheet">Refresh Data</button>
+        <button class="sheets-btn" id="fullscreenSheet">Full Screen</button>
+      </div>
+    </div>
     
+    <div class="sheets-iframe-container">
+      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRHG6FU5fb8k9cXyo-kSacml5QSxMj8HVu6xdWqMRax_U_cLhaOnHy0LsF6W84X4g/pubhtml?widget=true&amp;headers=false"></iframe>
+    </div>
+    
+    <div class="sheets-footer">
+      Data managed by Planning and Research Section, SDO Santa Rosa City
+    </div>
+  </div>
+</section>
+  <!-- PERFORMANCE INDICATORS-->   
+  <section class="container" style="text-align: center; padding: 30px 0;">
+    <h2>Performance Indicators</h2>
+    <p class="mb-4">Key Educational Performance Metrics</p>
+    
+    <div class="sheets-container">
+      <div class="sheets-header">
+        <h2 class="sheets-title">SY 2024-2025 Performance Indicators</h2>
+        <div class="sheets-actions">
+          <button class="sheets-btn" id="refreshSheet2">Refresh Data</button>
+          <button class="sheets-btn" id="fullscreenSheet2">Full Screen</button>
+        </div>
+      </div>
+      
+      <div class="sheets-iframe-container">
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vREQnGTpqrTrHapAOYEO1WIhiQD1i17qWXtg3yN0ggxnPp71-kKTyxLoe7LK0zoZw/pubhtml?widget=true&amp;headers=false"></iframe>
+      </div>
+      
+      <div class="sheets-footer">
+        Data managed by Planning and Research Section, SDO Santa Rosa City
+      </div>
+    </div>
+  </section>
     <br><br><br><br><br><br>
   </section>
   <div class="section-divider"></div> 
@@ -194,6 +240,87 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 </script>
+<script>
+  // JavaScript for Google Sheets embed controls
+  document.addEventListener('DOMContentLoaded', function() {
+    const refreshBtn = document.getElementById('refreshSheet');
+    const fullscreenBtn = document.getElementById('fullscreenSheet');
+    const iframe = document.querySelector('.sheets-iframe-container iframe');
+    
+    if (refreshBtn && iframe) {
+      refreshBtn.addEventListener('click', function() {
+        // Reload the iframe content
+        const currentSrc = iframe.src;
+        iframe.src = currentSrc;
+      });
+    }
+    
+    if (fullscreenBtn && iframe) {
+      fullscreenBtn.addEventListener('click', function() {
+        if (iframe.requestFullscreen) {
+          iframe.requestFullscreen();
+        } else if (iframe.webkitRequestFullscreen) {
+          iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) {
+          iframe.msRequestFullscreen();
+        }
+      });
+    }
+  });
+</script>
+<script>
+  // JavaScript for Google Sheets embed controls
+document.addEventListener('DOMContentLoaded', function() {
+  // First sheet controls
+  const refreshBtn = document.getElementById('refreshSheet');
+  const fullscreenBtn = document.getElementById('fullscreenSheet');
+  const iframe = document.querySelector('.sheets-iframe-container iframe');
   
+  if (refreshBtn && iframe) {
+    refreshBtn.addEventListener('click', function() {
+      // Reload the iframe content
+      const currentSrc = iframe.src;
+      iframe.src = currentSrc;
+    });
+  }
+  
+  if (fullscreenBtn && iframe) {
+    fullscreenBtn.addEventListener('click', function() {
+      if (iframe.requestFullscreen) {
+        iframe.requestFullscreen();
+      } else if (iframe.webkitRequestFullscreen) {
+        iframe.webkitRequestFullscreen();
+      } else if (iframe.msRequestFullscreen) {
+        iframe.msRequestFullscreen();
+      }
+    });
+  }
+  
+  // Second sheet controls
+  const refreshBtn2 = document.getElementById('refreshSheet2');
+  const fullscreenBtn2 = document.getElementById('fullscreenSheet2');
+  const iframe2 = document.querySelectorAll('.sheets-iframe-container iframe')[1]; // Get the second iframe
+  
+  if (refreshBtn2 && iframe2) {
+    refreshBtn2.addEventListener('click', function() {
+      // Reload the second iframe content
+      const currentSrc = iframe2.src;
+      iframe2.src = currentSrc;
+    });
+  }
+  
+  if (fullscreenBtn2 && iframe2) {
+    fullscreenBtn2.addEventListener('click', function() {
+      if (iframe2.requestFullscreen) {
+        iframe2.requestFullscreen();
+      } else if (iframe2.webkitRequestFullscreen) {
+        iframe2.webkitRequestFullscreen();
+      } else if (iframe2.msRequestFullscreen) {
+        iframe2.msRequestFullscreen();
+      }
+    });
+  }
+});
+</script>
 </body>
 </html>

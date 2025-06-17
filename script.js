@@ -169,3 +169,29 @@ function showMonth(month) {
 }
 
 
+// JavaScript for Google Sheets embed controls
+document.addEventListener('DOMContentLoaded', function() {
+  const refreshBtn = document.getElementById('refreshSheet');
+  const fullscreenBtn = document.getElementById('fullscreenSheet');
+  const iframe = document.querySelector('.sheets-iframe-container iframe');
+  
+  if (refreshBtn) {
+    refreshBtn.addEventListener('click', function() {
+      // Reload the iframe content
+      const currentSrc = iframe.src;
+      iframe.src = currentSrc;
+    });
+  }
+  
+  if (fullscreenBtn && iframe) {
+    fullscreenBtn.addEventListener('click', function() {
+      if (iframe.requestFullscreen) {
+        iframe.requestFullscreen();
+      } else if (iframe.webkitRequestFullscreen) {
+        iframe.webkitRequestFullscreen();
+      } else if (iframe.msRequestFullscreen) {
+        iframe.msRequestFullscreen();
+      }
+    });
+  }
+});
