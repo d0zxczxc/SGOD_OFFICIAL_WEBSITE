@@ -419,10 +419,10 @@
 
   <!-- Script for Password Protection of Document Links -->
   <script>
-  // Different encryption keys for each link
-  const encryptionKey1 = "SGODSTAFFONLY1";  // Password for first link
-  const encryptionKey2 = "SGODSTAFFONLY2";  // Password for second link
-  const encryptionKey3 = "SGODSTAFFONLY3";  // Password for third link
+    // Encryption keys for each link
+    const encryptionKey1 = "PRSSTAFFONLY1";  // Password for first link
+    const encryptionKey2 = "PRSSTAFFONLY2";  // Password for second link
+    const encryptionKey3 = "PRSSTAFFONLY3";  // Password for third link
 
   // URLs to be encrypted
   const originalUrl1 = "https://drive.google.com/file/d/1kkPkOcXQ7_xQH9XMGP9jvgy_mG-NZwq4/view?usp=drive_link";
@@ -443,24 +443,24 @@
   if (link1) {
     link1.setAttribute("data-encrypted-url", encryptedUrl1);
     link1.addEventListener("click", function(event) {
-      event.preventDefault();  // Prevents the default link action
-      const userKey = prompt("Enter the password for Document 1:");  // Ask user for password
-      if (userKey === encryptionKey1) {  // Check if password is correct
+      event.preventDefault();
+      const userKey = prompt("Enter the password for Document 1:");
+      if (userKey === encryptionKey1) {
         const encryptedUrl = link1.getAttribute("data-encrypted-url");
         const decryptedBytes = CryptoJS.AES.decrypt(encryptedUrl, encryptionKey1);
         const decryptedUrl = decryptedBytes.toString(CryptoJS.enc.Utf8);
         if (decryptedUrl) {
-          window.open(decryptedUrl, '_blank');  // Open URL in new tab if decryption successful
+          window.open(decryptedUrl, '_blank');
         } else {
           alert("Decryption failed. Please check the password.");
         }
       } else {
-        alert("Incorrect password!");  // Alert if password is wrong
+        alert("Incorrect password!");
       }
     });
   }
 
-  // Second link handler - similar structure to first handler
+  // Second link handler
   if (link2) {
     link2.setAttribute("data-encrypted-url", encryptedUrl2);
     link2.addEventListener("click", function(event) {
@@ -481,7 +481,7 @@
     });
   }
 
-  // Third link handler - similar structure to previous handlers
+  // Third link handler
   if (link3) {
     link3.setAttribute("data-encrypted-url", encryptedUrl3);
     link3.addEventListener("click", function(event) {
@@ -502,8 +502,6 @@
     });
   }
 </script>
-
-  <!-- Swiper JS Library for Slideshows -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   
   <!-- Script to Initialize Swipers (Slideshows) -->

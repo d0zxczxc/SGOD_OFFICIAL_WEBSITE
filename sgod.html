@@ -401,7 +401,7 @@
 
       <!-- Added 2024 and 2025 Plans under AIP -->
       
-      <a href="https://drive.google.com/file/d/1kkPkOcXQ7_xQH9XMGP9jvgy_mG-NZwq4/view?usp=drive_link" id="encrypted-link" target="_blank" class="download-link">2024 SDO AIP</a>
+      <a href="https://drive.google.com/file/d/1kkPkOcXQ7_xQH9XMGP9jvgy_mG-NZwq4/view?usp=drive_link" id="encrypted-link1" target="_blank" class="download-link">2024 SDO AIP</a>
       <a href="https://drive.google.com/file/d/1bmjEF8ghJgUiwG1wpI3iSbJmvuQGJDN_/view?usp=drive_link" id="encrypted-link2" target="_blank" class="download-link">2024 SGOD AIP</a>
       <a href="https://drive.google.com/file/d/1QEuNAkV5s-n2unORyjqec7P5banx7DcH/view?usp=drive_link" id="encrypted-link3" target="_blank" class="download-link">2025 SGOD AIP</a>
     </div>
@@ -456,99 +456,95 @@
   </button>
   
 
-
-
-
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
   <script src="path/to/crypto-js.js"></script>
   
-
   <script>
-  // Different encryption keys for each link
-  const encryptionKey1 = "SGODSTAFFONLY1";  // Password for first link
-  const encryptionKey2 = "SGODSTAFFONLY2";  // Password for second link
-  const encryptionKey3 = "SGODSTAFFONLY3";  // Password for third link
+      // Encryption keys for each link
+      const encryptionKey1 = "SGODSTAFFONLY1";  // Password for first link
+      const encryptionKey2 = "SGODSTAFFONLY2";  // Password for second link
+      const encryptionKey3 = "SGODSTAFFONLY3";  // Password for third link
 
-  // URLs to be encrypted
-  const originalUrl1 = "https://drive.google.com/file/d/1kkPkOcXQ7_xQH9XMGP9jvgy_mG-NZwq4/view?usp=drive_link";
-  const originalUrl2 = "https://drive.google.com/file/d/1kkPkOcXQ7_xQH9XMGP9jvgy_mG-NZwq4/view?usp=drive_link";
-  const originalUrl3 = "https://drive.google.com/file/d/1QEuNAkV5s-n2unORyjqec7P5banx7DcH/view?usp=drive_link";
-
-  // Encrypt each URL with its own key
-  const encryptedUrl1 = CryptoJS.AES.encrypt(originalUrl1, encryptionKey1).toString();
-  const encryptedUrl2 = CryptoJS.AES.encrypt(originalUrl2, encryptionKey2).toString();
-  const encryptedUrl3 = CryptoJS.AES.encrypt(originalUrl3, encryptionKey3).toString();
-
-  // Get the link elements
-  const link1 = document.getElementById("encrypted-link");
-  const link2 = document.getElementById("encrypted-link2");
-  const link3 = document.getElementById("encrypted-link3");
-  
-  // First link handler
-  if (link1) {
-    link1.setAttribute("data-encrypted-url", encryptedUrl1);
-    link1.addEventListener("click", function(event) {
-      event.preventDefault();
-      const userKey = prompt("Enter the password for Document 1:");
-      if (userKey === encryptionKey1) {
-        const encryptedUrl = link1.getAttribute("data-encrypted-url");
-        const decryptedBytes = CryptoJS.AES.decrypt(encryptedUrl, encryptionKey1);
-        const decryptedUrl = decryptedBytes.toString(CryptoJS.enc.Utf8);
-        if (decryptedUrl) {
-          window.open(decryptedUrl, '_blank');
-        } else {
-          alert("Decryption failed. Please check the password.");
-        }
-      } else {
-        alert("Incorrect password!");
+      // URLs to be encrypted
+      const originalUrl1 = "https://drive.google.com/file/d/1kkPkOcXQ7_xQH9XMGP9jvgy_mG-NZwq4/view?usp=drive_link";
+      const originalUrl2 = "https://drive.google.com/file/d/1kkPkOcXQ7_xQH9XMGP9jvgy_mG-NZwq4/view?usp=drive_link";
+      const originalUrl3 = "https://drive.google.com/file/d/1QEuNAkV5s-n2unORyjqec7P5banx7DcH/view?usp=drive_link";
+      
+      // Encrypt each URL with its own key
+      const encryptedUrl1 = CryptoJS.AES.encrypt(originalUrl1, encryptionKey1).toString();
+      const encryptedUrl2 = CryptoJS.AES.encrypt(originalUrl2, encryptionKey2).toString();
+      const encryptedUrl3 = CryptoJS.AES.encrypt(originalUrl3, encryptionKey3).toString();
+    
+      // Get the link elements
+      const link1 = document.getElementById("encrypted-link1");
+      const link2 = document.getElementById("encrypted-link2");
+      const link3 = document.getElementById("encrypted-link3");
+      
+      // First link handler
+      if (link1) {
+        link1.setAttribute("data-encrypted-url", encryptedUrl1);
+        link1.addEventListener("click", function(event) {
+          event.preventDefault();
+          const userKey = prompt("Enter the encryption key to access Document 1:");
+          if (userKey === encryptionKey1) {
+            const encryptedUrl = link1.getAttribute("data-encrypted-url");
+            const decryptedBytes = CryptoJS.AES.decrypt(encryptedUrl, encryptionKey1);
+            const decryptedUrl = decryptedBytes.toString(CryptoJS.enc.Utf8);
+            if (decryptedUrl) {
+              window.open(decryptedUrl, '_blank');
+            } else {
+              alert("Decryption failed. Please check the key.");
+            }
+          } else {
+            alert("Incorrect encryption key!");
+          }
+        });
       }
-    });
-  }
-
-  // Second link handler
-  if (link2) {
-    link2.setAttribute("data-encrypted-url", encryptedUrl2);
-    link2.addEventListener("click", function(event) {
-      event.preventDefault();
-      const userKey = prompt("Enter the password for Document 2:");
-      if (userKey === encryptionKey2) {
-        const encryptedUrl = link2.getAttribute("data-encrypted-url");
-        const decryptedBytes = CryptoJS.AES.decrypt(encryptedUrl, encryptionKey2);
-        const decryptedUrl = decryptedBytes.toString(CryptoJS.enc.Utf8);
-        if (decryptedUrl) {
-          window.open(decryptedUrl, '_blank');
-        } else {
-          alert("Decryption failed. Please check the password.");
-        }
-      } else {
-        alert("Incorrect password!");
+      
+      // Second link handler
+      if (link2) {
+        link2.setAttribute("data-encrypted-url", encryptedUrl2);
+        link2.addEventListener("click", function(event) {
+          event.preventDefault();
+          const userKey = prompt("Enter the encryption key to access Document 2:");
+          if (userKey === encryptionKey2) {
+            const encryptedUrl = link2.getAttribute("data-encrypted-url");
+            const decryptedBytes = CryptoJS.AES.decrypt(encryptedUrl, encryptionKey2);
+            const decryptedUrl = decryptedBytes.toString(CryptoJS.enc.Utf8);
+            if (decryptedUrl) {
+              window.open(decryptedUrl, '_blank');
+            } else {
+              alert("Decryption failed. Please check the key.");
+            }
+          } else {
+            alert("Incorrect encryption key!");
+          }
+        });
       }
-    });
-  }
 
-  // Third link handler
-  if (link3) {
-    link3.setAttribute("data-encrypted-url", encryptedUrl3);
-    link3.addEventListener("click", function(event) {
-      event.preventDefault();
-      const userKey = prompt("Enter the password for Document 3:");
-      if (userKey === encryptionKey3) {
-        const encryptedUrl = link3.getAttribute("data-encrypted-url");
-        const decryptedBytes = CryptoJS.AES.decrypt(encryptedUrl, encryptionKey3);
-        const decryptedUrl = decryptedBytes.toString(CryptoJS.enc.Utf8);
-        if (decryptedUrl) {
-          window.open(decryptedUrl, '_blank');
-        } else {
-          alert("Decryption failed. Please check the password.");
-        }
-      } else {
-        alert("Incorrect password!");
+      // Third link handler
+      if (link3) {
+        link3.setAttribute("data-encrypted-url", encryptedUrl3);
+        link3.addEventListener("click", function(event) {
+          event.preventDefault();
+          const userKey = prompt("Enter the encryption key to access Document 3:");
+          if (userKey === encryptionKey3) {
+            const encryptedUrl = link3.getAttribute("data-encrypted-url");
+            const decryptedBytes = CryptoJS.AES.decrypt(encryptedUrl, encryptionKey3);
+            const decryptedUrl = decryptedBytes.toString(CryptoJS.enc.Utf8);
+            if (decryptedUrl) {
+              window.open(decryptedUrl, '_blank');
+            } else {
+              alert("Decryption failed. Please check the key.");
+            }
+          } else {
+            alert("Incorrect encryption key!");
+          }
+        });
       }
-    });
-  }
-</script>
+  </script>
   <!-- Swiper-->
   <script>
     ['.mySwiper1', '.mySwiper2'].forEach(selector => {
