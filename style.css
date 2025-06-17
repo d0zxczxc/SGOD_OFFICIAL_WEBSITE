@@ -742,6 +742,9 @@ body {
 }
 
 
+img {
+  filter: brightness(1.1) contrast(1.2);
+}
 
 
 
