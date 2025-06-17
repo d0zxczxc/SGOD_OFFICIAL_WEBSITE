@@ -107,7 +107,28 @@
 
   </div>
 </section>
-      
+<section class="container" style="text-align: center; padding: 30px 0;">
+  <h2>Basic Education Data</h2>
+  <p class="mb-4">Forward Estimates</p>
+  
+  <div class="sheets-container">
+    <div class="sheets-header">
+      <h2 class="sheets-title">School Year 2024-2025 Data</h2>
+      <div class="sheets-actions">
+        <button class="sheets-btn" id="refreshSheet">Refresh Data</button>
+        <button class="sheets-btn" id="fullscreenSheet">Full Screen</button>
+      </div>
+    </div>
+    
+    <div class="sheets-iframe-container">
+      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRHG6FU5fb8k9cXyo-kSacml5QSxMj8HVu6xdWqMRax_U_cLhaOnHy0LsF6W84X4g/pubhtml?widget=true&amp;headers=false"></iframe>
+    </div>
+    
+    <div class="sheets-footer">
+      Data managed by Planning and Research Section, SDO Santa Rosa City
+    </div>
+  </div>
+</section>
     
     <br><br><br><br><br><br>
   </section>
@@ -194,6 +215,33 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 </script>
-  
+<script>
+  // JavaScript for Google Sheets embed controls
+  document.addEventListener('DOMContentLoaded', function() {
+    const refreshBtn = document.getElementById('refreshSheet');
+    const fullscreenBtn = document.getElementById('fullscreenSheet');
+    const iframe = document.querySelector('.sheets-iframe-container iframe');
+    
+    if (refreshBtn && iframe) {
+      refreshBtn.addEventListener('click', function() {
+        // Reload the iframe content
+        const currentSrc = iframe.src;
+        iframe.src = currentSrc;
+      });
+    }
+    
+    if (fullscreenBtn && iframe) {
+      fullscreenBtn.addEventListener('click', function() {
+        if (iframe.requestFullscreen) {
+          iframe.requestFullscreen();
+        } else if (iframe.webkitRequestFullscreen) {
+          iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) {
+          iframe.msRequestFullscreen();
+        }
+      });
+    }
+  });
+</script>
 </body>
 </html>
