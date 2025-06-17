@@ -297,7 +297,7 @@ html {
   font-family: 'Segoe UI', Arial, sans-serif;
   overflow: hidden;
   border-radius: 12px;
-  border: 2px solid #3947ae; /* blue border matching image */
+  border: 2px solid #ca2324; /* Red border matching image */
   box-shadow: 0 4px 12px 0 rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
@@ -311,7 +311,27 @@ html {
 
 /* The division head has a blue background */
 .org-division-head .org-card .org-info {
-  background: #005bab; /* Blue background for division head */
+  background: #545fda; /* Blue background for division head */
+}
+
+.org-card .org-role1 {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #ffffff; /* Black text as in image */
+  margin-bottom: 0;
+  line-height: 1.2;
+  transition: transform 0.3s ease;
+}
+
+.org-card .org-title1 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #ffffff; /* Black text as in image */
+  line-height: 1.2;
+  transition: transform 0.3s ease;
 }
 
 /* All other cards have yellow background */
@@ -389,7 +409,7 @@ html {
   font-size: 1.15rem;
   font-weight: bold;
   color: #fff;
-  background: #4723ca; /* Red header for sections */
+  background: #ca2324; /* Red header for sections */
   display: block;
   padding: 10px 0;
   margin: 35px 0 15px 0;
