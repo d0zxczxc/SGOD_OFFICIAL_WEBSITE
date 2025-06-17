@@ -297,7 +297,7 @@ html {
   font-family: 'Segoe UI', Arial, sans-serif;
   overflow: hidden;
   border-radius: 12px;
-  border: 2px solid #ca2324; /* Red border matching image */
+  border: 2px solid #3947ae; /* blue border matching image */
   box-shadow: 0 4px 12px 0 rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
@@ -389,7 +389,7 @@ html {
   font-size: 1.15rem;
   font-weight: bold;
   color: #fff;
-  background: #ca2324; /* Red header for sections */
+  background: #4723ca; /* Red header for sections */
   display: block;
   padding: 10px 0;
   margin: 35px 0 15px 0;
