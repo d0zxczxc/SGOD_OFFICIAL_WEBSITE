@@ -297,7 +297,7 @@ html {
   font-family: 'Segoe UI', Arial, sans-serif;
   overflow: hidden;
   border-radius: 12px;
-  border: 2px solid #ca2324; /* Red border matching image */
+  border: 2px solid #3947ae; /* Red border matching image */
   box-shadow: 0 4px 12px 0 rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
