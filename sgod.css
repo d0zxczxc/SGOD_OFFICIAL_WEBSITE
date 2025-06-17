@@ -261,3 +261,170 @@ html {
 }
 
 
+/* Organization Chart Layout with Larger Images */
+.employee-profiles.org-chart {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  padding: 30px 15px 15px 15px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.09);
+}
+
+.org-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.org-division-head {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.org-card {
+  background: linear-gradient(to bottom, #f8d74e, #f2c200);
+  border: 3px solid #ca2324;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px 0 rgba(0,0,0,0.12);
+  text-align: center;
+  width: 220px;
+  min-height: 280px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.org-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px 0 rgba(0,0,0,0.15);
+}
+
+.org-card.head {
+  border-width: 4px;
+  background: linear-gradient(to bottom, #1e88e5, #005bab);
+  color: #fff;
+  width: 250px;
+}
+
+/* Image Container */
+.org-image-container {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+}
+
+.org-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.org-card:hover .org-image {
+  transform: scale(1.05);
+}
+
+/* Info Container */
+.org-info {
+  padding: 15px 12px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.org-card.head .org-info {
+  background: linear-gradient(to bottom, #1e88e5, #005bab);
+}
+
+.org-card.head .org-title,
+.org-card.head .org-role {
+  color: #fff;
+}
+
+.org-card .org-title {
+  font-size: 1.05rem;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  color: #222;
+}
+
+.org-card .org-role {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #2d2d2d;
+  margin-bottom: 0;
+}
+
+.org-section-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(to right, #e53935, #ca2324);
+  display: block;
+  padding: 10px 0;
+  margin: 35px 0 15px 0;
+  text-align: center;
+  border-radius: 8px;
+  letter-spacing: .7px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.1);
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .employee-profiles.org-chart {
+    padding: 15px 5px;
+  }
+  
+  .org-row {
+    gap: 20px;
+  }
+  
+  .org-card {
+    width: 180px;
+    min-height: 240px;
+  }
+  
+  .org-card.head {
+    width: 200px;
+  }
+  
+  .org-image-container {
+    height: 140px;
+  }
+  
+  .org-section-label {
+    font-size: 1.05rem;
+    padding: 8px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .org-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .org-card {
+    width: 80%;
+    max-width: 280px;
+  }
+  
+  .org-image-container {
+    height: 200px;
+  }
+}
