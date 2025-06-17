@@ -1,95 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html> <!-- Declares the document type as HTML5 -->
+<html lang="en"> <!-- Root element with language set to English -->
+<head> <!-- Contains metadata about the document and links to external resources -->
+  <!-- Link to Bootstrap CSS framework - provides pre-designed components and styling -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <!-- Link to Swiper JS library CSS - enables image carousel/slideshow functionality -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
+  <!-- Sets the favicon (small icon in browser tab) -->
   <link rel="icon" href="Assets/logo.png" type="image/png">
+  
+  <!-- Sets the character encoding to UTF-8 (supports international characters) -->
   <meta charset="UTF-8" />
+  
+  <!-- Makes the webpage responsive (adjusts layout based on screen size) -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- Sets the title of the webpage (appears in browser tab) -->
   <title>Planning and Research</title>
+  
+  <!-- Links to custom CSS files for styling the webpage -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="style2.css" />
   <link rel="stylesheet" href="index.css" />
 </head>
 
+<body> <!-- Contains all visible content of the webpage -->
 
-<body>
-
-  <!-- Transparent Navbar -->
+  <!-- Header Section - Contains navigation and branding -->
   <header>
+    <!-- Philippine Date and Time Display -->
     <div id="philippines-datetime">
       <div id="philippines-timezone">Philippine Standard Time:</div>
       <div>
+        <!-- These spans will be filled with date and time by JavaScript -->
         <span id="philippines-date"></span> /
         <span id="philippines-clock"></span>
       </div>
     </div>
     
-
+    <!-- Navigation Bar -->
     <div class="navbar">
+      <!-- Logo with link to main website -->
       <div class="logo">
-        <a href="https://depedsantarosa.ph/"target="_blank">
-          <img src="Assets/banner white.png" alt="PRS Logo" />
+        <a href="https://depedsantarosa.ph/" target="_blank"> <!-- target="_blank" opens link in new tab -->
+          <img src="Assets/banner white.png" alt="PRS Logo" /> <!-- alt text provides description for screen readers -->
         </a>
       </div>
 
+      <!-- Navigation Menu -->
       <nav>
+        <!-- Home Link with Dropdown Structure (Note: dropdown content is missing closing tags) -->
         <div class="burger-dropdown">
           <a href="sgod.html"><span class="dropdown-label">Home</span></a>
-          
-        
-          
-          </ul>
+          <!-- Note: Unclosed <ul> tag here - this is a structural error -->
         </div>
+        
+        <!-- Regular Navigation Links -->
         <a href="about.html">About PRS</a>
         <a href="basicdata.html">Basic Education Data</a>
         <a href="research.html">Action and Basic Research</a>
+        
+        <!-- SGOD Issuances Dropdown Menu -->
         <div class="burger-dropdown">
-          <span class="dropdown-label">SGOD Issuances ▾</span>
-            <ul class="dropdown-menu-vertical">
-              <!-- Division Memo -->
+          <span class="dropdown-label">SGOD Issuances ▾</span> <!-- ▾ is a down-arrow symbol -->
+            <ul class="dropdown-menu-vertical"> <!-- Vertical dropdown menu -->
+              <!-- Menu Items -->
               <li><a href="DivMemo.html">Division Memo</a></li>
-              
-              <!-- Office Memo -->
-              <li><a href="#">Office Memo</a></li>
-              
-              <!-- Division Order -->
+              <li><a href="#">Office Memo</a></li> <!-- # as href creates a link that doesn't navigate anywhere -->
               <li><a href="#">Division Order</a></li>
             </ul>
           </div>
-
-        
+          <!-- Note: Extra closing tags that don't match opening tags - structure error -->
           </ul>
         </div>
-        
-        
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero Section - Large banner at top of page -->
   <section class="hero">
-    <div class="overlay">
+    <div class="overlay"> <!-- Dark overlay to make text more readable on background image -->
       <h1>
+        <!-- Link that scrolls to the about section when clicked -->
         <a href="#about-prs" style="color: white; text-decoration: none;">
-          <h1>Planning and Research<br>Section</h1>
+          <h1>Planning and Research<br>Section</h1> <!-- br creates a line break -->
         </a>
       </h1>
     </div>
   </section>
-<br><br>
+
+  <!-- Line breaks and section divider for visual separation -->
+  <br><br>
   <div class="section-divider"></div>
+  
+  <!-- About Section - Information about Planning and Research Section -->
   <section id="about-prs" class="about-section container" style="margin-top: -30px; background-color: #f4f4f4;">
+    <!-- Flex container for responsive layout - positions items side by side on large screens, stacked on small screens -->
     <div style="display: flex; align-items: flex-start; justify-content: center; gap: 40px; flex-wrap: wrap;">
-      <!-- Left: PRS Logo -->
+      <!-- Left side: PRS Logo -->
       <div style="flex: 1; min-width: 250px; text-align: center;">
         <img src="Assets/logo.png" alt="PRS Logo" style="height: 350px; max-width: 100%;">
       </div>
   
-      <!-- Right: Heading + Paragraph -->
+      <!-- Right side: Description text -->
       <div style="flex: 2; min-width: 300px;">
         <div style="text-align: center; margin-bottom: 15px;">
         </div>
+        <!-- Paragraph with styling for readability -->
         <p style="font-size: 19px; line-height: 1.8; text-align: justify;">
           <strong>The Planning and Research Section (PRS)</strong> of the Schools Division Office of Santa Rosa City plays an important role in supporting evidence-based decision-making and strategic planning in education. Through careful data collection, planning, and regular review, PRS helps make sure that programs and policies meet the changing needs of learners, teachers, and schools. The section leads the development of education plans, conducts useful research, and helps track performance to guide improvements. By promoting the use of data and new ideas, PRS helps ensure that every learner has access to quality and inclusive basic education.
         </p>
@@ -97,246 +115,276 @@
     </div>
   </section>
 
-  <!-- Divider -->
+  <!-- Visual divider and spacing -->
   <div class="section-divider"></div><br><br><br>
 
-<!-- SEMINAR SLIDESHOW -->
-<div class="slideshow-row">
-  <!-- Seminar Slideshow row -->
-  <div class="swiper mySwiper1 slideshow">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="assets/Seminar/slide1.jpg" alt="Seminar 1">
-        <div class="slide-caption">Seminar-Workshop on Research Writing</div>
+  <!-- Image Slideshow/Carousel Section -->
+  <div class="slideshow-row">
+    <!-- First Slideshow - Seminar Workshop -->
+    <div class="swiper mySwiper1 slideshow"> <!-- Swiper is the slideshow library being used -->
+      <div class="swiper-wrapper"> <!-- Container for all slides -->
+        <!-- Individual slides with images and captions -->
+        <div class="swiper-slide">
+          <img src="assets/Seminar/slide1.jpg" alt="Seminar 1">
+          <div class="slide-caption">Seminar-Workshop on Research Writing</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/Seminar/slide2.jpg" alt="Seminar 2">
+          <div class="slide-caption">Seminar-Workshop on Research Writing</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/Seminar/slide3.jpg" alt="Seminar 3">
+          <div class="slide-caption">Seminar-Workshop on Research Writing</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/Seminar/slide4.jpg" alt="Seminar 4">
+          <div class="slide-caption">Seminar-Workshop on Research Writing</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/Seminar/slide5.jpg" alt="Seminar 5">
+          <div class="slide-caption">Seminar-Workshop on Research Writing</div>
+        </div>
       </div>
-      <div class="swiper-slide">
-        <img src="assets/Seminar/slide2.jpg" alt="Seminar 2">
-        <div class="slide-caption">Seminar-Workshop on Research Writing</div>
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/Seminar/slide3.jpg" alt="Seminar 3">
-        <div class="slide-caption">Seminar-Workshop on Research Writing</div>
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/Seminar/slide4.jpg" alt="Seminar 4">
-        <div class="slide-caption">Seminar-Workshop on Research Writing</div>
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/Seminar/slide5.jpg" alt="Seminar 5">
-        <div class="slide-caption">Seminar-Workshop on Research Writing</div>
-      </div>
+      <!-- Navigation controls for slideshow -->
+      <div class="swiper-button-prev"></div> <!-- Previous button -->
+      <div class="swiper-button-next"></div> <!-- Next button -->
+      <div class="swiper-pagination"></div> <!-- Pagination dots -->
     </div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-pagination"></div>
-  </div>
 
-  <!-- BERF Slideshow -->
-  <div class="swiper mySwiper2 slideshow">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="Assets/BERF/BERF1.jpg" alt="BERF 1">
-        <div class="slide-caption">10th Cycle BERF Proposal Presentation</div>
+    <!-- Second Slideshow - BERF Presentation -->
+    <div class="swiper mySwiper2 slideshow">
+      <div class="swiper-wrapper">
+        <!-- Similar structure as first slideshow, but with different images -->
+        <div class="swiper-slide">
+          <img src="Assets/BERF/BERF1.jpg" alt="BERF 1">
+          <div class="slide-caption">10th Cycle BERF Proposal Presentation</div>
+        </div>
+        <!-- More slides for BERF slideshow -->
+        <div class="swiper-slide">
+          <img src="Assets/BERF/BERF2.jpg" alt="BERF 2">
+          <div class="slide-caption">10th Cycle BERF Proposal Presentation</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="Assets/BERF/BERF3.jpg" alt="BERF 3">
+          <div class="slide-caption">10th Cycle BERF Proposal Presentation</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="Assets/BERF/BERF4.jpg" alt="BERF 4">
+          <div class="slide-caption">10th Cycle BERF Proposal Presentation</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="Assets/BERF/BERF5.jpg" alt="BERF 5">
+          <div class="slide-caption">10th Cycle BERF Proposal Presentation</div>
+        </div>
       </div>
-      <div class="swiper-slide">
-        <img src="Assets/BERF/BERF2.jpg" alt="BERF 2">
-        <div class="slide-caption">10th Cycle BERF Proposal Presentation</div>
-      </div>
-      <div class="swiper-slide">
-        <img src="Assets/BERF/BERF3.jpg" alt="BERF 3">
-        <div class="slide-caption">10th Cycle BERF Proposal Presentation</div>
-      </div>
-      <div class="swiper-slide">
-        <img src="Assets/BERF/BERF4.jpg" alt="BERF 4">
-        <div class="slide-caption">10th Cycle BERF Proposal Presentation</div>
-      </div>
-      <div class="swiper-slide">
-        <img src="Assets/BERF/BERF5.jpg" alt="BERF 5">
-        <div class="slide-caption">10th Cycle BERF Proposal Presentation</div>
-      </div>
+      <!-- Navigation controls -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
     </div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-pagination"></div>
-  </div>
-  <!-- Day1 Slideshow -->
-  <div class="swiper mySwiper2 slideshow">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="Assets/Event/Day1/day1pic1.jpg" alt="Day1">
-        <div class="slide-caption">Day 1: Orientation on Planning and Monitoring Technologies</div>
-      </div>
-      <div class="swiper-slide">
-        <img src="Assets/Event/Day1/day1pic2.jpg" alt="Day1 2">
-        <div class="slide-caption">Day 1: Orientation on Planning and Monitoring Technologies</div>
-      </div>
-      <div class="swiper-slide">
-        <img src="Assets/Event/Day1/day1pic3.jpg" alt="Day1 3">
-        <div class="slide-caption">Day 1: Orientation on Planning and Monitoring Technologies</div>
-      </div>
-      <div class="swiper-slide">
-        <img src="Assets/Event/Day1/day1pic4.jpg" alt="Day1 4">
-        <div class="slide-caption">Day 1: Orientation on Planning and Monitoring Technologies</div>
-      </div>
-      <div class="swiper-slide">
-        <img src="Assets/Event/Day1/day1pic5.jpg" alt="Day1 5">
-        <div class="slide-caption">Day 1: Orientation on Planning and Monitoring Technologies</div>
-      </div>
-    </div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-pagination"></div>
-  </div>
-  <!-- day2 Slideshow -->
-  <div class="swiper mySwiper2 slideshow">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="Assets/Event/Day2/day2pic1.jpg" alt="Day2 1">
-        <div class="slide-caption">Day 2: Orientation on Planning and Monitoring Technologies</div>
-      </div>
-      <div class="swiper-slide">
-        <img src="Assets/Event/Day2/day2pic2.jpg" alt="Day2 2">
-        <div class="slide-caption">Day 2: Orientation on Planning and Monitoring Technologies</div>
-      </div>
-      <div class="swiper-slide">
-        <img src="Assets/Event/Day2/day2pic3.jpg" alt="Day2 3">
-        <div class="slide-caption">Day 2: Orientation on Planning and Monitoring Technologies</div>
-      </div>
-      <div class="swiper-slide">
-        <img src="Assets/Event/Day2/day2pic4.jpg" alt="Day2 4">
-        <div class="slide-caption">Day 2: Orientation on Planning and Monitoring Technologies</div>
-      </div>
-      <div class="swiper-slide">
-        <img src="Assets/Event/Day2/day2pic5.jpg" alt="Day2 5">
-        <div class="slide-caption">Day 2: Orientation on Planning and Monitoring Technologies</div>
-      </div>
-    </div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-pagination"></div>
-  </div>
-  <!-- day3 Slideshow -->
-  <div class="swiper mySwiper2 slideshow">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="Assets/Event/Day3/495446502_1135474008611657_5524927194303550569_n.jpg" alt="Day3 1">
-        <div class="slide-caption">Day 3: Orientation on Planning and Monitoring Technologies</div>
-      </div>
-      <div class="swiper-slide">
-        <img src="Assets/Event/Day3/495451369_1135474738611584_4863790901577678762_n.jpg" alt="Day3 2">
-        <div class="slide-caption">Day 3: Orientation on Planning and Monitoring Technologies</div>
-      </div>
-      <div class="swiper-slide">
-        <img src="Assets/Event/Day3/495560003_1135474001944991_4019501501092890053_n.jpg" alt="Day3 3">
-        <div class="slide-caption">Day 3: Orientation on Planning and Monitoring Technologies</div>
-      </div>
-      <div class="swiper-slide">
-        <img src="Assets/Event/Day3/495931168_1135474921944899_485094884409127013_n.jpg" alt="Day3 4">
-        <div class="slide-caption">Day 3: Orientation on Planning and Monitoring Technologies</div>
-      </div>
-      <div class="swiper-slide">
-        <img src="Assets/Event/Day3/496405031_1135474975278227_4749136627770870360_n.jpg" alt="Day3 5">
-        <div class="slide-caption">Day 3: Orientation on Planning and Monitoring Technologies</div>
-      </div>
-    </div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-pagination"></div>
     
+    <!-- Third Slideshow - Day 1 Events -->
+    <div class="swiper mySwiper2 slideshow">
+      <div class="swiper-wrapper">
+        <!-- Day 1 event slides -->
+        <div class="swiper-slide">
+          <img src="Assets/Event/Day1/day1pic1.jpg" alt="Day1">
+          <div class="slide-caption">Day 1: Orientation on Planning and Monitoring Technologies</div>
+        </div>
+        <!-- More Day 1 slides -->
+        <div class="swiper-slide">
+          <img src="Assets/Event/Day1/day1pic2.jpg" alt="Day1 2">
+          <div class="slide-caption">Day 1: Orientation on Planning and Monitoring Technologies</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="Assets/Event/Day1/day1pic3.jpg" alt="Day1 3">
+          <div class="slide-caption">Day 1: Orientation on Planning and Monitoring Technologies</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="Assets/Event/Day1/day1pic4.jpg" alt="Day1 4">
+          <div class="slide-caption">Day 1: Orientation on Planning and Monitoring Technologies</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="Assets/Event/Day1/day1pic5.jpg" alt="Day1 5">
+          <div class="slide-caption">Day 1: Orientation on Planning and Monitoring Technologies</div>
+        </div>
+      </div>
+      <!-- Navigation controls -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    
+    <!-- Fourth Slideshow - Day 2 Events -->
+    <div class="swiper mySwiper2 slideshow">
+      <div class="swiper-wrapper">
+        <!-- Day 2 event slides -->
+        <div class="swiper-slide">
+          <img src="Assets/Event/Day2/day2pic1.jpg" alt="Day2 1">
+          <div class="slide-caption">Day 2: Orientation on Planning and Monitoring Technologies</div>
+        </div>
+        <!-- More Day 2 slides -->
+        <div class="swiper-slide">
+          <img src="Assets/Event/Day2/day2pic2.jpg" alt="Day2 2">
+          <div class="slide-caption">Day 2: Orientation on Planning and Monitoring Technologies</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="Assets/Event/Day2/day2pic3.jpg" alt="Day2 3">
+          <div class="slide-caption">Day 2: Orientation on Planning and Monitoring Technologies</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="Assets/Event/Day2/day2pic4.jpg" alt="Day2 4">
+          <div class="slide-caption">Day 2: Orientation on Planning and Monitoring Technologies</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="Assets/Event/Day2/day2pic5.jpg" alt="Day2 5">
+          <div class="slide-caption">Day 2: Orientation on Planning and Monitoring Technologies</div>
+        </div>
+      </div>
+      <!-- Navigation controls -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    
+    <!-- Fifth Slideshow - Day 3 Events -->
+    <div class="swiper mySwiper2 slideshow">
+      <div class="swiper-wrapper">
+        <!-- Day 3 event slides -->
+        <div class="swiper-slide">
+          <img src="Assets/Event/Day3/495446502_1135474008611657_5524927194303550569_n.jpg" alt="Day3 1">
+          <div class="slide-caption">Day 3: Orientation on Planning and Monitoring Technologies</div>
+        </div>
+        <!-- More Day 3 slides -->
+        <div class="swiper-slide">
+          <img src="Assets/Event/Day3/495451369_1135474738611584_4863790901577678762_n.jpg" alt="Day3 2">
+          <div class="slide-caption">Day 3: Orientation on Planning and Monitoring Technologies</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="Assets/Event/Day3/495560003_1135474001944991_4019501501092890053_n.jpg" alt="Day3 3">
+          <div class="slide-caption">Day 3: Orientation on Planning and Monitoring Technologies</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="Assets/Event/Day3/495931168_1135474921944899_485094884409127013_n.jpg" alt="Day3 4">
+          <div class="slide-caption">Day 3: Orientation on Planning and Monitoring Technologies</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="Assets/Event/Day3/496405031_1135474975278227_4749136627770870360_n.jpg" alt="Day3 5">
+          <div class="slide-caption">Day 3: Orientation on Planning and Monitoring Technologies</div>
+        </div>
+      </div>
+      <!-- Navigation controls -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
+    </div>
   </div>
-</div>
-<div class="section-divider"></div><br><br><br>
-<div class="abstracts-grid">
-  <div class="parent">
-    <div class="card">
-      <div class="content-box">
-        <span class="card-title">Research Title 1</span>
-        <p class="card-content">A brief description of the research goes here...</p>
-        <a href="https://drive.google.com/file/d/1LEI242-X3-FYVg9T5j2JZ899Zcn8jmZB/view?usp=sharing"   target="_blank" class="see-more">Read More</a>
+  
+  <!-- Visual divider and spacing -->
+  <div class="section-divider"></div><br><br><br>
+  
+  <!-- Research Abstracts Grid Section -->
+  <div class="abstracts-grid">
+    <!-- Research Card 1 -->
+    <div class="parent">
+      <div class="card">
+        <div class="content-box">
+          <span class="card-title">Research Title 1</span>
+          <p class="card-content">A brief description of the research goes here...</p>
+          <!-- Link to Google Drive document -->
+          <a href="https://drive.google.com/file/d/1LEI242-X3-FYVg9T5j2JZ899Zcn8jmZB/view?usp=sharing" target="_blank" class="see-more">Read More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Research Cards 2-4 with same structure -->
+    <div class="parent">
+      <div class="card">
+        <div class="content-box">
+          <span class="card-title">Research Title 2</span>
+          <p class="card-content">A brief description of the research goes here...</p>
+          <a href="research2.pdf" class="see-more">Read More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="parent">
+      <div class="card">
+        <div class="content-box">
+          <span class="card-title">Research Title 3</span>
+          <p class="card-content">A brief description of the research goes here...</p>
+          <a href="research3.pdf" class="see-more">Read More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="parent">
+      <div class="card">
+        <div class="content-box">
+          <span class="card-title">Research Title 4</span>
+          <p class="card-content">A brief description of the research goes here...</p>
+          <a href="research4.pdf" class="see-more">Read More</a>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="parent">
-    <div class="card">
-      <div class="content-box">
-        <span class="card-title">Research Title 2</span>
-        <p class="card-content">A brief description of the research goes here...</p>
-        <a href="research2.pdf" class="see-more">Read More</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="parent">
-    <div class="card">
-      <div class="content-box">
-        <span class="card-title">Research Title 3</span>
-        <p class="card-content">A brief description of the research goes here...</p>
-        <a href="research3.pdf" class="see-more">Read More</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="parent">
-    <div class="card">
-      <div class="content-box">
-        <span class="card-title">Research Title 4</span>
-        <p class="card-content">A brief description of the research goes here...</p>
-        <a href="research4.pdf" class="see-more">Read More</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-  <!-- Divider -->
+  <!-- Visual divider -->
   <div class="section-divider"></div>
 
- <!-- Documents Section -->
-<section class="documents">
-  <h2>Documents</h2>
-  <div class="document-cards">
-    <div class="document-card">
-      <h3>DEDP</h3>
-      <p>Department of Education Development Plan</p>
-      <a href="https://docs.google.com/document/d/1zEj6N2rgutDPNaejZzNTKEZMZ-8P5_v1aqj5BSkkxno/edit?usp=sharing" target="_blank" class="download-link">Enhanced DEDP</a>
-    </div>
-    <div class="document-card">
-      <h3>AIP</h3>
-      <p>Annual Implementation Plan</p>
-
-      <!-- Added 2024 and 2025 Plans under AIP -->
+  <!-- Documents Section - Links to important files -->
+  <section class="documents">
+    <h2>Documents</h2>
+    <div class="document-cards">
+      <!-- DEDP Document Card -->
+      <div class="document-card">
+        <h3>DEDP</h3>
+        <p>Department of Education Development Plan</p>
+        <a href="https://docs.google.com/document/d/1zEj6N2rgutDPNaejZzNTKEZMZ-8P5_v1aqj5BSkkxno/edit?usp=sharing" target="_blank" class="download-link">Enhanced DEDP</a>
+      </div>
       
-      <a href="https://drive.google.com/file/d/1kkPkOcXQ7_xQH9XMGP9jvgy_mG-NZwq4/view?usp=drive_link" id="encrypted-link" target="_blank" class="download-link">2024 SDO AIP</a>
-      <a href="https://drive.google.com/file/d/1bmjEF8ghJgUiwG1wpI3iSbJmvuQGJDN_/view?usp=drive_link" id="encrypted-link2" target="_blank" class="download-link">2024 SGOD AIP</a>
-      <a href="https://drive.google.com/file/d/1QEuNAkV5s-n2unORyjqec7P5banx7DcH/view?usp=drive_link" id="encrypted-link3" target="_blank" class="download-link">2025 SGOD AIP</a>
+      <!-- AIP Document Card with Password-Protected Links -->
+      <div class="document-card">
+        <h3>AIP</h3>
+        <p>Annual Implementation Plan</p>
+        <!-- These links are password-protected using JavaScript encryption -->
+        <a href="https://drive.google.com/file/d/1kkPkOcXQ7_xQH9XMGP9jvgy_mG-NZwq4/view?usp=drive_link" id="encrypted-link" target="_blank" class="download-link">2024 SDO AIP</a>
+        <a href="https://drive.google.com/file/d/1bmjEF8ghJgUiwG1wpI3iSbJmvuQGJDN_/view?usp=drive_link" id="encrypted-link2" target="_blank" class="download-link">2024 SGOD AIP</a>
+        <a href="https://drive.google.com/file/d/1QEuNAkV5s-n2unORyjqec7P5banx7DcH/view?usp=drive_link" id="encrypted-link3" target="_blank" class="download-link">2025 SGOD AIP</a>
+      </div>
+      
+      <!-- OPCRF Document Card -->
+      <div class="document-card">
+        <h3>OPCRF</h3>
+        <p>Office Performance Commitment and Review Form</p>
+        <a href="https://drive.google.com/drive/folders/1zpE_RlWJR_yrL-YVhc1Cx5gZO20oJ11t?usp=sharing" target="_blank" class="download-link">2024 OPCRF</a>
+        <a href="https://drive.google.com/drive/folders/1k11Cw-w_xMJVIQmpCqO8tw0WXjrsgecC?usp=sharing" target="_blank" class="download-link">2023 OPCRF</a>
+      </div>
+      
+      <!-- SIPs Document Card -->
+      <div class="document-card">
+        <h3>SIPs</h3>
+        <p>School Improvement Plans</p>
+        <a href="https://drive.google.com/drive/folders/1kBASqeWoim3GLoAuDEwL-COoGeHzbH1X?usp=sharing" target="_blank" class="download-link">2022-2025 SIPs</a>
+        <a href="https://www.deped.gov.ph/2019/04/22/school-improvement-plan-sip-instructional-videos/" target="_blank" class="download-link">SIP</a>
+      </div>
+      
+      <!-- AAR Document Card -->
+      <div class="document-card">
+        <h3>AAR</h3>
+        <p>Annual Accomplishment Report</p>
+        <a href="https://drive.google.com/file/d/1f7RpUUEsQhDf0Ii9lIMwg1ej8z5lGkJy/view?usp=sharing" target="_blank" class="download-link">2023 AAR</a>
+        <a href="https://drive.google.com/file/d/1QuneXgNZ9gXcbZPn3_IrmfnbujTzrNOE/view?usp=sharing" target="_blank" class="download-link">2024 AAR</a>
+      </div>
     </div>
-    <div class="document-card">
-      <h3>OPCRF</h3>
-      <p>Office Performance Commitment and Review Form</p>
-      <a href="https://drive.google.com/drive/folders/1zpE_RlWJR_yrL-YVhc1Cx5gZO20oJ11t?usp=sharing" target="_blank" class="download-link">2024 OPCRF</a>
-      <a href="https://drive.google.com/drive/folders/1k11Cw-w_xMJVIQmpCqO8tw0WXjrsgecC?usp=sharing" target="_blank" class="download-link">2023 OPCRF</a>
-    </div>
-    <div class="document-card">
-      <h3>SIPs</h3>
-      <p>School Improvement Plans</p>
-      <a href="https://drive.google.com/drive/folders/1kBASqeWoim3GLoAuDEwL-COoGeHzbH1X?usp=sharing" target="_blank" class="download-link">2022-2025 SIPs</a>
-      <a href="https://www.deped.gov.ph/2019/04/22/school-improvement-plan-sip-instructional-videos/" target="_blank" class="download-link">SIP</a>
-    </div>
-    <div class="document-card">
-      <h3>AAR</h3>
-      <p>Annual Accomplishment Report</p>
-      <a href="https://drive.google.com/file/d/1f7RpUUEsQhDf0Ii9lIMwg1ej8z5lGkJy/view?usp=sharing" target="_blank" class="download-link">2023 AAR</a>
-      <a href="https://drive.google.com/file/d/1QuneXgNZ9gXcbZPn3_IrmfnbujTzrNOE/view?usp=sharing" target="_blank" class="download-link">2024 AAR</a>
-  </div>
-</section>
-
-  
+  </section>
 
   <!-- Footer Section -->
   <footer>
     <div class="footer-content">
+      <!-- Footer Logo -->
       <img src="assets/logo.png" alt="DepEd Logo" class="footer-logo">
+      <!-- Footer Text Description -->
       <p>
         The Planning and Research Section of the Schools Division Office (SDO) Santa Rosa City is committed to using 
         data to inform decisions, drive strategic planning, and conduct educational research. Our goal is to effectively 
@@ -348,22 +396,28 @@
     </div>
   </footer>
 
+  <!-- Copyright Notice -->
   <div class="rights">
     Copyright © 2025 DepEd Santa Rosa City - Planning and Research Section.
   </div>
 
+  <!-- Back to Top Button -->
   <button id="btn-back-to-top" aria-label="Back to Top" title="Back to Top" type="button">
+    <!-- SVG Icon for the button (up arrow) -->
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M8 12a.5.5 0 0 1-.5-.5V4.707L4.854 8.354a.5.5 0 1 1-.708-.708l4-4a.5.5 0 0 1 .708 0l4 4a.5.5 0 0 1-.708.708L8.5 4.707V11.5A.5.5 0 0 1 8 12z"/>
     </svg>
   </button>
   
-
-
+  <!-- JavaScript Files -->
+  <!-- Main script file for general website functionality -->
   <script src="script.js"></script>
+  
+  <!-- CryptoJS library for password protection functionality -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
   <script src="path/to/crypto-js.js"></script>
 
+  <!-- Script for Password Protection of Document Links -->
   <script>
   // Different encryption keys for each link
   const encryptionKey1 = "SGODSTAFFONLY1";  // Password for first link
@@ -389,24 +443,24 @@
   if (link1) {
     link1.setAttribute("data-encrypted-url", encryptedUrl1);
     link1.addEventListener("click", function(event) {
-      event.preventDefault();
-      const userKey = prompt("Enter the password for Document 1:");
-      if (userKey === encryptionKey1) {
+      event.preventDefault();  // Prevents the default link action
+      const userKey = prompt("Enter the password for Document 1:");  // Ask user for password
+      if (userKey === encryptionKey1) {  // Check if password is correct
         const encryptedUrl = link1.getAttribute("data-encrypted-url");
         const decryptedBytes = CryptoJS.AES.decrypt(encryptedUrl, encryptionKey1);
         const decryptedUrl = decryptedBytes.toString(CryptoJS.enc.Utf8);
         if (decryptedUrl) {
-          window.open(decryptedUrl, '_blank');
+          window.open(decryptedUrl, '_blank');  // Open URL in new tab if decryption successful
         } else {
           alert("Decryption failed. Please check the password.");
         }
       } else {
-        alert("Incorrect password!");
+        alert("Incorrect password!");  // Alert if password is wrong
       }
     });
   }
 
-  // Second link handler
+  // Second link handler - similar structure to first handler
   if (link2) {
     link2.setAttribute("data-encrypted-url", encryptedUrl2);
     link2.addEventListener("click", function(event) {
@@ -427,7 +481,7 @@
     });
   }
 
-  // Third link handler
+  // Third link handler - similar structure to previous handlers
   if (link3) {
     link3.setAttribute("data-encrypted-url", encryptedUrl3);
     link3.addEventListener("click", function(event) {
@@ -448,63 +502,72 @@
     });
   }
 </script>
+
+  <!-- Swiper JS Library for Slideshows -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+  <!-- Script to Initialize Swipers (Slideshows) -->
   <script>
+    // Initialize all slideshows with a forEach loop
     ['.mySwiper1', '.mySwiper2'].forEach(selector => {
-  new Swiper(selector, {
-    loop: true,
-    autoplay: {
-      delay: 3500,
-      disableOnInteraction: false
-    },
-    navigation: {
-      nextEl: `${selector} .swiper-button-next`,
-      prevEl: `${selector} .swiper-button-prev`
-    },
-    pagination: {
-      el: `${selector} .swiper-pagination`,
-      clickable: true
-    }
-  });
-});
+      new Swiper(selector, {
+        loop: true,  // Enables continuous loop through slides
+        autoplay: {
+          delay: 3500,  // Time between slide changes (3.5 seconds)
+          disableOnInteraction: false  // Continue autoplay even after user interaction
+        },
+        navigation: {  // Navigation arrow configuration
+          nextEl: `${selector} .swiper-button-next`,
+          prevEl: `${selector} .swiper-button-prev`
+        },
+        pagination: {  // Pagination dots configuration
+          el: `${selector} .swiper-pagination`,
+          clickable: true  // Allow clicking on pagination dots to navigate
+        }
+      });
+    });
 
+    // Additional initialization for mySwiper2 (appears redundant but ensures all slideshows work)
     new Swiper(".mySwiper2", {
-  loop: true,
-  autoplay: {
-    delay: 3500,
-    disableOnInteraction: false
-  },
-  navigation: {
-    nextEl: ".mySwiper2 .swiper-button-next",
-    prevEl: ".mySwiper2 .swiper-button-prev"
-  },
-  pagination: {
-    el: ".mySwiper2 .swiper-pagination",
-    clickable: true
-  }
-});
-
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+      },
+      navigation: {
+        nextEl: ".mySwiper2 .swiper-button-next",
+        prevEl: ".mySwiper2 .swiper-button-prev"
+      },
+      pagination: {
+        el: ".mySwiper2 .swiper-pagination",
+        clickable: true
+      }
+    });
   </script>
-   <script>
+  
+  <!-- Script for Back to Top Button Functionality -->
+  <script>
+    // Get the back to top button element
     const backToTopBtn = document.getElementById('btn-back-to-top');
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 150) {
-    backToTopBtn.style.display = 'flex';
-    backToTopBtn.style.opacity = '1';
-  } else {
-    backToTopBtn.style.opacity = '0';
-    // delay hiding to allow fade out
-    setTimeout(() => {
-      if (window.scrollY <= 150) backToTopBtn.style.display = 'none';
-    }, 300);
-  }
-});
+    // Add scroll event listener to show/hide the button based on scroll position
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 150) {  // When scrolled down more than 150px
+        backToTopBtn.style.display = 'flex';
+        backToTopBtn.style.opacity = '1';  // Show button with fade-in effect
+      } else {
+        backToTopBtn.style.opacity = '0';  // Start fade-out effect
+        // Delay hiding the button to allow fade-out animation to complete
+        setTimeout(() => {
+          if (window.scrollY <= 150) backToTopBtn.style.display = 'none';
+        }, 300);
+      }
+    });
 
-backToTopBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
+    // Add click event listener to scroll back to top smoothly when button is clicked
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });  // Smooth scroll to top
+    });
   </script>
 </body>
 </html>
