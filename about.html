@@ -1,48 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="icon" href="Assets/logo.png" type="Assets/logo.png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - SDO Santa Rosa City</title>
+  <title>About - Planning And Research</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style2.css" />
+  <link rel="stylesheet" href="about.css" />
+  <style>
+    /* Optional inline fallback */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  </style>
 </head>
+
 <body>
+
   <!-- Transparent Navbar (same as homepage) -->
   <header>
+    <div id="philippines-datetime">
+      <div id="philippines-timezone">Philippine Standard Time:</div>
+      <div>
+        <span id="philippines-date"></span> /
+        <span id="philippines-clock"></span>
+      </div>
+    </div>
     <div class="navbar">
       <div class="logo">
-        <img src="logo.png" alt="PRS Logo" />
-        <span>SDO Santa Rosa City</span>
+        <!-- Make SDO Santa Rosa City clickable -->
+        <a href="sgod.html">
+          <a href="https://depedsantarosa.ph/"target="blank"><img src="Assets/banner white.png" alt="PRS Logo" /></a>
+        </a>
       </div>
+      
       <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a> <!-- Link to the About page -->
-        <a href="#">Action and Basic Research</a>
-      </nav>
-    </div>
-  </header>
+        <div class="burger-dropdown">
+          <a href="sgod.html"><span class="dropdown-label">Home</span></a>
+          
+        
+          </ul>
+        </div>
+    
+        <a href="about.html">About PRS</a>
+        <a href="basicdata.html">Basic Education Data</a>
+        <a href="research.html">Action and Basic Research</a>
+        <nav>
+        
+          <div class="burger-dropdown">
+            <span class="dropdown-label">SGOD Issuances ▾</span>
+              <ul class="dropdown-menu-vertical">
+                <!-- Division Memo -->
+                <li><a href="DivMemo.html">Division Memo</a></li>
+                
+                <!-- Office Memo -->
+                <li><a href="#">Office Memo</a></li>
+                
+                <!-- Division Order -->
+                <li><a href="#">Division Order</a></li>
+              </ul>
+            </div>
+  
+          
+            </ul>
+          </div>
+          
+          
+        </nav>
+      </div>
+    </header>
+  
 
-  <!-- About Section -->
-  <section class="about-section">
-    <div class="container">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="overlay">
       <h1>About Us</h1>
-      <p>
-        The Planning and Research Section of the Schools Division Office (SDO) Santa Rosa City is committed to improving the quality of education through data-driven decision-making, strategic planning, and educational research. We aim to ensure the effective implementation of programs and policies that contribute to the betterment of the educational system in our city.
-      </p>
-      <p>
-        Our primary focus is on comprehensive data analysis, research initiatives, and collaborative planning to support continuous improvement within schools, teachers, and students. We strive to foster a culture of excellence and innovation in education while embracing the importance of teamwork and partnership in achieving our goals.
-      </p>
     </div>
   </section>
 
+  <!-- Divider -->
+  <div class="section-divider"></div>
+
+<!-- Employee Profiles Section -->
+<section class="employee-profiles">
+  <h2>Planning And Research Section</h2>
+  <div class="profile-cards">
+    <!-- Employee 2 -->
+    <div class="profile-card">
+      <img src="Assets/Employee Pictures/number2.jpg" alt="Employee 2" class="profile-image">
+      <div class="profile-description">
+        <h3>Adolfo C. Ibayan</h3>
+        <p>Planning Officer III</p>
+      </div>
+    </div>
+    <div class="profile-card">
+      <img src="Assets/Employee Pictures/number1.jpg" alt="Employee 1" class="profile-image">
+      <div class="profile-description">
+        <h3>Bonifacio B. Lagura Jr.</h3>
+        <p>Senior Education Program Specialist</p>
+      </div>
+    </div>
+    <!-- Employee 4 -->
+    <div class="profile-card">
+      <img src="Assets/Employee Pictures/Harlan.jpg" alt="Employee 4" class="profile-image">
+      <div class="profile-description">
+        <h3>Harlan Davidson F. Gefa</h3>
+        <p>PRS Assistant</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- About Section -->
+  <section class="about-section container">
+    <p>
+      <br><br>
+      The Planning and Research Section of the Schools Division Office (SDO) Santa Rosa City is committed to improving the quality of education through data-driven decision-making, strategic planning, and educational research. We aim to ensure the effective implementation of programs and policies that contribute to the betterment of the educational system in our city.
+    </p>
+    <p>
+      Our primary focus is on comprehensive data analysis, research initiatives, and collaborative planning to support continuous improvement within schools, teachers, and students. We strive to foster a culture of excellence and innovation in education while embracing the importance of teamwork and partnership in achieving our goals.
+    </p>
+    <br>
+    <br><br><br><br>
+  </section>
+
+    <!-- Divider -->
+   <div class="section-divider"></div>
+   
+    <div class="header">
+      <div class="header-text1">
+        <h2>Contact Information</h2>
+      </div>
+    </div>
+    
+    <div class="contact-container">
+      <div class="contact-section">
+        <h3>Department Contact Information</h3>
+        <div class="contact-item">
+          <div class="icon">🏢</div>
+          <div>Department of Education - Schools Division Office of Santa Rosa City, Tatlonghari St., Brgy. Market Area, Santa Rosa, Laguna, Philippines</div>
+        </div>
+
+
+       
+        <div class="contact-item">
+          <div class="icon">📞</div>
+          <div>Contact Number: (049) 544-2202 local 3004</div>
+        </div>
+        <div class="contact-item">
+          <div class="icon">📠</div>
+          <div>Facebook: Deped Tayo Santa Rosa City</div>
+        </div>
+        <div class="contact-item">
+          <div class="icon">🕙</div>
+          <div>Monday to Friday: 8:00 AM - 5:00 PM</div>
+          
+        </div>
+        <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3865.870048599617!2d121.1098405746917!3d14.318980186134697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d91475aa01d7%3A0x85b59fff3b8d0b68!2sDepartment%20of%20Education%20-%20Schools%20Division%20Office%20of%20Santa%20Rosa%20City!5e0!3m2!1sen!2sph!4v1745557355063!5m2!1sen!2sph" 
+        width="500" 
+        height="400" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      </div>
+      
+      
+      <div class="contact-section">
+        <h3>For Inquiries</h3>
+        <div class="contact-item">
+          <div class="icon">📊</div>
+          <div><strong>School Data Requests:</strong> prs.santarosa@deped-santarosa.edu.ph</div>
+        </div>
+        <div class="contact-item">
+          <div class="icon">📝</div>
+          <div><strong>Research Applications:</strong> prs.santarosa@deped-santarosa.edu.ph</div>
+        </div>
+        <div class="contact-item">
+          <div class="icon">📈</div>
+          <div><strong>Strategic Planning:</strong> prs.santarosa
+            @deped-santarosa.edu.ph</div>
+        </div>
+      </div>
+    </div>
+
+
+    <button id="btn-back-to-top" aria-label="Back to Top" title="Back to Top" type="button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 12a.5.5 0 0 1-.5-.5V4.707L4.854 8.354a.5.5 0 1 1-.708-.708l4-4a.5.5 0 0 1 .708 0l4 4a.5.5 0 0 1-.708.708L8.5 4.707V11.5A.5.5 0 0 1 8 12z"/>
+      </svg>
+    </button>
+    
   <!-- Footer -->
   <footer>
     <div class="footer-content">
-      <img src="deped-logo.png" alt="DepEd Logo" class="footer-logo">
+      <img src="assets/logo.png" alt="DepEd Logo" class="footer-logo">
       <p>
         The Planning and Research Section of the Schools Division Office (SDO) Santa Rosa City is dedicated to data-driven decision-making, strategic planning, and educational research. We ensure the effective implementation of programs and policies that enhance the quality of education in the city. Through comprehensive data analysis, research initiatives, and collaborative planning, we support the continuous improvement of schools, teachers, and students, fostering a culture of excellence and innovation in education.
       </p>
     </div>
   </footer>
+  <div class="rights">
+    Copyright © 2025 DepEd Santa Rosa City - Planning and Research Section.
+  </div>
+  <script src="script.js"></script>
+  <script>
+    const backToTopBtn = document.getElementById('btn-back-to-top');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 150) {
+    backToTopBtn.style.display = 'flex';
+    backToTopBtn.style.opacity = '1';
+  } else {
+    backToTopBtn.style.opacity = '0';
+    // delay hiding to allow fade out
+    setTimeout(() => {
+      if (window.scrollY <= 150) backToTopBtn.style.display = 'none';
+    }, 300);
+  }
+});
+
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+  </script>
 </body>
 </html>

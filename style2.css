@@ -1,0 +1,502 @@
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+/* Header */
+.header {
+  font-family: Verdana, sans-serif;
+  font-weight: bold;
+  background-color: #0930bd;
+  color: white;
+  padding: 20px;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header img {
+  max-height: 80px;
+}
+
+.header-text1 {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.header h2 {
+  margin: 5px 0 0;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/* Contact Container */
+.contact-container {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  padding: 30px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section {
+  margin-bottom: 25px;
+}
+
+.contact-section h3 {
+  color: #0066b3;
+  border-bottom: 2px solid #0066b3;
+  padding-bottom: 8px;
+  margin-top: 0;
+}
+
+.contact-item {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.icon {
+  width: 30px;
+  color: #0066b3;
+  margin-right: 15px;
+  text-align: center;
+}
+
+/* Staff Cards */
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.staff-card {
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 15px;
+  border-left: 4px solid #0066b3;
+}
+
+.staff-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #0066b3;
+}
+
+.staff-position {
+  font-style: italic;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.staff-contact {
+  font-size: 14px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .header img {
+    margin-bottom: 15px;
+  }
+
+  .staff-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .slideshow-container {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .text,
+  .slide-caption {
+    font-size: 16px;
+  }
+
+  .numbertext {
+    font-size: 10px;
+  }
+}
+
+/* Swiper Slideshow Styles */
+/* Ensure both slideshows are side-by-side */
+.slideshow-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  flex-wrap: wrap;  /* Ensures responsiveness */
+}
+
+/* Class for each slideshow */
+.slideshow {
+  width: 30%; /* Adjust to make them take up 48% of the width */
+  max-width: 600px; /* Maximum width of each slideshow */
+  height: 300px;
+  margin: 0; /* Remove margins for side-by-side layout */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-slide {
+  position: relative;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Slideshow Captions */
+.swiper-slide .slide-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: calc(100% - 20px); /* Ensures the caption does not overflow */
+  background-color: rgba(0, 0, 0, 0.6); /* Solid black background with transparency */
+  color: white; /* White text color */
+  padding: 10px;
+  font-weight: bold;
+  font-size: 19px;
+  text-align: center;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensures padding is accounted for in width calculation */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds shadow for additional contrast */
+}
+
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff;
+}
+
+/* Remove pagination dots */
+.swiper-pagination {
+  display: none !important;
+}
+
+.dot1, .dot2 {
+  display: none !important;
+}
+
+/* Caption Text Style */
+.text {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 60px;
+  padding: 10px;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* DateTime Display (Top Right) */
+#philippines-datetime {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  font-family: 'Bookman Old Style', serif;
+  font-size: 12px;
+  color: white;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  white-space: nowrap;
+  z-index: 999;
+}
+
+#philippines-date,
+#philippines-clock {
+  font-weight: normal;
+}
+
+/* GIF Container */
+.gif-container {
+  display: flex;
+  justify-content: space-between; /* Position GIF on the left and description on the right */
+  align-items: center;           /* Vertically centers the content */
+  width: 100%;
+  padding: 20px;
+}
+
+/* Left section for the GIF */
+.gif-left {
+  flex: 1;                       /* Makes sure the left section takes as much space as needed */
+  padding-right: 50px;           /* Space between the GIF and description */
+}
+
+/* Right section for title and description */
+.gif-right {
+  flex: 1;                       /* Right section takes up remaining space */
+  padding-left: 20px;            /* Space between the description and GIF */
+}
+
+.gif-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;                   /* Title color */
+  margin-left: -10px;
+  margin-bottom: 1px;           /* Space between the title and description */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 0 0 25px rgba(0, 123, 255, 0.7); /* Soft shadow and glow */
+  border-radius: 10px;       /* Gives rounded corners to the div */
+  background: linear-gradient(90deg, rgb(5, 5, 108) 0%, rgb(99, 61, 61) 37%, rgb(200, 87, 87) 100%);
+  margin-right: 60px;
+}
+
+.gif-description {
+  font-size: 17px;
+  color: #555;                   /* Description color */
+  line-height: 2.0;              /* Line spacing for better readability */
+  text-align: justify;
+  margin-right: 70px;
+  margin-bottom: 20px; 
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* GIF styling */
+.gif-left img {
+  max-width: 100%;                /* Ensure the GIF scales with the container */
+  height: auto;                   /* Keeps the GIF's aspect ratio intact */
+  border-radius: 10px;             /* Optional: Add rounded corners */
+  margin-left: 40px;
+}
+
+/* taskforce members */
+.taskforce-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;                   /* Title color */
+  margin-bottom: 10px;           /* Space between the title and description */
+  margin-right: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 0 0 25px rgba(0, 123, 255, 0.7); /* Soft shadow and glow */
+  border-radius: 30px;       /* Gives rounded corners to the div */
+  background: linear-gradient(90deg, rgb(5, 5, 108) 0%, rgb(99, 61, 61) 37%, rgb(200, 87, 87) 100%);
+}
+
+.taskforce {      /*Task Force Members:*/
+  text-align: left;
+  font-size: 20px;
+  line-height: 2.0;
+  font-weight: bold;
+  color: color-mix(in srgb, #0066b3 50%, #555 50%);
+  margin-top: 1px;
+}
+
+.taskforce-members {
+  text-align: left;
+  font-size: 16px;
+  line-height: 0.1;
+  font-style: italic;
+  margin-top: 1px;
+  font-weight: 500;
+}
+
+.staff-members {
+  text-align: left;
+  font-size: 16px;
+  line-height: 0.1;
+  font-style: italic;
+  margin-top: 1px;
+  font-weight: 500;
+}
+
+.taskforce-description {
+  font-size: 17px;
+  color: #555;                   /* Description color */
+  line-height: 2.0;              /* Line spacing for better readability */
+  text-align: justify;
+  margin-right: 50px;
+  margin-bottom: 1px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.taskforce-container {
+  display: flex;
+  justify-content: space-between; /* Position GIF on the left and description on the right */
+  align-items: flex-start;         /* Align items to the top instead of center */
+  width: 100%;
+  padding: 20px;  
+}
+
+.taskforce-left {
+  flex: 1;                       /* Makes sure the left section takes as much space as needed */
+  padding-right: 50px;           /* Space between the GIF and description */
+}
+
+.taskforce-right {
+  flex: 1;                       /* Right section takes up remaining space */
+  padding-left: 20px;            /* Space between the description and GIF */
+  margin-bottom: 0;              /* Remove large bottom margin */
+}
+
+.taskforce-left img {
+  max-width: 107%;               /* Ensure the GIF scales with the container */
+  height: 650px;                /* Keeps the GIF's aspect ratio intact */
+  width: 700px;
+  border-radius: 20px;           /* Optional: Add rounded corners */
+  margin-left: 10px;
+  margin-bottom: 0px;           /* Reduce large bottom margin to 20px */
+}
+
+.horizontal-divider{
+  color: rgb(142, 142, 142);
+  
+}
+
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  background-color: #0d6efd; /* Bootstrap primary */
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(13, 110, 253, 0.4);
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1100;
+}
+
+#btn-back-to-top svg {
+  display: block;
+}
+
+#btn-back-to-top:hover {
+  background-color: #084298; /* Darker blue */
+  box-shadow: 0 6px 12px rgba(8, 66, 152, 0.6);
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
+/* Google Sheets Embed Styling for DepEd Santa Rosa City */
+.sheets-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #fff;
+  position: relative;
+}
+
+.sheets-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: #003594; /* Matching your navy blue color */
+  color: white;
+  font-family: inherit;
+}
+
+.sheets-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.sheets-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.sheets-btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 6px 12px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.sheets-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.sheets-iframe-container {
+  position: relative;
+  padding-bottom: 65%; /* Adjust based on your content aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.sheets-iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.sheets-footer {
+  padding: 10px 24px;
+  background-color: #f8f9f9;
+  font-size: 0.75rem;
+  color: #5f6368;
+  text-align: right;
+  border-top: 1px solid #dadce0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sheets-container {
+    margin: 1rem auto;
+    width: 95%;
+  }
+  
+  .sheets-header {
+    padding: 12px 16px;
+  }
+  
+  .sheets-iframe-container {
+    padding-bottom: 85%; /* More height on mobile */
+  }
+}

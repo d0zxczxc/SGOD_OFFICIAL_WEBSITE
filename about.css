@@ -1,0 +1,173 @@
+/* Container for the employee profiles */
+.employee-profiles {
+  text-align: center;
+  margin-top: 40px;
+  padding: 0 20px; /* Add some horizontal padding for responsiveness */
+}
+
+/* Title for the section */
+.employee-profiles h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+/* Flex container for the profile cards */
+.profile-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;   /* Centers the profile cards horizontally */
+  margin: 0 auto;            /* Ensures the cards are centered */
+  padding: 0;                /* Removes extra padding */
+}
+
+/* Flex container for the top-level employee */
+.top-level {
+  justify-content: center;
+  margin-bottom: 30px;       /* Space between top-level and the other employees */
+}
+
+/* Individual profile card */
+.profile-card {
+  width: 220px; /* Set a fixed width for profile cards */
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;           /* Ensures no content spills over the card edges */
+  transition: transform 0.3s ease;
+  margin: 0;                  /* Removes margin between the profile cards */
+}
+
+/* Profile image styling */
+.profile-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;          /* Ensures the image fits within the box */
+  border-bottom: 2px solid #ddd; /* Adds a border below the image */
+  border-radius: 8px;         /* Rounded corners on the image */
+  object-fit: cover
+}
+
+/* Profile description styling */
+.profile-description {
+  padding: 10px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.profile-description h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.profile-description p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Hover effect for the cards */
+.profile-card:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design: Adjust the profile cards layout on smaller screens */
+@media only screen and (max-width: 768px) {
+  .profile-cards {
+    flex-direction: column; /* Stack the cards vertically on smaller screens */
+    align-items: center;     /* Centers the profile cards */
+  }
+}
+
+  .contact-item {
+    display: flex;
+    align-items: center;  /* Ensures both the icon and text are aligned */
+    margin-bottom: 5px;  /* Reduce the space between items */
+  }
+  
+  .contact-item .icon {
+    margin-right: 10px;  /* Space between the icon and the text */
+  }
+  
+  .contact-item div {
+    margin: 0;  /* Remove any additional margin around the text */
+    padding: 0;  /* Remove padding */
+    font-size: 14px;  /* Adjust font size if needed */
+  }
+  /* Container for Contact Information */
+.contact-container {
+  display: flex;
+  justify-content: space-between; /* Align the contact info on the left and map on the right */
+  align-items: flex-start; /* Align items at the top */
+  gap: 10px; /* Optional: space between the contact info and map */
+  margin-top: 20px;
+}
+
+/* Contact Section */
+.contact-section {
+  flex: 1; /* Takes available space */
+}
+
+/* Contact item layout */
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;  /* Tighten the space between items */
+}
+
+.contact-item .icon {
+  margin-right: 10px;  /* Space between icon and text */
+}
+
+/* Map Container */
+.google-map-container {
+  max-width: 40%; /* Make the map smaller */
+  display: flex;
+  justify-content: flex-end;  /* Aligns the map to the right */
+}
+
+/* iframe for map styling */
+iframe {
+  width: 95%;  /* Make the map take full container width */
+  height: 500px;  /* Adjust height */
+  border-radius: 10px;  /* Optional: rounded corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);  /* Optional: adds shadow */
+  border: none;  /* Removes default border */
+}
+
+/* Optional: Remove any space between name and email */
+.contact-item div {
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+  font-size: 14px; /* Adjust font size if needed */
+}
+
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  background-color: #0d6efd; /* Bootstrap primary */
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(13, 110, 253, 0.4);
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1100;
+}
+
+#btn-back-to-top svg {
+  display: block;
+}
+
+#btn-back-to-top:hover {
+  background-color: #084298; /* Darker blue */
+  box-shadow: 0 6px 12px rgba(8, 66, 152, 0.6);
+  transform: scale(1.1);
+}

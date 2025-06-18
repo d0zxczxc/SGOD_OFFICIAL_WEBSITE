@@ -1,0 +1,142 @@
+ /* Layout */
+ .memo-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 1px;
+    align-items: flex-start;
+  }
+  .memo-left {
+    flex: 0 0 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: #fff;
+    border: 1px solid #f9f9f9;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: -20px 20px 10px rgba(0,0,0,0.05);
+  }
+  .memo-left img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  .memo-right {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+  }
+
+  /* Memo format */
+  .memo-item {
+    margin-bottom: 30px;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+  }
+  .memo-date {
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 4px;
+    
+  }
+  .memo-no {
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 6px;
+    
+  }
+  .memo-title a {
+    
+    color: #0000EE;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  .memo-title a:hover {
+    text-decoration: underline;
+  }
+
+  .month-button {
+    width: 130px;              /* fixed width */
+  height: 50px;             /* fixed height */
+  padding: 0;               /* remove padding to keep fixed size */
+    font-weight: 700;
+    background: #003594;           /* white background */
+    color: #ffffff;                /* deep blue text (matching memo-date color) */
+    cursor: pointer;
+    border-radius: 0.5rem;
+    border-bottom: 2px solid #003594;
+    border-right: 2px solid #003594;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    transition-duration: 0.7s;
+    transition-property: border-top, border-left, border-bottom, border-right, box-shadow;
+  }
+  
+  .month-button:hover {
+    border-top: 2px solid #003594;
+    border-left: 2px solid #003594;
+    border-bottom: 2px solid #2899fb;      
+    border-right: 2px solid #1f91fc;
+    box-shadow:
+  rgba(102, 153, 255, 0.4) 5px 5px,
+  rgba(102, 153, 255, 0.3) 10px 10px,
+  rgba(102, 153, 255, 0.2) 15px 15px;
+
+  }
+  
+  
+  
+
+  /* Month content */
+  .month-content {
+    display: none;
+  }
+  .month-content.active {
+    display: block;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .memo-layout {
+      flex-direction: column;
+      align-items: center;
+    }
+    .memo-left,
+    .memo-right {
+      width: 100%;
+    }
+    .month-buttons {
+      justify-content: center;
+    }
+  }
+
+
+  #btn-back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 48px;
+    height: 48px;
+    background-color: #0d6efd; /* Bootstrap primary */
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(13, 110, 253, 0.4);
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1100;
+  }
+  
+  #btn-back-to-top svg {
+    display: block;
+  }
+  
+  #btn-back-to-top:hover {
+    background-color: #084298; /* Darker blue */
+    box-shadow: 0 6px 12px rgba(8, 66, 152, 0.6);
+    transform: scale(1.1);
+  }
+  

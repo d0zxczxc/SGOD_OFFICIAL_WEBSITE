@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="icon" href="Assets/logo.png" type="Assets/logo.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Action and Basic Research - SDO Santa Rosa City</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style2.css" />
+  <link rel="stylesheet" href="basicd.css" />
+  <style>
+    /* Optional fallback if not yet in your CSS */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  
+  <!-- Transparent Navbar (same as homepage) -->
+  <header>
+    <div id="philippines-datetime">
+      <div id="philippines-timezone">Philippine Standard Time:</div>
+      <div>
+        <span id="philippines-date"></span> /
+        <span id="philippines-clock"></span>
+      </div>
+    </div>
+    <div class="navbar">
+      <div class="logo">
+        <a href="sgod.html">
+          <a href="https://depedsantarosa.ph/"target="blank"><img src="Assets/banner white.png" alt="PRS Logo" /></a>
+        </a>
+      </div>
+      <nav>
+        <div class="burger-dropdown">
+          <a href="sgod.html"><span class="dropdown-label">Home</span></a>
+          
+        </div>
+        <a href="about.html">About PRS</a>
+        <a href="basicdata.html">Basic Education Data</a>
+        <a href="research.html">Action and Basic Research</a>
+        
+        <div class="burger-dropdown">
+          <span class="dropdown-label">SGOD Issuances ▾</span>
+            <ul class="dropdown-menu-vertical">
+              <!-- Division Memo -->
+              <li><a href="DivMemo.html">Division Memo</a></li>
+              
+              <!-- Office Memo -->
+              <li><a href="#">Office Memo</a></li>
+              
+              <!-- Division Order -->
+              <li><a href="#">Division Order</a></li>
+            </ul>
+          </div>
+
+        
+          </ul>
+        </div>
+        
+        
+      </nav>
+    </div>
+  </header>
+
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="overlay">
+      <h1>Basic Education<br> Data</h1>
+    </div>
+  </section>
+  <div class="section-divider"></div>
+
+<!-- Enrollment Pie Chart Section -->
+<section class="container" style="text-align: center; padding: 50px 0;">
+  <h2>Enrollment Status Overview</h2>
+  <canvas id="enrollmentChart"></canvas>
+</section>
+<br><br>
+<!-- BEIS Section Styled like the Image -->
+<section class="beis-section container" style="border: 1px solid #f4f4f4; border-radius: 1px; overflow: hidden;">
+  <!-- Header -->
+  <div style="background-color: #f2c200; padding: 10px 15px;">
+    <h2 style="margin: 0; font-size: 18px; color: #000000;">For better education</h2>
+  </div>
+
+  <!-- Body -->
+  <div style="padding: 35px; background-color: #f9f9f9;">
+    <p>
+      The Basic Education Information System (BEIS) maintains a database of education statistics, sector performance indicators and profile of public and private schools, learning centers and other education service providers.
+      It is a web-based system designed to enhance information management at all levels of the education system (school, division, region and national levels) through streamlined processes and use of information and communication technologies.
+      It aims to deliver relevant and accurate information to school heads, education managers, policy makers and various stakeholders of the education system.
+   
+    <p>The BEIS aims to achieve the following objectives:</p>
+    <ul><ul style="margin-left: 30px; padding-left: 10px;">
+      <li>Improve the collection of data from the schools and field offices and efficiently render delivery of data/information to various stakeholders.</li>
+      <li>Support information requirements for planning, quality assurance, monitoring & evaluation and other decision-making activities at all levels of the education system.</li>
+      <li>Provide a venue for sharing, using and reusing knowledge within DepED through improving access to data/information.</li>
+    </ul>
+
+
+
+<!--FORWARD ESTIMATES-->
+  </div>
+</section>
+<section class="container" style="text-align: center; padding: 30px 0;">
+  <h2>Basic Education Data</h2>
+  <p class="mb-4">Forward Estimates</p>
+  
+  <div class="sheets-container">
+    <div class="sheets-header">
+      <h2 class="sheets-title">School Year 2024-2025 Data</h2>
+      <div class="sheets-actions">
+        <button class="sheets-btn" id="refreshSheet">Refresh Data</button>
+        <button class="sheets-btn" id="fullscreenSheet">Full Screen</button>
+      </div>
+    </div>
+    
+    <div class="sheets-iframe-container">
+      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRHG6FU5fb8k9cXyo-kSacml5QSxMj8HVu6xdWqMRax_U_cLhaOnHy0LsF6W84X4g/pubhtml?widget=true&amp;headers=false"></iframe>
+    </div>
+    
+    <div class="sheets-footer">
+      Data managed by Planning and Research Section, SDO Santa Rosa City
+    </div>
+  </div>
+</section>
+  <!-- PERFORMANCE INDICATORS-->   
+  <section class="container" style="text-align: center; padding: 30px 0;">
+    <h2>Performance Indicators</h2>
+    <p class="mb-4">Key Educational Performance Metrics</p>
+    
+    <div class="sheets-container">
+      <div class="sheets-header">
+        <h2 class="sheets-title">SY 2024-2025 Performance Indicators</h2>
+        <div class="sheets-actions">
+          <button class="sheets-btn" id="refreshSheet2">Refresh Data</button>
+          <button class="sheets-btn" id="fullscreenSheet2">Full Screen</button>
+        </div>
+      </div>
+      
+      <div class="sheets-iframe-container">
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vREQnGTpqrTrHapAOYEO1WIhiQD1i17qWXtg3yN0ggxnPp71-kKTyxLoe7LK0zoZw/pubhtml?widget=true&amp;headers=false"></iframe>
+      </div>
+      
+      <div class="sheets-footer">
+        Data managed by Planning and Research Section, SDO Santa Rosa City
+      </div>
+    </div>
+  </section>
+    <br><br><br><br><br><br>
+  </section>
+  <div class="section-divider"></div> 
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-content">
+      <img src="assets/logo.png" alt="DepEd Logo" class="footer-logo">
+      <p>
+        The Planning and Research Section of the Schools Division Office (SDO) Santa Rosa City is committed to using 
+        data to inform decisions, drive strategic planning, and conduct educational research. Our goal is to effectively 
+        implement programs and policies that enhance the educational quality in the city. 
+        Through detailed data analysis, research initiatives, and teamwork in planning,
+         we contribute to the continuous improvement of schools, educators, and students, 
+         fostering a culture of excellence and innovation in education.
+      </p>
+    </div>
+  </footer>
+  <div class="rights">
+    Copyright © 2025 DepEd Santa Rosa City - Planning and Research Section.
+  </div>
+
+  <button id="btn-back-to-top" aria-label="Back to Top" title="Back to Top" type="button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M8 12a.5.5 0 0 1-.5-.5V4.707L4.854 8.354a.5.5 0 1 1-.708-.708l4-4a.5.5 0 0 1 .708 0l4 4a.5.5 0 0 1-.708.708L8.5 4.707V11.5A.5.5 0 0 1 8 12z"/>
+    </svg>
+  </button>
+  
+  <script src="script.js"></script>
+    <script>
+      const ctx = document.getElementById('enrollmentChart').getContext('2d');
+      const enrollmentChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+          labels: ['Public', 'Private'],
+          datasets: [{
+            label: 'Enrollment Status',
+            data: [63381, 24028], // Update with your real values
+            backgroundColor: ['#869397', '#003594'],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,  // This ensures the chart is responsive
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: {
+                font: {
+                  size: 14
+                }
+              }
+            },
+            title: {
+              display: true,
+              text: 'SY 2024 - 2025 Total LIS Enrollment',
+              font: {
+                size: 18
+              }
+            }
+          }
+        }
+      });
+  </script>
+
+<script>
+ const backToTopBtn = document.getElementById('btn-back-to-top');
+
+window.addEventListener('scroll', () => {
+if (window.scrollY > 150) {
+ backToTopBtn.style.display = 'flex';
+ backToTopBtn.style.opacity = '1';
+} else {
+ backToTopBtn.style.opacity = '0';
+ // delay hiding to allow fade out
+ setTimeout(() => {
+   if (window.scrollY <= 150) backToTopBtn.style.display = 'none';
+ }, 300);
+}
+});
+
+backToTopBtn.addEventListener('click', () => {
+window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+</script>
+<script>
+  // JavaScript for Google Sheets embed controls
+  document.addEventListener('DOMContentLoaded', function() {
+    const refreshBtn = document.getElementById('refreshSheet');
+    const fullscreenBtn = document.getElementById('fullscreenSheet');
+    const iframe = document.querySelector('.sheets-iframe-container iframe');
+    
+    if (refreshBtn && iframe) {
+      refreshBtn.addEventListener('click', function() {
+        // Reload the iframe content
+        const currentSrc = iframe.src;
+        iframe.src = currentSrc;
+      });
+    }
+    
+    if (fullscreenBtn && iframe) {
+      fullscreenBtn.addEventListener('click', function() {
+        if (iframe.requestFullscreen) {
+          iframe.requestFullscreen();
+        } else if (iframe.webkitRequestFullscreen) {
+          iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) {
+          iframe.msRequestFullscreen();
+        }
+      });
+    }
+  });
+</script>
+<script>
+  // JavaScript for Google Sheets embed controls
+document.addEventListener('DOMContentLoaded', function() {
+  // First sheet controls
+  const refreshBtn = document.getElementById('refreshSheet');
+  const fullscreenBtn = document.getElementById('fullscreenSheet');
+  const iframe = document.querySelector('.sheets-iframe-container iframe');
+  
+  if (refreshBtn && iframe) {
+    refreshBtn.addEventListener('click', function() {
+      // Reload the iframe content
+      const currentSrc = iframe.src;
+      iframe.src = currentSrc;
+    });
+  }
+  
+  if (fullscreenBtn && iframe) {
+    fullscreenBtn.addEventListener('click', function() {
+      if (iframe.requestFullscreen) {
+        iframe.requestFullscreen();
+      } else if (iframe.webkitRequestFullscreen) {
+        iframe.webkitRequestFullscreen();
+      } else if (iframe.msRequestFullscreen) {
+        iframe.msRequestFullscreen();
+      }
+    });
+  }
+  
+  // Second sheet controls
+  const refreshBtn2 = document.getElementById('refreshSheet2');
+  const fullscreenBtn2 = document.getElementById('fullscreenSheet2');
+  const iframe2 = document.querySelectorAll('.sheets-iframe-container iframe')[1]; // Get the second iframe
+  
+  if (refreshBtn2 && iframe2) {
+    refreshBtn2.addEventListener('click', function() {
+      // Reload the second iframe content
+      const currentSrc = iframe2.src;
+      iframe2.src = currentSrc;
+    });
+  }
+  
+  if (fullscreenBtn2 && iframe2) {
+    fullscreenBtn2.addEventListener('click', function() {
+      if (iframe2.requestFullscreen) {
+        iframe2.requestFullscreen();
+      } else if (iframe2.webkitRequestFullscreen) {
+        iframe2.webkitRequestFullscreen();
+      } else if (iframe2.msRequestFullscreen) {
+        iframe2.msRequestFullscreen();
+      }
+    });
+  }
+});
+</script>
+</body>
+</html>

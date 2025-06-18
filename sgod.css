@@ -1,0 +1,457 @@
+/* Reset Margin and Padding for All Elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f4f4; /* Light gray background for the body */
+  color: #333;
+}
+
+/* Calendar Container */
+.calendar {
+  max-width: 1200px;
+  margin: 40px auto;
+  background-color: #fff; /* White background for the calendar container */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Calendar Header */
+.calendar-header {
+  background: #000047;
+  background: linear-gradient(90deg, rgba(0, 0, 71, 1) 0%, rgba(9, 9, 121, 1) 37%, rgba(0, 212, 255, 1) 100%);
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.calendar-title {
+  font-size: 50px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 0 0 25px rgba(0, 123, 255, 0.7); /* Soft shadow and glow */
+}
+
+/* Month Buttons Section */
+.month-buttons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;  /* Ensures the buttons wrap on smaller screens */
+  margin-top: 20px;
+  gap: 15px;  /* Adds space between the buttons */
+}
+
+.month-button {
+  background-color: #007BFF; /* Blue button background */
+  border: none;
+  padding: 12px 20px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 30px; /* Rounded corners */
+  transition: all 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  margin: 5px;  /* Space between buttons */
+}
+
+/* Hover and active states */
+.month-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-3px); /* Button lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.month-button:active {
+  background-color: #003366; /* Darker blue on click */
+  transform: translateY(1px); /* Slightly lower when clicked */
+}
+
+/* Month Content Section */
+.month-content {
+  display: none; /* Hidden by default */
+}
+
+.month-content ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.month-content ul li {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.month-content ul li strong {
+  color: #000;
+}
+
+/* Month Containers for Each Month */
+.months {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.month {
+  background-color: #004085; /* Darker blue for the month blocks */
+  width: 48%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.month h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff; /* White text color for month title */
+}
+
+.month ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.month ul li {
+  font-size: 16px;
+  color: #ffffff; /* White text for event items */
+  margin-bottom: 10px;
+}
+
+.month ul li strong {
+  color: #f8f9fa; /* Slightly lighter white color for event dates */
+}
+
+.month ul li:hover {
+  background-color: #0056b3; /* Lighter blue background on hover */
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.month ul li:active {
+  background-color: #003366; /* Darker blue on click */
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: auto;
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  color: #333;
+}
+
+.close-btn {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Month Buttons Section */
+.month-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.month-button {
+  background: linear-gradient(135deg, #007BFF, #0056b3); /* Gradient blue background */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 30px; /* Rounded corners */
+  margin: 5px; /* Space between buttons */
+  transition: all 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Button Hover Effect */
+.month-button:hover {
+  background: linear-gradient(135deg, #0056b3, #003366); /* Darker gradient on hover */
+  transform: translateY(-3px); /* Button lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Active Button Effect */
+.month-button:active {
+  background: linear-gradient(135deg, #003366, #0056b3); /* Even darker gradient on click */
+  transform: translateY(1px); /* Slightly lower when clicked */
+}
+
+/* Stack buttons vertically on mobile */
+@media screen and (max-width: 768px) {
+  .month-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center the buttons */
+  }
+
+  .month-button {
+    width: 80%;  /* Make buttons larger on small screens */
+    margin-bottom: 10px;  /* Add space between stacked buttons */
+  }
+}
+
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  background-color: #0d6efd; /* Bootstrap primary */
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(13, 110, 253, 0.4);
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1100;
+}
+
+#btn-back-to-top svg {
+  display: block;
+}
+
+#btn-back-to-top:hover {
+  background-color: #084298; /* Darker blue */
+  box-shadow: 0 6px 12px rgba(8, 66, 152, 0.6);
+  transform: scale(1.1);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Organization Chart Layout with Fixed Card Sizes, Color Bands, and Hover Animation */
+.employee-profiles.org-chart {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  padding: 30px 15px 15px 15px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.09);
+}
+
+.org-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.org-division-head {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+/* Fixed-size Card with Proportional Sections */
+.org-card {
+  width: 280px;
+  height: 400px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 2px solid #3947ae; /* Red border matching image */
+  box-shadow: 0 4px 12px 0 rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover animation */
+.org-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* The division head has a blue background */
+.org-division-head .org-card .org-info {
+  background: #545fda; /* Blue background for division head */
+}
+
+.org-card .org-role1 {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #ffffff; /* Black text as in image */
+  margin-bottom: 0;
+  line-height: 1.2;
+  transition: transform 0.3s ease;
+}
+
+.org-card .org-title1 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #ffffff; /* Black text as in image */
+  line-height: 1.2;
+  transition: transform 0.3s ease;
+}
+
+/* All other cards have yellow background */
+.org-card .org-info {
+  background: #f2c200; /* Yellow background for other staff */
+}
+
+/* Image Container - takes 70% of card height */
+.org-image-container {
+  width: 100%;
+  height: 70%; /* 70% for image */
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+  flex-shrink: 0;
+  transition: transform 0.5s ease;
+}
+
+.org-card:hover .org-image-container {
+  transform: scale(1.03);
+}
+
+.org-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintains aspect ratio while filling container */
+  object-position: center 15%; /* Centers image and slightly favors the face */
+  transition: transform 0.5s ease;
+}
+
+.org-card:hover .org-image {
+  transform: scale(1.07);
+}
+
+/* Info Container - takes 30% of card height */
+.org-info {
+  height: 30%; /* 30% for text */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  flex-shrink: 0;
+  transition: background-color 0.3s ease;
+}
+
+.org-card .org-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #000; /* Black text as in image */
+  line-height: 1.2;
+  transition: transform 0.3s ease;
+}
+
+.org-card:hover .org-title {
+  transform: translateY(-2px);
+}
+
+.org-card .org-role {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #000; /* Black text as in image */
+  margin-bottom: 0;
+  line-height: 1.2;
+  transition: transform 0.3s ease;
+}
+
+.org-card:hover .org-role {
+  transform: translateY(-2px);
+}
+
+.org-section-label {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: #fff;
+  background: #3947ae; /* Blue header for sections */
+  display: block;
+  padding: 10px 0;
+  margin: 35px 0 15px 0;
+  text-align: center;
+  border-radius: 5px;
+  letter-spacing: .5px;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.05);
+  text-transform: uppercase;
+}
+
+/* Maintain fixed proportions in media queries */
+@media (max-width: 900px) {
+  .org-row {
+    gap: 20px;
+  }
+  
+  .org-card {
+    width: 230px;
+    height: 330px;
+  }
+  
+  .org-card .org-title {
+    font-size: 1.1rem;
+  }
+  
+  .org-card .org-role {
+    font-size: 0.9rem;
+  }
+  
+  .org-section-label {
+    font-size: 1rem;
+    padding: 8px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .org-row {
+    gap: 30px;
+  }
+  
+  .org-card {
+    width: 260px;
+    height: 370px;
+  }
+}
